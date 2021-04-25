@@ -1,0 +1,16 @@
+food_boost_perm_deposit = {
+	is_for_colonizeable = yes
+	category = deposit_cat_rare
+	
+	icon = d_alien_pets_deposit
+	
+	resources = {
+		category = planet_deposits
+		upkeep = {
+			food = 10
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}

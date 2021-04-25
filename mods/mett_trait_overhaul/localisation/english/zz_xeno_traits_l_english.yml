@@ -1,0 +1,116 @@
+﻿l_english:
+ ####################################
+ # Misc
+ ####################################
+  TRAIT_ILLUSTRIOUS_EFFECT:0 "Ruler Opinion Impact: §G+50§!"
+  TRAIT_SHROUDBORN_EFFECT:0 "All leaders are §GImmortal§!"
+  
+ ####################################
+ # Traits 
+ # common/traits/00_species_traits.txt
+ ####################################
+ 
+ trait_illustrious:0 "Illustrious"
+ trait_illustrious_desc:0 "§LMembers of this species are born leaders and project an aura of charm and authority. Can generate §GExalted§! leaders. §!\n" 
+ trait_shroudborn:0 "Shroudborn"
+ trait_shroudborn_desc:0 "§LThis species somehow managed to initiate a covenant with the Shroud very early in its history. A price was paid, and the survivors were rewarded with immortality. §!\n" 
+ trait_dynamic:0 "Dynamic"
+ trait_dynamic_desc:0 "§LMembers of this species enjoy hard work. From manual laborers to captains of industry, all accomplish their tasks with zeal and celerity. Can generate §YRapacious§! leaders. §!\n"
+ trait_ambitious:0 "Audacious"
+ trait_ambitious_desc:0 "§LMembers of this species are naturally venturesome, and never shy away from risk if it means seizing an opportunity. Can generate §GVisionary§! and §GConqueror§! leaders. §!\n" 
+ trait_analytical:0 "Analytical"
+ trait_analytical_desc:0 "§LMembers of this species are mathematical savants, and prefer cold logic to unrestrained imagination. Can generate §GMentat§! and §GBringer of Light§! leaders. §!\n" 
+ trait_scholarly:0 "Scholarly" 
+ trait_scholarly_desc:0 "§LMembers of this species are unparalleled in their talent for qualitative research, but struggle with basic arithmetic. Can generate §GLife Weaver§! and §GNatalist§! leaders. §!\n" 
+ trait_ingenious:0 "Ingenious" 
+ trait_ingenious_desc:0 "§LMembers of this species excel at applied sciences, and have little interest in theoretical concepts. Can generate §GStar Lifter§! and §GArcologist§! leaders. §!\n" 
+ trait_imbecilic:0 "Imbecilic"
+ trait_imbecilic_desc:0 "§LMembers of this species tend to be denser than a neutron star. Few have any capacity for rational thought, and fewer yet are blessed with the ability to lead. §!\n" 
+ trait_scion_of_the_fallen:0 "Scion of the Fallen"
+ trait_scion_of_the_fallen_desc:0 "§LThis species once lived under the protection of a now extinct galactic civilization. Can generate §GPathfinder§! leaders. §!\n" 
+ trait_valiant:0 "Valiant" 
+ trait_valiant_desc:0 "§LMembers of this species do not experience fear as most other organics do, and fight with remarkable valor and bravery. Can generate §GHold the Line§! and §YPrideful§! leaders. §!\n"
+ trait_predator:0 "Predator"
+ trait_predator_desc:0 "§LThis species evolved to become the apex predator of an exceptionally hostile world, and still act on natural instincts. Can generate §GHunter§!, §GChallenger§! and §GChampion§! leaders. §!\n"
+ trait_hygrophilic:0 "Hygrophilic"
+ trait_hygrophilic_desc:0 "§LThis species absorbs water directly from the air, and can only survive in §Gwet§! environments. §!\n"
+ trait_xerophilic:0 "Xerophilic"
+ trait_xerophilic_desc:0 "§LThis species' biochemistry uses compounds that react violently to water, and can only survive in §Ydry§! environments. §!\n"
+ trait_cryophilic:0 "Cryophilic"
+ trait_cryophilic_desc:0 "§LThis species uses liquid ammonia as a biological solvent instead of water, and can only survive in §Bcold§! environments. §!\n"
+ trait_destructive:0 "Destructive"
+ trait_destructive_desc:0 "§LThough they may quell some of their primal urges, members of this species are naturally wrathful and brutal. §!\n"
+ trait_individualistic:0 "Individualistic"
+ trait_individualistic_desc:0 "§LMembers of this species are vain, egotistical and often put their selfish interests above the greater good. §!\n"
+ trait_collectivistic:0 "Collectivistic"
+ trait_collectivistic_desc:0 "§LMembers of this species are soulless, ego-extinct creatures content to leave their fate in the hands of their betters. §!\n"
+ trait_gigantic:0 "Gigantic"
+ trait_gigantic_desc:0 "§LMembers of this species are immense in size and strength. They require a proportionally huge amount of food and gestation period. §!\n"
+ trait_apathetic:0 "Apathetic"
+ trait_apathetic_desc:0 "§LMembers of this species are reluctant to take on the responsibilities leadership entails. §!\n"
+ trait_moronic:0 "Moronic"
+ trait_moronic_desc:0 "§LMembers of this species tend to be rather dim. There is no gentler way to put it. §!\n"
+ 
+ ####################################
+ # Ruler Traits
+ # common/traits/zz_xenology_ruler_traits.txt
+ ####################################
+ 
+ trait_ruler_exalted:0 "Exalted"
+ trait_ruler_exalted_desc:0 "This leader is exalted among their kind and adored by their people." 
+ trait_ruler_rapacious:0 "Rapacious"
+ trait_ruler_rapacious_desc:0 "This prehensile and unscrupulous leader will stop at nothing to accumulate more wealth and power."
+ trait_ruler_visionary:0 "Visionary"
+ trait_ruler_visionary_desc:0 "Whether through diplomacy or force of arms, this leader intends to reshape the world in their image."
+ trait_ruler_mentat:0 "Mentat"
+ trait_ruler_mentat_desc:0 "This leader is practically an organic supercomputer, further enhancing their prodigious cognitive abilities with rare and extremely potent nootropics."
+ trait_ruler_life_weaver:0 "Life Weaver"
+ trait_ruler_life_weaver_desc:0 "This leader aims to improve all suitable lifeforms, from agricultural crops to sentient beings, through genetic modification. "
+ trait_ruler_star_lifter:0 "Star Lifter"
+ trait_ruler_star_lifter_desc:0 "This leader seeks to turn formidable megascale projects into reality with experimental astroengineering techniques."
+ trait_ruler_hold_the_line:0 "Hold the Line"
+ trait_ruler_hold_the_line_desc:0 "This leader will protect their nation with unshakeable resolve."
+ 
+ ####################################
+ # Admiral Traits
+ # common/traits/zz_xenology_admiral_traits.txt
+ ####################################
+ 
+ trait_admiral_bringer_of_light:0 "Bringer of Light"
+ trait_admiral_bringer_of_light_desc:0 "This leader combines remarkable scientific and strategic acumen to practically bend the forces of the universe at will in battle."
+ trait_admiral_prideful:0 "Prideful"
+ trait_admiral_prideful_desc:0 "The prospect of defeat is utterly alien to this leader, who will ignore any orders to withdraw until the enemy has been rendered silent."
+ trait_admiral_hunter:0 "Hunter"
+ trait_admiral_hunter_desc:0 "This leader is guided by their predatory instincts, and the galaxy is but another hunting ground.
+ trait_admiral_challenger:0 "Challenger"
+ trait_admiral_challenger_desc:0 "This leader's unconventional tactics are especially efficient against Fallen Empires. The time has come for the fossils of bygone ages to join the ash heap of history."
+ trait_admiral_champion:0 "Champion"
+ trait_admiral_champion_desc:0 "This leader expertly assesses the enemy's strengths and weaknesses to vanquish fleets of immense size and power. They are a bulwark against the greatest threats of our universe."
+ 
+ ####################################
+ # General Traits
+ # common/traits/zz_xenology_general_traits.txt
+ ####################################
+ 
+ trait_general_conqueror:0 "Conqueror"
+ trait_general_conqueror_desc:0 "This leader has a destiny to manifest, and for that goal, their troops with follow them to the ends of the galaxy."
+ 
+ ####################################
+ # Governor Traits
+ # common/traits/zz_xenology_governor_traits.txt
+ ####################################
+ 
+ trait_governor_arcologist:0 "Arcologist"
+ trait_governor_arcologist_desc:0 "This leader is able to solve urban challenges with an ultra-efficient, self-sufficient, eco-friendly infrastructure."
+ trait_governor_natalist:0 "Natalist"
+ trait_governor_natalist_desc:0 "This leader promotes and incentivizes reproduction through cost-effective social programs."
+ 
+ ####################################
+ # Scientist Traits
+ # common/traits/zz_xenology_scientist_traits.txt
+ ####################################
+ 
+ trait_scientist_pathfinder:0 "Pathfinder"
+ trait_scientist_pathfinder_desc:0 "Their species' spacefaring past makes this leader an instinctive trailblazer."
+ 
+ 

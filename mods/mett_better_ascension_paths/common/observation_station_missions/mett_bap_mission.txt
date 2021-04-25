@@ -1,0 +1,46 @@
+#Brainwash&Annex
+@enlighten_nrg_cost = 10
+
+primitive_brainwashing = {
+	icon = "GFX_fleet_task_brainwash_primitives"
+	small_icon = 5
+	
+	cost = {
+		energy = @enlighten_nrg_cost
+	}
+	
+	gain = {
+		society_research = 15
+	}
+	
+	monthly_progress = 0.05
+	completion_event = brainwash.1
+
+	potential = {}
+
+	valid = {
+		OR = {
+			has_technology = tech_will_to_power
+			has_technology = tech_telepathy
+		}
+		OR = {
+			has_policy_flag = interference_active
+			has_policy_flag = interference_full
+		}
+	}
+	
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ai_personality_behaviour = infiltrator
+				has_ai_personality_behaviour = dominator
+			}	
+		}
+		modifier = {
+			factor = 0
+			energy < 1000
+		}
+	}
+}

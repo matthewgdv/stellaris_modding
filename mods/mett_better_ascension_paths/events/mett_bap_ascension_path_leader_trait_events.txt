@@ -1,0 +1,117 @@
+
+##############################
+##############################
+### SYNTHETIC DAWN events  ###
+### by Maximilian Olbers,  ###
+### Miranda van den Brink, ###
+### & Dee Majek			   ###
+##############################
+##############################
+
+namespace = utopia
+
+# New Leaders Get Erudite Trait
+country_event = {
+	id = utopia.2509
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			species = { 
+				has_trait = trait_erudite 
+				NOR = {
+					has_trait = trait_cybernetic 			
+				}
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = leader_trait_admiral_erudite
+				add_ruler_trait = leader_trait_ruler_erudite
+				break = yes
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = leader_trait_general_erudite
+				add_ruler_trait = leader_trait_ruler_erudite
+				break = yes
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_governor_erudite
+				add_ruler_trait = leader_trait_ruler_erudite
+				break = yes
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = leader_trait_scientist_erudite
+				add_ruler_trait = leader_trait_ruler_erudite
+				break = yes
+			}
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = leader_trait_ruler_erudite
+				add_ruler_trait = leader_trait_ruler_erudite
+				break = yes
+			}
+		}
+	}
+}
+
+# New Leaders Get Synthetic Trait (Should also work on "normal" Synthetics)
+country_event = {
+	id = utopia.2560
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { has_trait = trait_robotic_3 }
+				species = { has_trait = trait_robotic_3_machine_mett }
+				species = { has_trait = trait_robotic_3_cyborg_mett }
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = leader_trait_admiral_synthetic
+				add_ruler_trait = leader_trait_ruler_synthetic
+				break = yes
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = leader_trait_general_synthetic
+				add_ruler_trait = leader_trait_ruler_synthetic
+				break = yes
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_governor_synthetic
+				add_ruler_trait = leader_trait_ruler_synthetic
+				break = yes
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = leader_trait_scientist_synthetic
+				add_ruler_trait = leader_trait_ruler_synthetic
+				break = yes
+			}
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = leader_trait_ruler_synthetic
+				add_ruler_trait = leader_trait_ruler_synthetic
+				break = yes
+			}
+		}
+	}
+}
+

@@ -1,0 +1,4354 @@
+##########################################################################################################################################################################################################################
+# [1] Social Justice
+##########################################################################################################################################################################################################################
+
+####################################
+# [1.0] Social Justice Tag
+####################################
+soc_justice_tag = {
+	potential = {
+		always = yes 
+	}
+}
+####################################
+# [1.1] Gender
+####################################
+gender = {
+
+	potential = {
+		has_technology = tech_social_laws
+	}
+	
+	option = {
+		name = "gender_ambiguity"
+		
+		policy_flags = {
+			gender_ambiguity
+		}
+		
+		valid = {
+			OR = {
+				has_authority = "auth_machine_intelligence"
+				has_authority = "auth_hive_mind"
+			}
+		}
+		
+		modifier = {
+			tile_resource_unity_mult = 0.05
+		}
+	}
+	
+	option = {
+		name = "gender_equality"
+
+		policy_flags = {
+			gender_equality
+		}
+		
+		valid = {
+			NOR = {
+				has_authority = "auth_machine_intelligence"
+				has_authority = "auth_hive_mind"
+			}
+		}
+		
+		modifier = {
+			tile_resource_unity_mult = 0.05
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 15
+			}
+		}
+	}
+
+	option = {
+		name = "gender_slightly_mel"
+
+		policy_flags = {
+			gender_slightly_mel
+		}
+		
+		valid = {
+			NOR = {
+				has_ethic = "ethic_fanatic_pluralist"
+				has_authority = "auth_machine_intelligence"
+				has_authority = "auth_hive_mind"
+			}
+		}
+
+		modifier = {
+			pop_happiness = -0.02
+			country_resource_influence_add = 0.5
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_elitist"
+				}
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_ethic = "ethic_fanatic_elitist"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "gender_mel"
+
+		policy_flags = {
+			gender_mel
+		}
+		
+		valid = {
+			NOR = {
+				has_ethic = "ethic_pluralist"
+				has_ethic = "ethic_fanatic_pluralist"
+				has_authority = "auth_machine_intelligence"
+				has_authority = "auth_hive_mind"
+			}
+			OR = {
+				allows_slavery = yes
+			}
+		}
+
+		modifier = {
+			pop_happiness = -0.04
+			country_resource_influence_add = 1
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 1
+				OR = {
+					has_ethic = "ethic_elitist"
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_fanatic_elitist"
+				}
+			}
+		}
+	}
+		
+	option = {
+		name = "gender_slightly_fem"
+
+		policy_flags = {
+			gender_slightly_fem
+		}
+		
+		valid = {
+			NOR = {
+				has_ethic = "ethic_fanatic_pluralist"
+				has_authority = "auth_machine_intelligence"
+				has_authority = "auth_hive_mind"
+			}
+		}
+
+		modifier = {
+			pop_happiness = -0.02
+			country_resource_influence_add = 0.5
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_elitist"
+				}
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_ethic = "ethic_fanatic_elitist"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "gender_fem"
+
+		policy_flags = {
+			gender_fem
+		}
+		
+		valid = {
+			NOR = {
+				has_ethic = "ethic_pluralist"
+				has_ethic = "ethic_fanatic_pluralist"
+				has_authority = "auth_machine_intelligence"
+				has_authority = "auth_hive_mind"
+			}
+			OR = {
+				allows_slavery = yes
+			}
+		}
+		
+		modifier = {
+			pop_happiness = -0.04
+			country_resource_influence_add = 1
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 1
+				OR = {
+					has_ethic = "ethic_elitist"
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_fanatic_elitist"
+				}
+			}
+		}
+	}
+}
+####################################
+# [1.2] Sexuality
+####################################
+sex = {
+
+	potential = {
+		has_technology = tech_imp_social_laws
+	}
+	
+	option = {
+		name = "sex_asexual"
+		
+		policy_flags = {
+			sex_asexual
+		}
+		
+		valid = {
+			OR = {
+				has_authority = "auth_machine_intelligence"
+				has_authority = "auth_hive_mind"
+			}
+		}
+		
+		modifier = {
+			tile_resource_unity_mult = 0.02
+		}
+	}
+	
+	option = {
+		name = "sex_lgb_inclusive"
+
+		policy_flags = {
+			sex_lgb_inclusive
+		}
+				
+		valid = {
+			NOR = {
+				has_authority = "auth_machine_intelligence"
+				has_authority = "auth_hive_mind"
+			}
+		}
+				
+		modifier = {
+			tile_resource_unity_mult = 0.02
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 100
+			}
+		}
+	}
+
+	option = {
+		name = "sex_neutral"
+
+		policy_flags = {
+			sex_neutral
+		}
+				
+		valid = {
+			NOR = {
+				has_authority = "auth_machine_intelligence"
+				has_authority = "auth_hive_mind"
+			}
+		}
+		
+		modifier = {
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_elitist"
+				}
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_ethic = "ethic_fanatic_elitist"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "sex_heteronormative"
+
+		policy_flags = {
+			sex_heteronormative
+		}
+				
+		valid = {
+			NOR = {
+				has_ethic = "ethic_fanatic_pluralist"
+				has_authority = "auth_machine_intelligence"
+				has_authority = "auth_hive_mind"
+			}
+		}
+				
+		modifier = {
+			tile_resource_unity_mult = -0.02
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 1
+				OR = {
+					has_ethic = "ethic_elitist"
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_fanatic_elitist"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "sex_homophobia"
+
+		policy_flags = {
+			sex_homophobia
+		}
+				
+		valid = {
+			NOR = {
+				has_ethic = "ethic_pluralist"
+				has_ethic = "ethic_fanatic_pluralist"
+				has_authority = "auth_machine_intelligence"
+				has_authority = "auth_hive_mind"
+			}
+		}
+				
+		modifier = {
+			pop_happiness = -0.02
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 1
+				OR = {
+					has_ethic = "ethic_fanatic_elitist"
+				}
+			}
+		}
+	}
+}
+####################################
+# [1.3] Transgender
+####################################
+trans = {
+
+	potential = {
+		has_technology = tech_imp_social_laws
+	}
+	
+	option = {
+		name = "trans_unnecessary"
+		
+		policy_flags = {
+			trans_unnecessary
+		}
+		
+		valid = {
+			OR = {
+				has_authority = "auth_machine_intelligence"
+				has_authority = "auth_hive_mind"
+			}
+		}
+		
+		modifier = {
+			tile_resource_unity_mult = 0.01
+		}
+	}
+	
+	option = {
+		name = "trans_no_trans"
+
+		policy_flags = {
+			trans_no_trans
+		}
+		
+		valid = {
+			NOR = {
+				has_ethic = "ethic_pluralist"
+				has_ethic = "ethic_fanatic_pluralist"
+				has_authority = "auth_machine_intelligence"
+				has_authority = "auth_hive_mind"
+			}
+		}
+				
+		modifier = {
+			tile_resource_unity_mult = -0.01
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 1
+				OR = {
+					has_ethic = "ethic_elitist"
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_fanatic_elitist"
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "trans_limited_trans"
+
+		policy_flags = {
+			trans_limited_trans
+		}
+		
+		valid = {
+			NOR = {
+				has_ethic = "ethic_fanatic_pluralist"
+				has_authority = "auth_machine_intelligence"
+				has_authority = "auth_hive_mind"
+			}
+		}
+		
+		modifier = {
+			tile_resource_unity_mult = 0.01
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_pluralist"
+					has_ethic = "ethic_fanatic_pluralist"
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_elitist"
+				}
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_ethic = "ethic_fanatic_elitist"
+				}
+			}
+		}
+	}
+		
+	option = {
+		name = "trans_full_trans"
+
+		policy_flags = {
+			trans_full_trans
+		}
+		
+		valid = {
+			NOR = {
+				has_authority = "auth_machine_intelligence"
+				has_authority = "auth_hive_mind"
+			}
+		}
+		
+		modifier = {
+			tile_resource_unity_mult = 0.02
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 5
+				OR = {
+					has_valid_ai_personality = no
+					is_ai = no
+				}
+			}
+			modifier = {
+				factor = 5
+				has_valid_ai_personality = yes
+				is_ai = yes
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					has_ethic = "ethic_pluralist"
+					has_ethic = "ethic_fanatic_pluralist"
+				}
+			}
+		}
+	}
+		
+	option = {
+		name = "trans_attack_helicopter"
+
+		policy_flags = {
+			trans_attack_helicopter
+		}
+		
+		valid = {
+			NOR = {
+				has_authority = "auth_machine_intelligence"
+				has_authority = "auth_hive_mind"
+			}
+			has_ethic = "ethic_fanatic_pluralist"
+		}
+		
+		modifier = {
+			tile_resource_unity_mult = 0.02
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 10
+				OR = {
+					has_ethic = "ethic_fanatic_pluralist"
+				}
+			}
+		}
+	}
+}
+####################################
+# [1.4] Race
+####################################
+race = {
+
+	potential = {
+		has_technology = tech_social_laws
+	}
+	
+	option = {
+		name = "race_identical"
+		
+		policy_flags = {
+			race_identical
+		}
+				
+		valid = {
+			OR = {
+				has_authority = "auth_machine_intelligence"
+				has_authority = "auth_hive_mind"
+			}
+		}
+		
+		modifier = {
+			tile_resource_unity_mult = 0.02
+		}
+
+	}
+	
+	option = {
+		name = "race_equality"
+
+		policy_flags = {
+			race_equality
+		}
+				
+		valid = {
+			NOR = {
+				has_authority = "auth_machine_intelligence"
+				has_authority = "auth_hive_mind"
+			}
+		}
+				
+		modifier = {
+			tile_resource_unity_mult = 0.02
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 15
+			}
+		}
+	}
+
+	option = {
+		name = "race_discrimination"
+
+		policy_flags = {
+			race_discrimination
+		}
+		
+		valid = {
+			NOR = {
+				has_ethic = "ethic_pluralist"
+				has_ethic = "ethic_fanatic_pluralist"
+				has_authority = "auth_machine_intelligence"
+				has_authority = "auth_hive_mind"
+			}
+		}
+		
+		modifier = {
+			tile_resource_unity_mult = -0.01
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 1
+				has_ethic = "ethic_elitist"
+			}
+			modifier = {
+				factor = 2
+				has_ethic = "ethic_fanatic_elitist"
+			}
+		}
+	}
+	
+	option = {
+		name = "race_supremacy"
+
+		policy_flags = {
+			race_supremacy
+		}
+		
+		valid = {
+			AND = {
+				has_ethic = "ethic_fanatic_authoritarian"
+				has_ethic = "ethic_fanatic_elitist"
+				allows_slavery = yes
+			}
+			NOR = {
+				has_authority = "auth_machine_intelligence"
+				has_authority = "auth_hive_mind"
+			}
+		}
+				
+		modifier = {
+			pop_slave_resource_output = 0.1
+			tile_resource_unity_mult = -0.02
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 10
+				AND = {
+					has_ethic = "ethic_fanatic_elitist"
+					has_ethic = "ethic_fanatic_authoritarian"
+				}
+			}
+		}
+	}
+}
+####################################
+# [1.5] Prostitution
+####################################
+prostitution = {
+
+	potential = {
+		has_technology = tech_adv_social_laws
+	}
+	
+	option = {
+		name = "prostitution_rights"
+		
+		policy_flags = {
+			prostitution_rights
+		}
+				
+		valid = {
+		}
+				
+		modifier = {
+			tile_resource_energy_mult = 0.02
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 15
+			}
+			modifier = {
+				factor = 5
+				has_ethic = "ethic_socialism"
+			}
+			modifier = {
+				factor = 10
+				has_ethic = "ethic_fanatic_socialism"
+			}
+		}
+	}
+	
+	option = {
+		name = "prostitution_decriminalised"
+
+		policy_flags = {
+			prostitution_decriminalised
+		}
+				
+		valid = {
+			NOT = { has_ethic = ethic_fanatic_socialism }
+		}
+				
+		modifier = {
+			pop_happiness = 0.01
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 5
+				has_ethic = "ethic_capitalism"
+			}
+			modifier = {
+				factor = 10
+				has_ethic = "ethic_fanatic_capitalism"
+			}
+		}
+	}
+	
+	option = {
+		name = "prostitution_forbidden"
+
+		policy_flags = {
+			prostitution_forbidden
+		}
+				
+		valid = {
+			OR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+				
+		modifier = {
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 2
+				has_ethic = "ethic_spiritualist"
+			}
+			modifier = {
+				factor = 4
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
+	}
+}
+####################################
+# [1.6] Abortion
+####################################
+abortion = {
+
+	potential = {
+		has_technology = tech_adv_social_laws
+	}
+	
+	option = {
+		name = "abortion_permitted"
+		
+		policy_flags = {
+			abortion_permitted
+		}
+					
+		valid = {
+		}
+				
+		modifier = {
+			pop_happiness = 0.02
+			pop_growth_speed = -0.05
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 5
+				has_ethic = "ethic_materialist"
+			}
+			modifier = {
+				factor = 10
+				has_ethic = "ethic_fanatic_materialist"
+			}
+		}
+	}
+	
+	option = {
+		name = "abortion_banned"
+
+		policy_flags = {
+			abortion_banned
+		}
+					
+		valid = {
+			NOT = { has_ethic = ethic_fanatic_egalitarian }
+		}
+				
+		modifier = {
+			pop_happiness = -0.05
+			pop_growth_speed = 0.1
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 5
+				has_ethic = "ethic_spiritualist"
+			}
+			modifier = {
+				factor = 10
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
+	}
+}
+####################################
+# [1.7] Drug Legalization Status 
+####################################
+drugs = {
+
+	potential = {
+		has_technology = tech_mine_solar_dust
+	}
+	
+	option = {
+		name = "drugs_illegal"
+		
+		policy_flags = {
+			drugs_illegal
+		}
+
+		valid = {
+			NOT = { has_ethic = ethic_fanatic_egalitarian }
+		}
+					
+		modifier = {
+		}
+	
+		AI_weight = {
+			modifier = {
+				factor = 0
+				has_ethic = "ethic_egalitarian"
+			}
+		}
+	}
+	
+	option = {
+		name = "drugs_medical"
+		
+		policy_flags = {
+			drugs_medical
+		}
+		
+		valid = {
+			has_technology = tech_medical_drug
+		}
+				
+		modifier = {
+			pop_growth_speed = 0.05
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 5
+			}
+		}
+	}
+	
+	option = {
+		name = "drugs_state"
+		
+		policy_flags = {
+			drugs_state
+		}
+
+		valid = {
+			NOT = { has_ethic = ethic_fanatic_capitalism }
+			has_technology = tech_medical_drug
+		}
+				
+		modifier = {
+			pop_happiness = 0.02		
+			pop_growth_speed = 0.02
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 10
+				OR = {
+					has_ethic = "ethic_socialism"
+					has_ethic = "ethic_fanatic_socialism"
+				}
+			}
+			modifier = {
+				factor = 0
+				has_ethic = "ethic_capitalism"
+			}
+		}
+	}
+	
+	option = {
+		name = "drugs_legal"
+		
+		policy_flags = {
+			drugs_legal
+		}
+		
+		valid = {
+			NOT = { has_ethic = ethic_fanatic_socialism }
+		}
+				
+		modifier = {
+			tile_resource_energy_mult = 0.02
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 10
+				OR = {
+					has_ethic = "ethic_capitalism"
+					has_ethic = "ethic_fanatic_capitalism"
+				}
+			}
+			modifier = {
+				factor = 0
+				has_ethic = "ethic_socialism"
+			}
+		}
+	}
+}
+##########################################################################################################################################################################################################################
+# [2] Economic Regulations
+##########################################################################################################################################################################################################################
+
+####################################
+# [2.0] Economic Regulations Tag
+####################################
+economic_reg_tag = {
+	potential = {
+		always = yes 
+	}
+}
+####################################
+# [2.1] Land and property Ownership
+####################################
+land = {
+
+	potential = {
+		has_technology = tech_social_laws
+	}
+	
+	option = {
+		name = "land_public"
+		
+		policy_flags = {
+			land_public
+		}
+		
+		valid = {
+			NOT = { has_ethic = ethic_fanatic_capitalism }
+		}
+		
+		modifier = {
+			tile_resource_unity_mult = 0.05
+			all_technology_research_speed = 0.05
+			tile_resource_influence_mult = -0.1
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 15
+				OR = {
+					has_ethic = "ethic_socialism"
+					has_ethic = "ethic_fanatic_socialism"
+				}
+			}
+			modifier = {
+				factor = 0
+				has_ethic = "ethic_capitalism"
+			}
+		}
+	}
+	
+	option = {
+		name = "land_subsidies"
+		
+		policy_flags = {
+			land_subsidies
+		}
+		
+		valid = {
+		}
+		
+		modifier = {
+			tile_resource_minerals_mult = 0.05
+			planet_building_cost_mult = -0.25
+			tile_resource_energy_mult = -0.05
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 0
+				has_ethic = "ethic_fanatic_capitalism"
+			}
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_socialism"
+					has_ethic = "ethic_fanatic_socialism"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "land_pioneers"
+		
+		policy_flags = {
+			land_pioneers
+		}
+		
+		valid = {
+		}
+		
+		modifier = {
+			tile_resource_food_mult = 0.05
+			planet_clear_blocker_time_mult = -0.25
+			planet_colony_development_speed_mult = 0.5
+			planet_unrest_mult = 0.2
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 0
+				has_ethic = "ethic_fanatic_socialism"
+			}
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_capitalism"
+					has_ethic = "ethic_fanatic_capitalism"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "land_private"
+		
+		policy_flags = {
+			land_private
+		}
+		
+		valid = {
+			NOT = { has_ethic = "ethic_fanatic_socialism" }
+		}
+		
+		modifier = {
+			tile_resource_influence_mult = 0.25
+			tile_resource_energy_mult = 0.05
+			planet_building_cost_mult = 0.25
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 15
+				OR = {
+					has_ethic = "ethic_capitalism"
+					has_ethic = "ethic_fanatic_capitalism"
+				}
+			}
+			modifier = {
+				factor = 0
+				has_ethic = "ethic_socialism"
+			}
+		}
+	}
+}
+####################################
+# [2.2] Business Ownership
+####################################
+business = {
+
+	potential = {
+		has_technology = tech_imp_social_laws
+	}
+	
+	option = {
+		name = "business_planned"
+		
+		policy_flags = {
+			business_planned
+		}
+		
+		valid = {
+			not = { has_ethic = "ethic_fanatic_capitalism" }
+		}
+		
+		modifier = {
+			all_technology_research_speed = 0.05
+			tile_resource_unity_mult = 0.05
+			tile_resource_food_mult = 0.05
+			tile_resource_energy_mult = -0.05
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 15
+				OR = {	
+					has_ethic = "ethic_socialism"
+					has_ethic = "ethic_fanatic_socialism"
+				}	
+			}
+			modifier = {
+				factor = 0
+				has_ethic = "ethic_capitalism"
+			}
+		}
+	}
+	
+	option = {
+		name = "business_essentials"
+		
+		policy_flags = {
+			business_essentials
+		}
+		
+		modifier = {
+			tile_resource_unity_mult = 0.05
+			tile_resource_food_mult = 0.05
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 0
+				has_ethic = "ethic_fanatic_capitalism"
+			}
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_socialism"
+					has_ethic = "ethic_fanatic_socialism"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "business_regulated"
+		
+		policy_flags = {
+			business_regulated
+		}
+		
+		modifier = {
+			tile_resource_energy_mult = 0.05
+			tile_resource_minerals_mult = 0.05
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 0
+				has_ethic = "ethic_fanatic_socialism"
+			}
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_capitalism"
+					has_ethic = "ethic_fanatic_capitalism"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "business_free"
+		
+		policy_flags = {
+			business_free
+		}
+		
+		valid = {
+			NOT = { has_ethic = "ethic_fanatic_socialism" }
+		}
+		
+		modifier = {
+			tile_resource_energy_mult = 0.1
+			tile_resource_minerals_mult = 0.05
+			pop_government_ethic_attraction = -0.1
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 15
+				OR = {
+					has_ethic = "ethic_capitalism"
+					has_ethic = "ethic_fanatic_capitalism"
+				}
+			}
+			modifier = {
+				factor = 0
+				has_ethic = "ethic_socialism"
+			}
+		}
+	}
+}
+####################################
+# [2.3] Income Variance
+####################################
+income = {
+
+	potential = {
+		has_technology = tech_adv_social_laws
+	}
+	
+	option = {
+		name = "income_deregulated"
+		
+		policy_flags = {
+			income_deregulated
+		}
+		
+		valid = {
+			NOR = {
+				has_ethic = "ethic_socialism"
+				has_ethic = "ethic_fanatic_socialism"
+				has_ethic = "ethic_fanatic_pluralist"
+			}
+		}
+		
+		modifier = {
+			planet_unrest_add = 25
+			tile_resource_unity_mult = -0.05
+			tile_resource_energy_mult = 0.1
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 15
+				OR = {
+					has_ethic = "ethic_capitalism"
+					has_ethic = "ethic_fanatic_capitalism"
+				}
+			}
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_elitist"
+					has_ethic = "ethic_fanatic_elitist"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "income_100"
+
+		policy_flags = {
+			income_100
+		}
+					
+		valid = {
+			NOT = { has_ethic = "ethic_fanatic_socialism" }
+		}
+			
+		modifier = {
+			planet_unrest_add = 10
+			tile_resource_unity_mult = -0.02
+			tile_resource_energy_mult = 0.05
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_capitalism"
+					has_ethic = "ethic_fanatic_capitalism"
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "income_25"
+
+		policy_flags = {
+			income_25
+		}
+					
+		valid = {
+		}
+			
+		modifier = {
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 5
+			}
+		}
+	}
+	
+	option = {
+		name = "income_5"
+
+		policy_flags = {
+			income_5
+		}
+		
+		valid = {
+			NOT = { has_ethic = "ethic_fanatic_capitalism" }
+		}
+		
+		modifier = {
+			planet_unrest_add = -10
+			tile_resource_unity_mult = 0.02
+			tile_resource_energy_mult = -0.05
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_socialism"
+					has_ethic = "ethic_fanatic_socialism"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "income_identical"
+
+		policy_flags = {
+			income_identical
+		}
+		
+		valid = {
+			NOR = {
+				has_ethic = "ethic_capitalism"
+				has_ethic = "ethic_fanatic_capitalism"
+				has_ethic = "ethic_fanatic_elitist"
+			}
+		}
+		
+		modifier = {
+			planet_unrest_add = -20
+			tile_resource_unity_mult = 0.05
+			tile_resource_energy_mult = -0.1
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 15
+				OR = {
+					has_ethic = "ethic_socialism"
+					has_ethic = "ethic_fanatic_socialism"
+				}
+			}
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_pluralist"
+					has_ethic = "ethic_fanatic_pluralist"
+				}
+			}
+		}
+	}
+}
+####################################
+# [2.4] Taxation Method
+####################################
+tax = {
+
+	potential = {
+		has_technology = tech_imp_social_laws
+	}
+	
+	option = {
+		name = "tax_trickle"
+		
+		policy_flags = {
+			tax_trickle
+		}
+		
+		valid = {
+			NOR = {
+				has_ethic = "ethic_pluralist"
+				has_ethic = "ethic_fanatic_pluralist"
+				has_ethic = "ethic_fanatic_socialism"
+			}
+		}
+		
+		modifier = {
+			country_resource_influence_add = 2
+			pop_happiness = -0.1
+			planet_unrest_add = 50
+		}
+
+		AI_weight = {
+			weight = 0
+		}
+	}
+	
+	option = {
+		name = "tax_flat"
+		
+		policy_flags = {
+			tax_flat
+		}
+				
+		valid = {
+			NOT = { has_ethic = "ethic_fanatic_pluralist" }
+		}
+		
+		modifier = {
+			country_resource_influence_add = 1
+			tile_resource_energy_mult = 0.05
+			pop_happiness = -0.05
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 15
+				OR = {
+					has_ethic = "ethic_fanatic_elitist"
+					has_ethic = "ethic_elitist"
+					has_ethic = "ethic_fanatic_capitalism"
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_socialism"
+					has_ethic = "ethic_fanatic_socialism"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "tax_brackets"
+		
+		policy_flags = {
+			tax_brackets
+		}
+				
+		valid = {
+		}
+		
+		modifier = {
+			tile_resource_energy_mult = 0.05
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_fanatic_elitist"
+					has_ethic = "ethic_elitist"
+				}
+			}
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_socialism"
+					has_ethic = "ethic_fanatic_socialism"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "tax_rich"
+		
+		policy_flags = {
+			tax_rich
+		}
+		
+		modifier = {
+			tile_resource_energy_mult = 0.1
+			country_resource_influence_add = -0.5
+		}
+		
+		valid = {
+			NOT = { has_ethic = "ethic_fanatic_elitist" }
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 15
+				OR = {
+					has_ethic = "ethic_fanatic_pluralist"
+					has_ethic = "ethic_pluralist"
+					has_ethic = "ethic_fanatic_socialism"
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_elitist"
+					has_ethic = "ethic_fanatic_elitist"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "tax_redistribution"
+		
+		policy_flags = {
+			tax_redistribution
+		}
+		
+		valid = {
+			NOR = {
+				has_ethic = "ethic_elitist"
+				has_ethic = "ethic_fanatic_elitist"
+				has_ethic = ethic_fanatic_capitalism
+			}
+		}
+			
+		modifier = {
+			pop_happiness = 0.1
+			planet_unrest_add = -25
+			country_resource_influence_add = -1
+		}
+				
+		valid = {
+			NOT = { has_ethic = "ethic_fanatic_pacifist" }
+			NOT = { has_ethic = "ethic_pacifist" }
+			NOT = { has_ethic = "ethic_fanatic_egalitarian" }
+		}
+
+		AI_weight = {
+			weight = 0
+		}
+	}
+}
+####################################
+# [2.5] Cost of Living
+####################################
+livingcosts = {
+
+	potential = {
+		has_technology = tech_imp_social_laws
+	}
+	
+	option = {
+		name = "livingcosts_consumerism"
+		
+		policy_flags = {
+			livingcosts_consumerism
+		}
+		
+		valid = {
+			NOR = {
+				has_ethic = "ethic_fanatic_capitalism"
+				has_ethic = "ethic_capitalism"
+			}
+		}
+		
+		modifier = {
+			pop_happiness = 0.1
+			pop_growth_speed = 0.2
+			pop_consumer_goods_mult = 0.25
+			tile_resource_energy_mult = -0.05
+		}
+
+		AI_weight = {
+			weight = 0
+		}		
+	}
+	
+	option = {
+		name = "livingcosts_basics"
+		
+		policy_flags = {
+			livingcosts_basics
+		}
+		
+		valid = {
+			NOT = { has_ethic = "ethic_fanatic_capitalism" }
+		}
+		
+		modifier = {
+			pop_happiness = 0.05
+			pop_growth_speed = 0.1
+			pop_consumer_goods_mult = 0.1
+			tile_resource_energy_mult = -0.02
+		}
+		
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "livingcosts_balanced"
+		
+		policy_flags = {
+			livingcosts_balanced
+		}
+		
+		valid = {
+		}
+		
+		modifier = {
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 15
+			}
+		}
+	}
+	
+	option = {
+		name = "livingcosts_high"
+		
+		policy_flags = {
+			livingcosts_high
+		}
+		
+		valid = {
+			NOT = { has_ethic = "ethic_fanatic_socialism" }
+		}
+		
+		modifier = {
+			pop_happiness = -0.05
+			pop_growth_speed = -0.1
+			pop_consumer_goods_mult = -0.1
+			tile_resource_energy_mult = 0.02
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 10
+				OR = {
+					has_ethic = "ethic_capitalism"
+					has_ethic = "ethic_fanatic_capitalism"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "livingcosts_extreme"
+		
+		policy_flags = {
+			livingcosts_extreme
+		}
+		
+		valid = {
+			NOR = {
+				has_ethic = "ethic_socialism"
+				has_ethic = "ethic_fanatic_socialism"
+			}
+		}
+		
+		modifier = {
+			pop_happiness = -0.1
+			pop_growth_speed = -0.2
+			pop_consumer_goods_mult = -0.25
+			tile_resource_energy_mult = 0.05
+		}
+
+		AI_weight = {
+			weight = 0
+		}
+	}
+}
+####################################
+# [2.6] Work Hours
+####################################
+schedule = {
+
+	potential = {
+		has_technology = tech_adv_social_laws
+	}
+	
+	option = {
+		name = "schedule_assistance"
+
+		policy_flags = {
+			six_hours
+		}
+		
+		valid = {
+			NOT = { has_ethic = "ethic_fanatic_capitalism" }
+		}
+		
+		modifier = {
+			pop_robot_production_output = 0.5
+			tile_resource_minerals_mult = -0.2
+			tile_resource_food_mult = -0.2
+			tile_resource_energy_mult = -0.2
+		}
+	}
+	
+	option = {
+		name = "schedule_four"
+
+		policy_flags = {
+			six_hours
+		}
+		
+		modifier = {
+			pop_happiness = 0.15
+			tile_resource_minerals_mult = -0.05
+			tile_resource_food_mult = -0.05
+			tile_resource_energy_mult = -0.05
+		}
+	}
+	
+	option = {
+		name = "schedule_six"
+
+		policy_flags = {
+			six_hours
+		}
+		
+		modifier = {
+			pop_happiness = 0.05
+			tile_resource_minerals_mult = -0.02
+			tile_resource_food_mult = -0.02
+			tile_resource_energy_mult = -0.02
+		}
+	}
+	
+	option = {
+		name = "schedule_eight"
+
+		policy_flags = {
+			schedule_eight
+		}
+
+		modifier = {
+		}
+	}
+	
+	option = {
+		name = "schedule_ten"
+
+		policy_flags = {
+			schedule_ten
+		}
+
+		modifier = {
+			pop_happiness = -0.05
+			tile_resource_minerals_mult = +0.02
+			tile_resource_food_mult = +0.02
+			tile_resource_energy_mult = +0.02
+		}
+	}
+	
+	option = {
+		name = "schedule_twelve"
+
+		policy_flags = {
+			schedule_twelve
+		}
+
+		modifier = {
+			pop_happiness = -0.15
+			tile_resource_minerals_mult = +0.05
+			tile_resource_food_mult = +0.05
+			tile_resource_energy_mult = +0.05
+		}
+	}
+}
+####################################
+# [2.7] Union Regulation
+####################################
+unions = {
+
+	potential = {
+		has_technology = tech_imp_social_laws
+	}
+	
+	option = {
+		name = "unions_deregulated"
+		
+		policy_flags = {
+			unions_deregulated
+		}
+				
+		valid = {
+			NOR = {
+				has_ethic = "ethic_authoritarian"
+				has_ethic = "ethic_fanatic_authoritarian"
+			}			
+		}
+
+		modifier = {
+			faction_influence_mult = 0.5
+			faction_influence_add = 1
+			pop_government_ethic_attraction = -0.2
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_fanatic_egalitarian"
+					has_ethic = "ethic_egalitarian"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "unions_lightly"
+		
+		policy_flags = {
+			unions_lightly
+		}
+				
+		valid = {
+			NOT = { has_ethic = "ethic_fanatic_authoritarian" }			
+		}
+		
+		modifier = {
+			faction_influence_mult = 0.25
+			faction_influence_add = 0.5
+			pop_government_ethic_attraction = -0.1
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_fanatic_egalitarian"
+					has_ethic = "ethic_egalitarian"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "unions_heavily"
+		
+		policy_flags = {
+			unions_heavily
+		}
+				
+		valid = {
+			NOT = { has_ethic = "ethic_fanatic_egalitarian" }			
+		}
+		
+		modifier = {
+			faction_influence_mult = 0.1
+			pop_government_ethic_attraction = +0.1
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_fanatic_authoritarian"
+					has_ethic = "ethic_authoritarian"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "unions_prohibited"
+		
+		policy_flags = {
+			unions_prohibited
+		}
+		valid = {
+			NOR = {
+				has_ethic = "ethic_egalitarian"
+				has_ethic = "ethic_fanatic_egalitarian"
+			}			
+		}
+		modifier = {
+			faction_influence_mult = -0.1
+			faction_influence_add = -1
+			pop_government_ethic_attraction = 0.2
+		}
+				
+		valid = {
+			NOT = { has_ethic = "ethic_fanatic_egalitarian" }
+		}
+
+		AI_weight = {
+			weight = 0
+		}
+	}
+}
+##########################################################################################################################################################################################################################
+# [3] Resource Allocation
+##########################################################################################################################################################################################################################
+
+####################################
+# [3.0] Resource Allocation Tag
+####################################
+resource_tag = {
+	potential = {
+		always = yes 
+	}
+}
+####################################
+# [3.1] Food Distribution
+####################################
+food = {
+
+	potential = {
+		has_technology = tech_social_laws
+	}
+	
+	option = {
+		name = "food_rationing"
+			
+		policy_flags = {
+			"food_rationing"
+		}
+		
+		modifier = {
+			pop_food_req_mult = -0.75
+			pop_growth_speed = -0.25
+			pop_happiness = -0.05
+		}
+	}	
+	
+	option = {
+		name = "food_controls"
+		
+		policy_flags = {
+			"food_controls"
+		}
+		
+		modifier = {
+			pop_food_req_mult = -0.25
+			pop_growth_speed = -0.1
+		}
+	}
+	
+	option = {
+		name = "food_balanced"
+		
+		policy_flags = {
+			"food_balanced"
+		}
+		
+		modifier = {
+		}
+		
+		ai_weight = {
+			weight = 100
+		}
+	}
+	
+	option = {
+		name = "food_extra"
+
+		policy_flags = {
+			"food_extra"
+		}
+		
+		modifier = {
+			pop_food_req_mult = 1
+			pop_growth_speed = 0.1
+		}
+	}
+	
+	option = {
+		name = "food_lavish"
+		
+		policy_flags = {
+			"food_lavish"
+		}
+		
+		modifier = {
+			pop_food_req_mult = 2
+			pop_growth_speed = 0.25
+			pop_happiness = 0.05	
+		}
+	}
+}
+####################################
+# [3.2] Production Focus
+####################################
+production = {
+
+	potential = {
+		has_technology = tech_social_laws
+	}
+	
+	option = {
+		name = "production_balanced"
+
+		policy_flags = {
+			balanced_focus
+		}
+
+		modifier = {
+		}
+	}
+	
+	option = {
+		name = "production_energy"
+
+		policy_flags = {
+			energy_focus
+		}
+
+		modifier = {
+			tile_resource_energy_mult = 0.1
+			tile_resource_minerals_mult = -0.1
+		}
+	}
+	
+	option = {
+		name = "production_minerals"
+
+		policy_flags = {
+			minerals_focus
+		}
+
+		modifier = {
+			tile_resource_energy_mult = -0.1
+			tile_resource_minerals_mult = 0.1
+		}
+	}
+}
+####################################
+# [3.3] Taxation Level
+####################################
+taxes = {
+
+	potential = {
+		has_technology = tech_social_laws
+	}
+	
+	option = {
+		name = "taxes_minimal"
+		
+		policy_flags = {
+			taxes_minimal
+		}
+		
+		valid = {
+			NOR = { 
+				has_ethic = "ethic_fanatic_authoritarian" 
+				has_ethic = "ethic_authoritarian"
+			}
+		}
+		
+		modifier = {
+			tile_resource_energy_mult = -0.2
+			pop_happiness = 0.1
+			planet_unrest_add = -20
+		}
+		
+		ai_weight = {
+			weight = 0
+		}
+	}
+	
+	option = {
+		name = "taxes_low"
+		
+		policy_flags = {
+			taxes_low
+		}
+
+		valid = {
+			NOT = { has_ethic = "ethic_fanatic_authoritarian" }
+		}
+	
+		modifier = {
+			tile_resource_energy_mult = -0.1
+			pop_happiness = 0.05
+			planet_unrest_add = -10
+		}
+		
+		ai_weight = {
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_fanatic_egalitarian"
+					has_ethic = "ethic_egalitarian"
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "taxes_balanced"
+	
+		policy_flags = {
+			taxes_balanced
+		}
+	
+		modifier = {
+		}
+		
+		ai_weight = {
+			modifier = {
+				factor = 10
+			}
+		}
+	}	
+	
+	option = {
+		name = "taxes_high"
+
+		policy_flags = {
+			taxes_high
+		}
+		
+		valid = {
+			NOT = { has_ethic = "ethic_fanatic_egalitarian" }
+		}
+	
+		modifier = {
+			tile_resource_energy_mult = 0.1
+			pop_happiness = -0.05
+			planet_unrest_add = 10
+		}
+		
+		ai_weight = {
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_fanatic_authoritarian"
+					has_ethic = "ethic_authoritarian"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "taxes_extreme"
+		
+		policy_flags = {
+			taxes_extreme
+		}
+		valid = {
+			NOR = { 
+				has_ethic = "ethic_fanatic_egalitarian" 
+				has_ethic = "ethic_egalitarian"
+			}
+		}
+		modifier = {
+			tile_resource_energy_mult = 0.2
+			pop_happiness = -0.1
+			planet_unrest_add = 20
+		}
+
+		ai_weight = {
+			weight = 0
+		}
+	}
+}
+####################################
+# [3.4] Research Budget
+####################################
+research = {
+
+	potential = {
+		has_technology = tech_mind_or_materials
+	}
+
+	option = {
+		name = "research_extreme_research"
+		
+		policy_flags = {
+			research_extreme_research
+		}
+		
+		valid = {
+			has_technology = tech_adv_social_laws
+			OR = {
+				has_policy_flag = research_research
+				has_policy_flag = research_extreme_research
+			}
+		}
+		
+		modifier = {
+			num_tech_alternatives_add = 1
+			all_technology_research_speed = 0.3
+			tile_resource_minerals_mult = -0.15
+			tile_resource_energy_mult = -0.15
+		}
+	}
+
+	option = {
+		name = "research_research"
+		
+		policy_flags = {
+			research_research
+		}
+		
+		valid = {
+			has_technology = tech_imp_social_laws
+			OR = {
+				has_policy_flag = research_extreme_research
+				has_policy_flag = research_research
+				has_policy_flag = research_slight_research
+			}
+		}
+		
+		modifier = {
+			all_technology_research_speed = 0.2
+			tile_resource_minerals_mult = -0.1
+			tile_resource_energy_mult = -0.1
+		}
+	}
+	
+	option = {
+		name = "research_slight_research"
+		
+		policy_flags = {
+			research_slight_research
+		}
+		
+		valid = {
+			OR = {
+				has_policy_flag = research_research
+				has_policy_flag = research_slight_research
+				has_policy_flag = research_balanced
+			}
+		}
+		
+		modifier = {
+			all_technology_research_speed = 0.1
+			tile_resource_minerals_mult = -0.05
+			tile_resource_energy_mult = -0.05
+		}
+	}
+	
+	option = {
+		name = "research_balanced"
+		
+		policy_flags = {
+			research_balanced
+		}
+		
+		valid = {
+			OR = {
+				NOT = {
+					# For the first time around
+					has_policy_flag = research_extreme_research
+					has_policy_flag = research_production
+					has_policy_flag = research_slight_research
+					has_policy_flag = research_balanced
+					has_policy_flag = research_slight_production
+					has_policy_flag = research_production
+					has_policy_flag = research_extreme_production
+				}
+				OR = {
+					has_policy_flag = research_slight_research
+					has_policy_flag = research_balanced
+					has_policy_flag = research_slight_production
+				}
+			}
+		}
+		
+		modifier = {
+		}
+	}
+	
+	option = {
+		name = "research_slight_production"
+
+		policy_flags = {
+			research_slight_production
+		}
+		
+		valid = {
+			OR = {
+				has_policy_flag = research_production
+				has_policy_flag = research_slight_production
+				has_policy_flag = research_balanced
+			}
+		}
+		
+		modifier = {
+			all_technology_research_speed = -0.1
+			tile_resource_minerals_mult = +0.05
+			tile_resource_energy_mult = +0.05
+		}
+	}
+	
+	option = {
+		name = "research_production"
+
+		policy_flags = {
+			research_production
+		}
+		
+		valid = {
+			has_technology = tech_imp_social_laws
+			OR = {
+				has_policy_flag = research_production
+				has_policy_flag = research_slight_production
+				has_policy_flag = research_extreme_production
+			}
+		}
+		
+		modifier = {
+			all_technology_research_speed = -0.2
+			tile_resource_minerals_mult = +0.1
+			tile_resource_energy_mult = +0.1
+		}
+	}
+	
+	option = {
+		name = "research_extreme_production"
+
+		policy_flags = {
+			research_extreme_production
+		}
+		
+		valid = {
+			has_technology = tech_adv_social_laws
+			OR = {
+				has_policy_flag = research_production
+				has_policy_flag = research_extreme_production
+			}
+		}
+		
+		modifier = {
+			megastructure_build_speed_mult = 0.25
+			all_technology_research_speed = -0.3
+			tile_resource_minerals_mult = +0.15
+			tile_resource_energy_mult = +0.15
+		}
+	}
+}
+####################################
+# [3.5] Artistic Initiatives
+####################################
+art = {
+
+	potential = {
+		has_technology = tech_adv_social_laws
+	}
+
+	option = {
+		name = "art_none"
+		
+		policy_flags = {
+			art_none
+		}
+		
+		valid = {
+		}
+		
+		modifier = {
+			tile_resource_energy_mult = 0.05
+		}
+		
+		AI_weight = {
+		}
+	}
+	
+	option = {
+		name = "art_grants"
+
+		policy_flags = {
+			art_grants
+		}
+				
+		valid = {
+		}
+		
+		modifier = {
+			tile_resource_unity_mult = 0.05
+		}
+
+		AI_weight = {
+		}
+	}
+
+	option = {
+		name = "art_propaganda"
+
+		policy_flags = {
+			art_propaganda
+		}
+				
+		valid = {
+			OR = {
+				has_ethic = "ethic_authoritarian"
+				has_ethic = "ethic_fanatic_authoritarian"
+				has_ethic = ethic_gestalt_consciousness
+			}
+			has_technology = tech_propaganda_laws
+		}
+		
+		modifier = {
+			pop_government_ethic_attraction = 0.1
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_fanatic_authoritarian"
+					has_ethic = "ethic_authoritarian"
+				}
+			}
+		}
+	}
+}
+##########################################################################################################################################################################################################################
+# [4] Martial Stance
+##########################################################################################################################################################################################################################
+
+####################################
+# [4.0] Martial Stance Tag
+####################################
+martial_tag = {
+	potential = {
+		always = yes 
+	}
+}
+####################################
+# [4.1] Baseline Military Readiness
+####################################
+readiness = {
+
+	potential = {
+		has_technology = tech_military_science
+	}
+	
+	allow = {
+		is_at_war = no 
+	}
+	
+	option = {
+		name = "readiness_low"
+	
+		policy_flags = {
+			readiness_low
+		}
+		
+		valid = {
+			NOT = { has_ethic = "ethic_fanatic_militarist" }
+		}
+
+		modifier = {
+			ship_upkeep_mult = -0.1
+			ship_sensor_range_add = -1
+			ship_evasion_mult = -0.05
+		}
+
+		ai_weight = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_militarist"
+					has_ethic = "ethic_fanatic_militarist"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "readiness_normal"
+	
+		policy_flags = {
+			readiness_normal
+		}
+	
+		modifier = {
+		}
+		
+		ai_weight = {
+			modifier = {
+				factor = 2
+			}
+		}
+	}
+	
+	option = {
+		name = "readiness_total"
+
+		policy_flags = {
+			readiness_total
+		}
+		
+		valid = {
+			NOT = { has_ethic = "ethic_fanatic_pacifist" }
+		}
+		
+		modifier = {
+			ship_upkeep_mult = 0.1
+			ship_sensor_range_add = 1
+			ship_evasion_mult = 0.05
+		}
+
+		ai_weight = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_pacifist"
+					has_ethic = "ethic_fanatic_pacifist"
+				}
+			}
+		}
+	}
+}
+####################################
+# [4.2] Fleet Focus
+####################################
+fleet = {
+
+	potential = {
+		has_technology = tech_fleet_focus
+	}
+
+	option = {
+		name = "fleet_dawn"
+		
+		policy_flags = {
+			fleet_dawn
+		}
+		
+		valid = {
+			OR = {
+				has_policy_flag = fleet_trans
+				has_policy_flag = fleet_dawn
+			}
+		}
+		
+		modifier = {
+			ship_hull_regen_add_perc = 0.5
+			ship_armor_regen_add_perc = 0.5
+			country_naval_cap_mult = -0.4
+			ship_upkeep_mult = 0.4
+			starbase_shipyard_build_cost_mult = 0.3
+			starbase_shipyard_build_speed_mult = -0.3
+			ship_weapon_damage = 0.15
+			ship_fire_rate_mult = 0.15
+			ship_hull_mult = 0.3
+			ship_shield_mult = 0.15
+		}
+
+		ai_weight = {
+			base = 1
+			modifier = {
+				factor = 1000
+				is_country_type = fallen_empire
+			}
+		}
+	}
+
+	option = {
+		name = "fleet_trans"
+
+		policy_flags = {
+			fleet_trans
+		}
+		
+		valid = {
+			OR = {
+				has_policy_flag = fleet_dawn
+				has_policy_flag = fleet_trans
+				has_policy_flag = fleet_superior
+			}
+		}
+
+		modifier = {
+			country_naval_cap_mult = -0.25
+			ship_upkeep_mult = 0.25
+			starbase_shipyard_build_cost_mult = 0.2
+			starbase_shipyard_build_speed_mult = -0.2
+			ship_weapon_damage = 0.1
+			ship_fire_rate_mult = 0.1
+			ship_hull_mult = 0.2
+			ship_shield_mult = 0.1
+		}
+
+		ai_weight = {
+			base = 1
+		}
+	}
+	
+	option = {
+		name = "fleet_superior"
+
+		policy_flags = {
+			fleet_superior
+		}
+		
+		valid = {
+			OR = {
+				has_policy_flag = fleet_trans
+				has_policy_flag = fleet_superior
+				has_policy_flag = fleet_balanced
+			}
+		}
+
+		modifier = {
+			country_naval_cap_mult = -0.1
+			ship_upkeep_mult = 0.1
+			starbase_shipyard_build_cost_mult = 0.1
+			starbase_shipyard_build_speed_mult = -0.1
+			ship_weapon_damage = 0.05
+			ship_fire_rate_mult = 0.05
+			ship_hull_mult = 0.1
+			ship_shield_mult = 0.05
+		}
+
+		ai_weight = {
+			base = 1
+		}
+	}
+	
+	option = {
+		name = "fleet_balanced"
+		
+		policy_flags = {
+			fleet_balanced
+		}
+		
+		valid = {
+			OR = {
+				NOT = {
+					has_policy_flag = fleet_dawn
+					has_policy_flag = fleet_trans
+					has_policy_flag = fleet_superior
+					has_policy_flag = fleet_balanced
+					has_policy_flag = fleet_massive
+					has_policy_flag = fleet_colossal
+					has_policy_flag = fleet_legion
+				}
+				OR = {
+					has_policy_flag = fleet_balanced
+					has_policy_flag = fleet_superior
+					has_policy_flag = fleet_massive
+				}
+			}
+		}
+
+		ai_weight = {
+			base = 1
+		}
+	}
+	
+	option = {
+		name = "fleet_massive"
+
+		policy_flags = {
+			fleet_massive
+		}
+		
+		valid = {
+			OR = {
+				has_policy_flag = fleet_colossal
+				has_policy_flag = fleet_massive
+				has_policy_flag = fleet_balanced
+			}
+		}
+
+		modifier = {
+			country_naval_cap_mult = 0.25
+			ship_upkeep_mult = -0.25
+			starbase_shipyard_build_cost_mult = -0.2
+			starbase_shipyard_build_speed_mult = 0.2
+			ship_weapon_damage = -0.1
+			ship_fire_rate_mult = -0.1
+			ship_hull_mult = -0.2
+			ship_shield_mult = -0.1
+		}
+
+		ai_weight = {
+			base = 1
+		}
+	}
+	
+	option = {
+		name = "fleet_colossal"
+
+		policy_flags = {
+			fleet_colossal
+		}
+		
+		valid = {
+			OR = {
+				has_policy_flag = fleet_colossal
+				has_policy_flag = fleet_massive
+				has_policy_flag = fleet_legion
+			}
+		}
+
+		modifier = {
+			navy_size_mult = 0.25
+			ship_upkeep_mult = -0.25
+			spaceport_ship_build_cost_mult = -0.2
+			spaceport_ship_build_speed_mult = 0.2
+			ship_fire_rate_mult = -0.25
+			ship_hitpoints_mult = -0.25
+		}
+
+		ai_weight = {
+			base = 1
+		}
+	}
+	option = {
+		name = "fleet_legion"
+		
+		policy_flags = {
+			fleet_legion
+		}
+		
+		valid = {
+			OR = {
+				has_policy_flag = fleet_colossal
+				has_policy_flag = fleet_legion
+			}
+		}
+
+		modifier = {
+			country_naval_cap_add = 25
+			country_naval_cap_mult = 0.5
+			ship_upkeep_mult = -0.5
+			starbase_shipyard_build_cost_mult = -0.3
+			starbase_shipyard_build_speed_mult = 0.3
+			ship_weapon_damage = -0.15
+			ship_fire_rate_mult = -0.15
+			ship_hull_mult = -0.3
+			ship_shield_mult = -0.15
+		}
+
+		ai_weight = {
+			base = 1
+		}
+	}
+}
+####################################
+# [4.3] Law Enforcement
+####################################
+law = {
+
+	potential = {
+		has_technology = tech_military_science
+	}
+
+	option = {
+		name = "law_personal"
+		
+		policy_flags = {
+			law_personal
+		}
+		
+		valid = {
+			NOR = {
+				has_ethic = "ethic_authoritarian"
+				has_ethic = "ethic_fanatic_authoritarian"
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
+		
+		modifier = {
+			planet_fortification_strength = 0.25
+			army_damage_mult = 0.25
+			planet_unrest_add = 20
+			pop_government_ethic_attraction = -0.05
+			pop_ethic_pacifist_attraction_mult = -0.25
+		}
+		
+		AI_weight = {
+			weight = 0
+		}
+	}
+	
+	option = {
+		name = "law_militia"
+		
+		policy_flags = {
+			law_militia
+		}
+		
+		valid = {
+			NOT = { has_ethic = "ethic_fanatic_pacifist" }
+		}
+		
+		modifier = {
+			planet_fortification_strength = 0.1
+			army_damage_mult = 0.1
+			pop_ethic_militarist_attraction_mult = 0.1
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_pacifist"
+					has_ethic = "ethic_fanatic_pacifist"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "law_police"
+		
+		policy_flags = {
+			law_police
+		}
+		
+		modifier = {
+			pop_happiness = 0.05
+			planet_unrest_add = -10
+			pop_growth_speed = 0.1
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_militarist"
+					has_ethic = "ethic_fanatic_militarist"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "law_justicars"
+		
+		policy_flags = {
+			law_justicars
+		}
+		
+		valid = {
+			NOT = { has_ethic = "ethic_fanatic_egalitarian" }
+		}
+
+		modifier = {
+			pop_happiness = 0.05
+			planet_unrest_add = -5
+			pop_government_ethic_attraction = 0.1
+			tile_resource_unity_mult = 0.05
+			tile_resource_energy_mult = -0.05
+		}
+		
+		AI_weight = {
+			weight = 0
+		}
+	}
+}
+####################################
+# [4.4] Personal Weapons
+####################################
+weapons = {
+
+	potential = {
+		has_technology = tech_imp_social_laws
+	}
+
+	option = {
+		name = "weapons_banned"
+	
+		policy_flags = {
+			weapons_banned
+		}
+				
+		valid = {
+			NOT = { has_ethic = "ethic_fanatic_egalitarian" }
+		}
+
+		modifier = {
+			army_defense_damage_mult = -0.1
+			army_defense_morale_mult = -0.1
+			country_unrest_unhappy_pop_effect_mult = -0.15
+		}
+
+		ai_weight = {
+			modifier = {
+				factor = 10
+				OR = {
+					has_ethic = "ethic_authoritarian"
+					has_ethic = "ethic_fanatic_authoritarian"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "weapons_limited"
+	
+		policy_flags = {
+			weapons_limited
+		}
+	
+		modifier = {
+			pop_happiness = 0.05
+		}
+		
+		ai_weight = {
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_authoritarian"
+					has_ethic = "ethic_fanatic_authoritarian"
+					has_ethic = "ethic_egalitarian"
+					has_ethic = "ethic_fanatic_egalitarian"
+				}
+			}
+		}
+	}		
+
+	option = {
+		name = "weapons_allowed"
+	
+		policy_flags = {
+			weapons_allowed
+		}
+		
+		valid = {
+			NOT = { has_ethic = "ethic_fanatic_authoritarian" }
+		}
+		
+		modifier = {
+			army_defense_damage_mult = 0.1
+			army_defense_morale_mult = 0.1
+			country_unrest_unhappy_pop_effect_mult = 0.15
+		}
+
+		ai_weight = {
+			modifier = {
+				factor = 10
+				OR = {
+					has_ethic = "ethic_egalitarian"
+					has_ethic = "ethic_fanatic_egalitarian"
+				}
+			}
+		}
+	}
+}
+##########################################################################################################################################################################################################################
+# [5] Social Approach
+##########################################################################################################################################################################################################################
+
+####################################
+# [5.0] Social Approach Tag
+####################################
+social_tag = {
+	potential = {
+		always = yes 
+	}
+}
+####################################
+# [5.1] Public Opinion
+####################################
+opinion = {
+
+	potential = {
+		has_technology = tech_propaganda_laws
+	}
+
+	option = {
+		name = "opinion_engineering"
+	
+		policy_flags = {
+			opinion_engineering
+		}
+				
+		valid = {
+			OR = {
+				has_ethic = "ethic_authoritarian"
+				has_ethic = "ethic_fanatic_authoritarian"
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+
+		modifier = {
+			pop_government_ethic_attraction = 0.1
+		}
+
+		ai_weight = {
+			modifier = {
+				factor = 10
+				OR = {
+					has_ethic = "ethic_authoritarian"
+					has_ethic = "ethic_fanatic_authoritarian"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "opinion_balanced"
+	
+		policy_flags = {
+			opinion_balanced
+		}
+	
+		modifier = {
+			pop_happiness = 0.05
+		}
+		
+		ai_weight = {
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_authoritarian"
+					has_ethic = "ethic_fanatic_authoritarian"
+					has_ethic = "ethic_egalitarian"
+					has_ethic = "ethic_fanatic_egalitarian"
+				}
+			}
+		}
+	}		
+
+	option = {
+		name = "opinion_mob"
+	
+		policy_flags = {
+			opinion_mob
+		}
+		
+		valid = {
+			OR = {
+				has_ethic = "ethic_egalitarian"
+				has_ethic = "ethic_fanatic_egalitarian"
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+		
+		modifier = {
+			pop_ethics_shift_speed_mult = 0.1
+		}
+
+		ai_weight = {
+			modifier = {
+				factor = 10
+				OR = {
+					has_ethic = "ethic_egalitarian"
+					has_ethic = "ethic_fanatic_egalitarian"
+				}
+			}
+		}
+	}
+}
+####################################
+# [5.2] Education Ideals
+####################################
+ideals = {
+
+	potential = {
+		has_technology = tech_adv_education
+	}
+	
+	option = {
+		name = "ideals_neutral"
+
+		policy_flags = {
+			ideals_neutral
+		}
+
+		modifier = {
+		}
+		
+		ai_weight = {
+			weight = 0
+		}
+	}
+	
+	option = {
+		name = "ideals_state"
+
+		policy_flags = {
+			ideals_state
+		}
+		
+		valid = {
+			OR = { 
+				has_ethic = "ethic_authoritarian"
+				has_ethic = "ethic_fanatic_authoritarian"
+				has_ethic = ethic_gestalt_consciousness
+			}
+			has_technology = tech_propaganda_laws
+		}
+
+		modifier = {
+			pop_government_ethic_attraction = 0.2
+		}
+
+		ai_weight = {
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_authoritarian"
+					has_ethic = "ethic_fanatic_authoritarian"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "ideals_scientific"
+
+		policy_flags = {
+			ideals_scientific
+		}
+		
+		modifier = {
+			all_technology_research_speed = 0.1
+		}
+				
+		valid = {
+			NOR = {
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
+
+		ai_weight = {
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_materialist"
+					has_ethic = "ethic_fanatic_materialist"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "ideals_philosophy"
+
+		policy_flags = {
+			ideals_philosophy
+		}
+		
+		modifier = {
+			country_leader_pool_size = 1
+			pop_ethics_shift_speed_mult = 0.25
+		}
+				
+		valid = {
+		}
+
+		ai_weight = {
+			modifier = {
+				factor = 2
+			}
+		}
+	}
+	
+	option = { 
+		name = "ideals_supremacy"
+		
+		policy_flags = {
+			ideals_supremacy
+		}
+				
+		valid = {
+			OR = {
+				has_ethic = ethic_gestalt_consciousness
+				AND = {
+					OR = {
+						has_ethic = "ethic_fanatic_xenophobe" 
+						has_ethic = "ethic_xenophobe"
+					}
+					OR = { 
+						has_ethic = "ethic_fanatic_authoritarian"
+						has_ethic = "ethic_authoritarian"
+					}			
+					allows_slavery = yes
+					has_technology = tech_propaganda_laws
+				}
+			}
+		}
+		
+		modifier = {
+			country_resource_influence_add = 1
+			tile_resource_unity_mult = 0.05
+			pop_other_species_happiness = -0.15
+			country_unrest_unhappy_slave_effect_mult = -0.25
+			pop_ethic_xenophobe_attraction_mult = 0.25
+		}
+
+		ai_weight = {
+			modifier = {
+				factor = 5
+			}
+		}
+	}
+}
+####################################
+# [5.3] Education Distribution
+####################################
+education = {
+
+	potential = {
+		has_technology = tech_education
+	}
+	
+	option = {
+		name = "education_universal"
+		
+		policy_flags = {
+			education_universal
+		}
+		
+		valid = {
+			NOT = {	has_ethic = "ethic_fanatic_elitist"	}
+		}
+		
+		modifier = {
+			all_technology_research_speed = 0.2
+			tile_resource_energy_mult = -0.1
+			planet_army_build_speed_mult = -0.2
+			planet_army_build_cost_mult = 0.2
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_pluralist"
+					has_ethic = "ethic_fanatic_pluralist"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "education_preadult"
+
+		policy_flags = {
+			education_preadult
+		}
+
+		modifier = {
+			all_technology_research_speed = 0.1
+			leader_cost = -0.1
+			tile_resource_energy_mult = -0.05
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 5
+			}
+		}
+	}
+	
+	option = {
+		name = "education_grants"
+		
+		policy_flags = {
+			education_grants
+		}
+
+		modifier = {
+			country_leader_pool_size = 1
+			species_leader_exp_gain = 0.2
+			leader_cost = -0.2
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_elitist"
+					has_ethic = "ethic_fanatic_elitist"
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "education_private"
+		
+		policy_flags = {
+			education_private
+		}
+		
+		valid = {
+			NOT = {	has_ethic = "ethic_fanatic_pluralist" }
+		}
+		
+		modifier = {
+			tile_resource_minerals_mult = 0.1
+			tile_resource_food_mult = 0.1
+			tile_resource_energy_mult = 0.05
+			all_technology_research_speed = -0.1
+			planet_unrest_add = 20
+		}
+		
+		AI_weight = {
+			weight = 0
+		}
+	}
+	
+}
+####################################
+# [5.4] Religious Freedoms
+####################################
+religion = {
+
+	potential = {
+		has_technology = tech_social_laws
+	}
+	
+	option = {
+		name = "religion_banned"
+
+		policy_flags = {
+			religion_banned
+		}
+				
+		valid = {
+			NOR = {
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+			OR = {
+				has_ethic = "ethic_authoritarian"
+				has_ethic = "ethic_fanatic_authoritarian"
+				has_ethic = "ethic_gestalt_consciousness"
+			}
+		}
+
+		modifier = {
+			all_technology_research_speed = 0.1
+			planet_unrest_add = 10
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_fanatic_materialist"
+				}
+			}
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_fanatic_authoritarian"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "religion_secular"
+		
+		policy_flags = {
+			religion_secular
+		}
+
+		valid = {
+			NOT = {	has_ethic = "ethic_fanatic_spiritualist" }
+			has_technology = tech_education
+		}
+		
+		modifier = {
+			all_technology_research_speed = 0.05
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_materialist"
+					has_ethic = "ethic_fanatic_materialist"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "religion_freedom"
+
+		policy_flags = {
+			religion_freedom
+		}
+				
+		valid = {
+		}
+
+		modifier = {
+			faction_influence_mult = 0.1
+			faction_influence_add = 0.5
+		}
+
+		AI_weight = {
+		}
+	}
+	
+	option = {
+		name = "religion_ecumenicism"
+
+		policy_flags = {
+			religion_ecumenicism
+		}
+		
+		valid = {
+			OR = {
+				has_ethic = ethic_gestalt_consciousness
+				OR = {
+					has_ethic = "ethic_fanatic_spiritualist"
+					has_ethic = "ethic_spiritualist"
+				}
+				OR = {
+					has_ethic = "ethic_fanatic_pluralist"
+					has_ethic = "ethic_pluralist"
+				}
+			}
+		}
+		
+		modifier = {
+			tile_resource_unity_mult = 0.05
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_pluralist"
+					has_ethic = "ethic_fanatic_pluralist"
+				}
+			}
+		}
+	}
+		
+	option = {
+		name = "religion_state"
+		
+		policy_flags = {
+			religion_state
+		}
+		
+		valid = {
+			OR = {
+				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_spiritualist"
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+		
+		modifier = {
+			diplomacy_influence_cost = -0.1
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_spiritualist"
+					has_ethic = "ethic_fanatic_spiritualist"
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_egalitarian"
+					has_ethic = "ethic_fanatic_egalitarian"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "religion_one"
+
+		policy_flags = {
+			religion_one
+		}
+		
+		valid = {
+			OR = {
+				has_ethic = ethic_gestalt_consciousness
+				OR = {
+					has_ethic = "ethic_spiritualist"
+					has_ethic = "ethic_fanatic_spiritualist"
+				}
+				OR = {
+					has_ethic = "ethic_authoritarian"
+					has_ethic = "ethic_fanatic_authoritarian"
+				}
+			}
+		}
+		
+		modifier = {
+			pop_government_ethic_attraction = 0.2
+			planet_unrest_add = 10
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_fanatic_spiritualist"
+				}
+			}
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_fanatic_authoritarian"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "religion_cult"
+		
+		policy_flags = {
+			religion_cult
+		}
+
+		valid = {
+			OR = {
+				has_ethic = ethic_gestalt_consciousness
+				AND = {
+					AND = {
+						has_ethic = "ethic_fanatic_spiritualist"
+						has_ethic = "ethic_fanatic_authoritarian"
+					}
+					has_technology = tech_propaganda_laws
+				}
+			}
+		}
+		
+		modifier = {
+			edict_influence_cost = -0.1
+			edict_length_mult = 0.2
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 5
+			}
+		}
+	}
+}
+####################################
+# [5.5] Penitentiary Laws
+####################################
+prison = {
+
+	potential = {
+		has_technology = tech_adv_social_laws
+	}
+	
+	option = {
+		name = "prison_standard"
+		
+		policy_flags = {
+			prison_standard
+		}
+		
+		modifier = {}
+		
+		AI_weight = {
+			weight = 0
+		}
+	}
+	
+	option = {
+		name = "prison_labor"
+		
+		policy_flags = {
+			prison_labor
+		}
+		
+		modifier = {
+			slave_production_output = 0.15
+			country_unrest_unhappy_slave_effect_mult = -0.1
+		}
+		
+		AI_weight = {
+		}
+	}
+	
+	option = {
+		name = "prison_rehabilitation"
+		
+		policy_flags = {
+			prison_rehabilitation
+		}
+		
+		modifier = {
+			tile_resource_unity_mult = 0.05
+		}
+		
+		AI_weight = {
+		}
+	}
+	
+	option = {
+		name = "prison_death"
+		
+		policy_flags = {
+			prison_death
+		}
+		
+		modifier = {
+			pop_government_ethic_attraction = 0.1
+		}
+		
+		AI_weight = {
+		}
+	}
+	
+	option = {
+		name = "prison_conscription"
+		
+		policy_flags = {
+			prison_conscription
+		}
+		
+		valid = {
+			NOT = { has_ethic = "ethic_fanatic_pacifist" }
+			has_technology = tech_military_science
+		}
+		
+		modifier = {
+			planet_army_build_speed_mult = 0.2
+			planet_army_build_cost_mult = -0.2
+			army_upkeep_mult = -0.1
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_pacifist"
+					has_ethic = "ethic_fanatic_pacifist"
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_militarist"
+					has_ethic = "ethic_fanatic_militarist"
+				}
+			}
+		}
+	}
+}
+####################################
+# [5.6] Medical Care
+####################################
+medicine = {
+
+	potential = {
+		has_technology = tech_imp_social_laws
+	}
+	
+	option = {
+		name = "medicine_minimal"
+		
+		policy_flags = {
+			medicine_minimal
+		}
+				
+		valid = {
+			OR = {
+				has_ethic = "ethic_fanatic_capitalism"
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+		
+		modifier = {
+			pop_growth_speed = -0.25
+			leader_age = -40
+			species_leader_exp_gain = 0.5
+			leader_cost = -0.25
+			tile_resource_unity_mult = 0.25
+		}
+		
+		AI_weight = {
+			weight = 0
+		}
+	}
+	
+	option = {
+		name = "medicine_privatized"
+
+		policy_flags = {
+			medicine_privatized
+		}
+		
+		valid = {
+			NOT = { has_ethic = "ethic_fanatic_socialism" }
+		}
+		
+		modifier = {
+			pop_growth_speed = -0.1
+			leader_age = 10
+			pop_happiness = -0.05
+			tile_resource_energy_mult = 0.05
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_capitalism"
+					has_ethic = "ethic_fanatic_capitalism"
+				}
+			}
+			modifier = {
+				factor = 0
+					has_ethic = "ethic_socialism"
+			}
+		}
+	}
+
+	option = {
+		name = "medicine_regulated"
+
+		policy_flags = {
+			medicine_regulated
+		}
+	
+		modifier = {
+			pop_growth_speed = 0.1
+			leader_age = 15
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 5
+			}
+		}
+	}
+	
+	option = {
+		name = "medicine_universal"
+
+		policy_flags = {
+			medicine_universal
+		}
+		
+		valid = {
+			NOT = { has_ethic = "ethic_fanatic_capitalism" }
+		}
+		
+		modifier = {
+			pop_growth_speed = 0.25
+			leader_age = 5
+			pop_happiness = 0.05
+			tile_resource_energy_mult = -0.05
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_socialism"
+					has_ethic = "ethic_fanatic_socialism"
+				}
+			}
+			modifier = {
+				factor = 0
+					has_ethic = "ethic_capitalism"
+			}
+		}
+	}
+}
+##########################################################################################################################################################################################################################
+# [6] Imperial Structure
+##########################################################################################################################################################################################################################
+
+####################################
+# [6.0] Imperial Structure Tag
+####################################
+structure_tag = {
+	potential = {
+		always = yes 
+	}
+}
+####################################
+# [6.1] Regional Autonomy
+####################################
+centralization = {
+
+	potential = {
+		has_technology = tech_centralization_extent
+	}
+	
+	option = {
+		name = "centralization_extreme_central"
+		
+		policy_flags = {
+			centralization_extreme_central
+		}
+		
+		valid = {
+			OR = {
+				has_policy_flag = centralization_extreme_central
+				has_policy_flag = centralization_strong_central
+			}
+			has_ethic = ethic_fanatic_authoritarian
+			has_technology = tech_galactic_administration
+		}
+
+		modifier = {
+			country_resource_influence_mult = 0.25
+			pop_happiness = -0.05
+			country_core_sector_system_cap = 3
+			country_sector_cap_add = -3
+		}
+
+		ai_weight = {
+			base = 0
+		}
+	}
+
+	option = {
+		name = "centralization_strong_central"
+		
+		policy_flags = {
+			centralization_strong_central
+		}
+		
+		valid = {
+			OR = {
+				has_policy_flag = centralization_extreme_central
+				has_policy_flag = centralization_strong_central
+				has_policy_flag = centralization_slight_central
+			}
+			OR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			has_technology = tech_adaptive_bureaucracy
+		}
+
+		modifier = {
+			country_resource_influence_mult = 0.15
+			pop_happiness = -0.025
+			country_core_sector_system_cap = 2
+			country_sector_cap_add = -2
+		}	
+
+		ai_weight = {
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_authoritarian"
+					has_ethic = "ethic_fanatic_authoritarian"
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "centralization_slight_central"
+		
+		policy_flags = {
+			centralization_slight_central
+		}
+				
+		valid = {
+			OR = {
+				has_policy_flag = centralization_strong_central
+				has_policy_flag = centralization_slight_central
+				has_policy_flag = centralization_balanced
+			}
+		}
+
+		modifier = {
+			country_resource_influence_mult = 0.05
+			pop_happiness = -0.01
+			country_core_sector_system_cap = 1
+			country_sector_cap_add = -1
+		}
+
+		ai_weight = {
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_authoritarian"
+					has_ethic = "ethic_fanatic_authoritarian"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "centralization_balanced"
+		
+		policy_flags = {
+			centralization_balanced
+		}
+		
+		valid = {
+			OR = {
+				NOT = {
+					has_policy_flag = centralization_extreme_central
+					has_policy_flag = centralization_strong_central
+					has_policy_flag = centralization_slight_central
+					has_policy_flag = centralization_balanced
+					has_policy_flag = decentralization_slight_decentral
+					has_policy_flag = decentralization_strong_decentral
+					has_policy_flag = decentralization_extreme_decentral
+				}
+				OR = {
+					has_policy_flag = centralization_slight_central
+					has_policy_flag = centralization_balanced
+					has_policy_flag = decentralization_slight_decentral
+				}
+			}
+		}
+
+		modifier = {
+		}
+
+		ai_weight = {
+			modifier = {
+				factor = 10
+			}
+		}
+	}
+	
+	option = {
+		name = "decentralization_slight_decentral"
+
+		policy_flags = {
+			decentralization_slight_decentral
+		}
+		
+		valid = {
+			OR = {
+					has_policy_flag = centralization_balanced
+					has_policy_flag = decentralization_slight_decentral
+					has_policy_flag = decentralization_strong_decentral
+					
+			}
+		}
+
+		modifier = {
+			country_resource_influence_mult = -0.05
+			pop_happiness = 0.01
+			country_core_sector_system_cap = -1
+			country_sector_cap_add = 1
+		}
+
+		ai_weight = {
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_egalitarian"
+					has_ethic = "ethic_fanatic_egalitarian"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "decentralization_strong_decentral"
+
+		policy_flags = {
+			decentralization_strong_decentral
+		}	
+		
+		valid = {
+			OR = {
+				has_policy_flag = decentralization_slight_decentral
+				has_policy_flag = decentralization_strong_decentral
+				has_policy_flag = decentralization_extreme_decentral
+			}
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			has_technology = tech_adaptive_bureaucracy
+		}
+
+		modifier = {
+			country_resource_influence_mult = -0.15
+			pop_happiness = 0.02
+			country_core_sector_system_cap = -2
+			country_sector_cap_add = 2
+		}
+
+		ai_weight = {
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_egalitarian"
+					has_ethic = "ethic_fanatic_egalitarian"
+				}
+			}
+		}
+	}
+	option = {
+		name = "decentralization_extreme_decentral"
+		
+		policy_flags = {
+			decentralization_extreme_decentral
+		}
+		
+		valid = {
+			OR = {
+				has_policy_flag = decentralization_extreme_decentral
+				has_policy_flag = decentralization_strong_decentral
+			}
+			has_ethic = ethic_fanatic_egalitarian
+			has_technology = tech_galactic_administration
+		}
+
+		modifier = {
+			country_resource_influence_mult = -0.25
+			pop_happiness = 0.05
+			country_core_sector_system_cap = -3
+			country_sector_cap_add = 3
+		}
+
+		ai_weight = {
+			base = 0
+		}
+	}
+}
+####################################
+# [6.2] Leader Selection System
+####################################
+leader = {
+
+	potential = {
+		has_technology = tech_adv_social_laws
+	}
+	
+	option = {
+		name = "leader_merit"
+		
+		valid = {
+			NOT = { has_ethic = "ethic_fanatic_militarist" }
+		}
+	
+		policy_flags = {
+			leader_merit
+		}
+	
+		valid = {
+			NOT = { has_ethic = ethic_fanatic_elitist }
+		}
+	
+		modifier = {
+			leader_skill_levels = 1
+			species_leader_exp_gain = 0.25
+			country_leader_pool_size = 1
+			country_leader_cap = -2
+			leader_cost = 1
+		}
+		
+		ai_weight = {
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_pluralist"
+					has_ethic = "ethic_fanatic_pluralist"
+				}
+			}
+		}
+	}	
+
+	option = {
+		name = "leader_merit_and_loyalty"
+	
+		policy_flags = {
+			leader_merit_and_loyalty
+		}
+	
+		modifier = {
+		}
+		
+		ai_weight = {
+			modifier = {
+				factor = 10
+			}
+		}
+	}	
+	
+	option = {
+		name = "leader_nepotism"
+
+		policy_flags = {
+			leader_nepotism
+		}
+		
+		valid = {
+			NOT = { has_ethic = ethic_fanatic_pluralist }
+		}
+	
+		modifier = {
+			leader_skill_levels = -1
+			species_leader_exp_gain = -0.1
+			country_leader_pool_size = -1
+			country_leader_cap = +5
+			leader_cost = -0.5
+		}
+		
+		ai_weight = {
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_elitist"
+					has_ethic = "ethic_fanatic_elitist"
+				}
+			}
+		}
+	}
+	
+	option = { 
+		name = "leader_conditioning"
+		
+		valid = {
+			NOT = { has_ethic = ethic_fanatic_egalitarian }
+		}
+	
+		policy_flags = {
+			leader_conditioning
+		}
+	
+		modifier = {
+			leader_skill_levels = 2
+			species_leader_exp_gain = 0.5
+			country_leader_pool_size = -2
+			country_leader_cap = -5
+			leader_cost = 0.5
+		}
+		
+		ai_weight = {
+			weight = 0
+		}
+	}
+}
+####################################
+# [6.3] Propagation of Information
+####################################
+information = {
+
+	potential = {
+		has_technology = tech_propaganda_laws
+	}
+	
+	option = {
+		name = "information_freedom"
+		
+		policy_flags = {
+			information_freedom
+		}
+		
+		valid = {
+			NOT = { has_ethic = ethic_fanatic_authoritarian }
+		}
+		
+		modifier = {
+			pop_government_ethic_attraction = -0.1
+			all_technology_research_speed = 0.05
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_egalitarian"
+					has_ethic = "ethic_fanatic_egalitarian"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "information_restricted"
+		
+		policy_flags = {
+			information_restricted
+		}
+		
+		modifier = {
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 10
+			}
+		}
+	}
+	
+	option = {
+		name = "information_censored"
+
+		policy_flags = {
+			information_censored
+		}
+		
+		valid = {
+			NOT = { has_ethic = ethic_fanatic_egalitarian }
+		}
+		
+		modifier = {
+			pop_government_ethic_attraction = 0.1
+			all_technology_research_speed = -0.05
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_authoritarian"
+					has_ethic = "ethic_fanatic_authoritarian"
+				}
+			}
+		}
+	}
+}
+####################################
+# [6.4] Tourism
+####################################
+tourism = {
+
+	potential = {
+		has_technology = tech_tourism
+	}
+	
+	option = {
+		name = "tourism_closed"
+		
+		policy_flags = {
+			tourism_closed
+		}
+		
+		valid = {
+			NOT = { has_ethic = ethic_fanatic_xenophile }
+		}
+		
+		modifier = {
+			pop_ethic_xenophobe_attraction_mult = 0.25
+			tile_resource_unity_mult = 0.05
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_xenophobe"
+					has_ethic = "ethic_fanatic_xenophobe"
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_xenophile"
+					has_ethic = "ethic_fanatic_xenophile"
+				}
+			}
+		}	
+	}
+	
+	option = {
+		name = "tourism_visa"
+		
+		policy_flags = {
+			tourism_visa
+		}
+		modifier = {
+			pop_ethic_xenophobe_attraction_mult = 0.1
+			tile_resource_energy_mult = 0.05
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_fanatic_xenophobe"
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_fanatic_xenophile"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "tourism_passport"
+		
+		policy_flags = {
+			tourism_passport
+		}
+		
+		modifier = {
+			pop_ethic_xenophile_attraction_mult = 0.1
+			pop_other_species_happiness = 0.1
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_fanatic_xenophobe"
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_fanatic_xenophile"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "tourism_free"
+		
+		policy_flags = {
+			tourism_free
+		}
+
+		valid = {
+			NOT = { has_ethic = ethic_fanatic_xenophobe }
+		}
+		
+		modifier = {
+			pop_ethic_xenophile_attraction_mult = 0.25
+			country_border_friction_mult = -0.15
+		}
+				
+		AI_weight = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_xenophobe"
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_fanatic_xenophile"
+				}
+			}
+		}
+	}
+}
+

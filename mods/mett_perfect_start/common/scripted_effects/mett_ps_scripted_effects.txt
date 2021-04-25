@@ -1,0 +1,75 @@
+remove_scientist_traits = {
+	leader = {
+		remove_trait = leader_trait_maniacal
+		remove_trait = leader_trait_expertise_materials
+		remove_trait = leader_trait_expertise_propulsion
+		remove_trait = leader_trait_expertise_voidcraft
+		remove_trait = leader_trait_expertise_industry
+		remove_trait = leader_trait_expertise_field_manipulation
+		remove_trait = leader_trait_expertise_particles
+		remove_trait = leader_trait_expertise_computing
+		remove_trait = leader_trait_expertise_psionics
+		remove_trait = leader_trait_expertise_new_worlds
+		remove_trait = leader_trait_expertise_statecraft
+		remove_trait = leader_trait_expertise_biology
+		remove_trait = leader_trait_expertise_military_theory
+		remove_trait = leader_trait_spark_of_genius
+		remove_trait = leader_trait_adaptable
+		remove_trait = leader_trait_flexible_programming
+		remove_trait = leader_trait_eager
+		remove_trait = leader_trait_newboot
+		remove_trait = leader_trait_resilient
+		remove_trait = leader_trait_meticulous
+		remove_trait = leader_trait_carefree
+		remove_trait = leader_trait_roamer
+		remove_trait = leader_trait_cataloger
+		remove_trait = leader_trait_archaeologist
+		remove_trait = leader_trait_paranoid
+	}
+}
+
+add_society_traits = {
+	leader = {
+		add_trait = leader_trait_spark_of_genius
+		add_trait = leader_trait_maniacal
+		add_trait = leader_trait_expertise_psionics
+		add_trait = leader_trait_expertise_new_worlds
+		add_trait = leader_trait_expertise_statecraft
+		add_trait = leader_trait_expertise_biology
+		add_trait = leader_trait_expertise_military_theory
+		
+	}
+}
+
+add_physics_traits = {
+	leader = {
+		add_trait = leader_trait_spark_of_genius
+		add_trait = leader_trait_maniacal
+		add_trait = leader_trait_expertise_field_manipulation
+		add_trait = leader_trait_expertise_particles
+		add_trait = leader_trait_expertise_computing
+		
+	}
+}
+
+add_engineering_traits = {
+	leader = {
+		add_trait = leader_trait_spark_of_genius
+		add_trait = leader_trait_maniacal
+		add_trait = leader_trait_expertise_materials
+		add_trait = leader_trait_expertise_propulsion
+		add_trait = leader_trait_expertise_voidcraft
+		add_trait = leader_trait_expertise_industry
+	}
+}
+
+add_survey_traits = {
+	leader = {
+		remove_trait = leader_trait_meticulous
+		remove_trait = leader_trait_carefree
+		remove_trait = leader_trait_roamer
+		remove_trait = leader_trait_cataloger
+		remove_trait = leader_trait_archaeologist
+		remove_trait = leader_trait_paranoid
+	}
+}

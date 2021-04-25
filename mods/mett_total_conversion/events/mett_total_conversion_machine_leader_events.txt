@@ -1,0 +1,21 @@
+
+##############################
+##############################
+### SYNTHETIC DAWN events  ###
+### by Maximilian Olbers,  ###
+### Miranda van den Brink, ###
+### & Dee Majek			   ###
+##############################
+##############################
+
+namespace = syndaw
+
+# machine leaders malfunction
+event = {
+	id = syndaw.10
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+	}
+}

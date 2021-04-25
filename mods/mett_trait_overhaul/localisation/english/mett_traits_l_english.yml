@@ -1,0 +1,17 @@
+﻿l_english:
+ ####################################
+ # Traits
+ ####################################
+
+ trait_mett_perfect_bodies:0 "Perfect Bodies"
+ trait_mett_perfect_bodies_desc:0 "§LThe bodies of this species are the envy of the galaxy. Powerful. Fast. Efficient.§!\n"
+ trait_mett_perfect_minds:0 "Perfect Minds"
+ trait_mett_perfect_minds_desc:0 "§LBetween their eidetic memories and multi-threaded subjectivity, this species barely views others as meaningfully sapient.§!\n"
+ trait_mett_perfect_culture:0 "Perfect Culture"
+ trait_mett_perfect_culture_desc:0 "§LThis species possesses the genetic predispositions to a utopian culture. They are persuasive, united, and happy.§!\n"
+ trait_mett_immortal:0 "Immortality"
+ trait_mett_immortal_desc:0 "§LMembers of this species do not age past their prime and never succumb to cancer or degenerative disorders. The oldest of them have lived for aeons. §!\n"
+ trait_mett_perfect_robots:0 "Perfected Robotics"
+ trait_mett_perfect_robots_desc:0 "§LThe robotic units used by this species have been improved to the point of near perfection. There is little room for further upgrades.§!\n"
+ trait_mett_perfect_machines:0 "Perfected Machinery"
+ trait_mett_perfect_machines_desc:0 "§LThe machinery of this species has been improved to the point of near perfection. There is little room for further upgrades.§!\n"

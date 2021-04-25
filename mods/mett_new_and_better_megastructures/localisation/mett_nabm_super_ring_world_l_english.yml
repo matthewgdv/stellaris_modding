@@ -1,0 +1,23 @@
+﻿l_english:
+
+ requires_ringworld:0 "Requires a Ring World already built in the system."
+ 
+ ### Super Ring World Techs
+ tech_extremely_efficient_mineral_compression:0 "Extremely Efficient Mineral Compression"
+ tech_extremely_efficient_mineral_compression_desc:0 "Advanced mineral compression techniques using quantum mechanics."
+ tech_advanced_ringworld_engineering:0 "Ring World Engineering"
+ tech_advanced_ringworld_engineering_desc:0 "An artificial ring with a cicumference of 950,000,000 km, which encircles a star. Its inner surface automatically adapts itself to offer perfect habitability for any known species."
+
+ ### Super Ring World
+ super_ring_world_1_MEGASTRUCTURE_DETAILS:1 "A §Y$pc_ringworld_habitable$§! allows for multiple planet-like zones, cannibalizing all other planets in the system for materials."
+ super_ring_world_1_CONSTRUCTION_INFO_DELAYED:3 "A full Ring World consists of 12 Completed Ring World Sections, each equivalent to a size 25 Gaia world."
+ super_ring_world_1:0 "Ring World Site"
+ super_ring_world_1_DESC:0 "This complex will serve as a staging ground, resource depot and living quarters for the hundreds of thousands of personnel involved in the Ring World's construction."
+ super_ring_world_2_intermediate:0 "Ring World Frame"
+ super_ring_world_2_intermediate_DESC:0 "This initial skeletal frame encircles the system's sun, and serves as the platform on which we will eventually build fully habitable sections."
+ super_ring_world_2:0 "Ring World Frame Section"
+ super_ring_world_2_DESC:0 "This skeletal frame section makes up roughly one quarter of the unfinished Ring World's total surface area. Work on the 3 smaller habitable sections has not yet been completed."
+ super_ring_world_3_intermediate:0 "Completed Ring World Section"
+ super_ring_world_3_intermediate_DESC:0 "A fully functional habitable Ring World section, complete with an active biosphere, that is ready for settlement."
+ 
+ requires_extremely_efficient_mineral_compression:1 "$TRIGGER_FAIL$Requires the £engineering  §Y$tech_extremely_efficient_mineral_compression$§! technology." 

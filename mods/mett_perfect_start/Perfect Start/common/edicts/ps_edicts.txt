@@ -1,0 +1,131 @@
+recruit_surveyor = {
+	modifier = {
+	}
+	
+	resources = {
+		cost = { 
+			energy = 200
+		}
+	}
+	
+	allow = {
+		NOT = { has_country_flag = recruiting_surveyor }
+	}
+	
+	effect = {
+		custom_tooltip = edict_recruit_surveyor_effect
+		hidden_effect = { 
+			set_country_flag = recruiting_surveyor
+			country_event = { id = ps_genius_edict.01 } 
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+}
+
+recruit_admiral = {
+	modifier = {
+	}
+	
+	resources = {
+		cost = {
+			energy = 200
+		}
+	}
+	
+	allow = {
+		NOT = { has_country_flag = recruiting_admiral }
+	}
+	
+	effect = {
+		custom_tooltip = edict_recruit_admiral_effect
+		hidden_effect = { 
+			set_country_flag = recruiting_admiral
+			country_event = { id = ps_genius_edict.02 } 
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+}
+
+genius_edict_default = {
+	modifier = {
+	}
+	
+	resources = {
+		cost = {
+			energy = 500
+		}
+	}
+	
+
+	potential = {
+		NOT = { 
+			has_authority = auth_hive_mind
+			has_authority = auth_machine_intelligence
+		}
+	}
+	
+	effect = {
+		custom_tooltip = edict_genius_edict_default_effect
+		hidden_effect = { country_event = { id = ps_genius_edict.00 } }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+genius_edict_hive = {
+	modifier = {
+	}
+	
+	resources = {
+		cost = {
+			energy = 500
+		}
+	}
+
+	potential = {
+		has_authority = auth_hive_mind
+	}
+	
+	effect = {
+		custom_tooltip = edict_genius_edict_hive_effect
+		hidden_effect = { country_event = { id = ps_genius_edict.00 } }
+	}
+		
+	ai_weight = {
+		weight = 0
+	}
+}
+
+genius_edict_machine = {
+	modifier = {
+	}
+	
+	resources = {
+		cost = {
+			energy = 500
+		}
+	}
+
+	potential = {
+		has_authority = auth_machine_intelligence
+	}
+	
+	effect = {
+		custom_tooltip = edict_genius_edict_machine_effect
+		hidden_effect = { country_event = { id = ps_genius_edict.00 } }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}

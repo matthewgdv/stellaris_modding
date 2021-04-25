@@ -1,0 +1,117 @@
+@b0time = 120
+@b0cost = 30
+@b0effect = 1
+@b0upkeep = 1
+
+@b1time = 210
+@b1cost = 60
+@b1effect = 2
+@b1upkeep = 1
+
+@b2time = 180
+@b2cost = 90
+@b2effect = 3
+@b2upkeep = 1.5
+
+@b3time = 180
+@b3cost = 120
+@b3effect = 4
+@b3upkeep = 2
+
+@b4time = 180
+@b4cost = 150
+@b4effect = 5
+@b4upkeep = 2.5
+
+@b5time = 180
+@b5cost = 180
+@b5effect = 8
+@b5upkeep = 3
+
+@feupkeep = 4
+@feproduction = 12
+
+@science1 = 1
+@science2 = 2
+@science3 = 3
+@science4 = 4
+@science5 = 6
+
+solar_dust_lab_1 = {
+	base_buildtime = @b2time
+	icon = "solar_dust_lab_1"
+	
+	cost = {
+		minerals = @b2cost
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		physics_research = 10
+		society_research = 10
+		engineering_research = 10
+	}
+	
+	required_resources = {
+		sr_solar_dust = 1
+	}
+	
+	upgrades = {
+		solar_dust_lab_2
+	}
+
+	prerequisites = {
+			"tech_medical_drug"
+	}
+}
+
+solar_dust_lab_2 = {
+	base_buildtime = @b3time
+	is_listed = no
+	icon = "solar_dust_lab_2"
+	
+	cost = {
+		minerals = @b3cost
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		physics_research = 15
+		society_research = 15
+		engineering_research = 15
+	}
+	
+	required_resources = {
+		sr_solar_dust = 1
+	}
+	
+	upgrades = {
+		solar_dust_lab_3
+	}
+
+	prerequisites = {
+			"tech_adv_medical_drug"
+	}
+}

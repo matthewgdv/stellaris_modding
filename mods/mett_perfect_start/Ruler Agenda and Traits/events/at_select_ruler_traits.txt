@@ -1,0 +1,482 @@
+namespace = at_select_ruler_traits
+
+country_event = {
+	id = at_select_ruler_traits.00
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { leader { has_leader_flag = starting_leader } }
+			new_ruler_agenda = yes	
+		}
+		if = {
+			limit = {
+				owner = {
+					is_ai = no
+					NOT = {
+						has_authority = auth_hive_mind
+						has_authority = auth_machine_intelligence
+						has_country_flag = confirm_ruler_traits
+						leader = {
+							has_leader_flag = ruler_second_trait_selected
+						}
+					}
+				}
+			}
+			country_event = { id = at_select_ruler_traits.01 }
+		}
+	}
+}
+
+country_event = {
+	id = at_select_ruler_traits.01
+	title = "at_select_ruler_traits.01.name"
+	desc = "at_select_ruler_traits.01.desc"
+	picture = GFX_evt_throne_room
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = confirm_ruler_traits
+	}
+	
+	option = {
+		name = at_select_ruler_traits.yes
+		custom_tooltip = at_select_ruler_traits.yes.desc
+		hidden_effect = {
+			remove_ruler_traits = yes
+			country_event = { id = at_select_ruler_traits.02 }
+		}
+	}
+	
+	option = {
+		name = at_select_ruler_traits.skip
+		custom_tooltip = at_select_ruler_traits.skip.desc
+		hidden_effect = {
+			leader = { 
+				set_leader_flag = ruler_first_trait_selected
+				set_leader_flag = ruler_second_trait_selected
+			}
+			if = {
+				limit = { has_country_flag = first_governor_trait }
+				country_event = { id = at_start.04 }
+			}
+		}
+	}
+	
+	after = {
+		remove_country_flag = confirm_ruler_traits
+	}
+}
+
+country_event = {
+	id = at_select_ruler_traits.02
+	title = "at_select_ruler_traits.02.name"
+	desc = {
+		trigger = {
+			hidden:fromfrom = {
+				hidden:leader = {
+					switch = {
+						trigger = has_leader_flag
+						ruler_bonus_trait_2 = { text = at_select_ruler_traits.02.desc.bonus2 }
+						ruler_bonus_trait_1 = { text = at_select_ruler_traits.02.desc.bonus1 }
+						ruler_first_trait_selected = { text = at_select_ruler_traits.02.desc.second }
+						default = { text = at_select_ruler_traits.02.desc }
+					}
+				}
+			}
+		}
+	}
+	picture = GFX_evt_throne_room
+	
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { has_country_flag = restart_ruler_trait_selection }
+			remove_country_flag = restart_ruler_trait_selection
+		}
+	}
+	
+	option = {
+		name = at_select_ruler_traits.a
+		custom_tooltip = at_select_ruler_traits.a.desc
+		trigger = { 
+			leader = { NOT = { has_trait = "trait_ruler_architectural_sense" } }
+		}
+		hidden_effect = {
+			leader = { add_trait = trait_ruler_architectural_sense }
+		}
+	}
+	
+	option = {
+		name = at_select_ruler_traits.b
+		custom_tooltip = at_select_ruler_traits.b.desc
+		trigger = {
+			leader = { NOT = { has_trait = "trait_ruler_battleship_focus" } }
+			has_technology = tech_battleships
+		}
+		hidden_effect = {
+			leader = { add_trait = trait_ruler_battleship_focus }
+		}
+	}
+
+	option = {
+		name = at_select_ruler_traits.c
+		custom_tooltip = at_select_ruler_traits.c.desc
+		trigger = { 
+			leader = { NOT = { has_trait = "trait_ruler_charismatic" } }
+		}
+		hidden_effect = {
+			leader = { add_trait = trait_ruler_charismatic }
+		}
+	}
+
+	option = {
+		name = at_select_ruler_traits.d
+		custom_tooltip = at_select_ruler_traits.d.desc
+		trigger = {
+			leader = { NOT = { has_trait = "trait_ruler_champion_of_the_people" } }
+		}
+		hidden_effect = {
+			leader = { add_trait = trait_ruler_champion_of_the_people }
+		}
+	}
+	
+	option = {
+		name = at_select_ruler_traits.e
+		custom_tooltip = at_select_ruler_traits.e.desc
+		trigger = {
+			leader = { NOT = { has_trait = "trait_ruler_corvette_focus" } }
+			has_technology = tech_destroyers
+		}
+		hidden_effect = {
+			leader = { add_trait = trait_ruler_corvette_focus }
+		}
+	}
+	
+	option = {
+		name = at_select_ruler_traits.f
+		custom_tooltip = at_select_ruler_traits.f.desc
+		trigger = {
+			leader = { NOT = { has_trait = "trait_ruler_cruiser_focus" } }
+			has_technology = tech_cruisers
+		}
+		hidden_effect = {
+			leader = { add_trait = trait_ruler_cruiser_focus }
+		}
+	}
+	
+	option = {
+		name = at_select_ruler_traits.g
+		custom_tooltip = at_select_ruler_traits.g.desc
+		trigger = {
+			leader = { NOT = { has_trait = "trait_ruler_deep_connections" } }
+		}
+		hidden_effect = {
+			leader = { add_trait = trait_ruler_deep_connections }
+		}
+	}
+	
+	option = {
+		name = at_select_ruler_traits.h
+		custom_tooltip = at_select_ruler_traits.h.desc
+		trigger = {
+			leader = { NOT = { has_trait = "trait_ruler_destroyer_focus" } }
+			has_technology = tech_destroyers
+		}
+		hidden_effect = {
+			leader = { add_trait = trait_ruler_destroyer_focus }
+		}
+	}
+	
+	option = {
+		name = at_select_ruler_traits.i
+		custom_tooltip = at_select_ruler_traits.i.desc
+		trigger = {
+			leader = { NOT = { has_trait = "trait_ruler_expansionist" } }
+		}
+		hidden_effect = {
+			leader = { add_trait = trait_ruler_expansionist }
+		}
+	}
+	
+	option = {
+		name = at_select_ruler_traits.j
+		custom_tooltip = at_select_ruler_traits.j.desc
+		trigger = {
+			leader = { NOT = { has_trait = "trait_ruler_explorer" } }
+		}
+		hidden_effect = {
+			leader = { add_trait = trait_ruler_explorer }
+		}
+	}
+	
+	option = {
+		name = at_select_ruler_traits.k
+		custom_tooltip = at_select_ruler_traits.k.desc
+		trigger = {
+			leader = { NOT = { has_trait = "trait_ruler_eye_for_talent" } }
+			has_technology = tech_galactic_administration
+		}
+		hidden_effect = {
+			leader = { add_trait = trait_ruler_eye_for_talent }
+		}
+	}
+	
+	option = {
+		name = at_select_ruler_traits.l
+		custom_tooltip = at_select_ruler_traits.l.desc
+		trigger = {
+			leader = { NOT = { has_trait = "trait_ruler_fertility_preacher" } }
+		}
+		hidden_effect = {
+			leader = { add_trait = trait_ruler_fertility_preacher }
+		}
+	}
+	
+	option = {
+		name = at_select_ruler_traits.m
+		custom_tooltip = at_select_ruler_traits.m.desc
+		trigger = {
+			leader = { NOT = { has_trait = "leader_trait_fleet_organizer" } }
+			has_technology = tech_doctrine_fleet_size_2
+		}
+		hidden_effect = {
+			leader = { add_trait = leader_trait_fleet_organizer }
+		}
+	}
+	
+	option = {
+		name = at_select_ruler_traits.n
+		custom_tooltip = at_select_ruler_traits.n.desc
+		trigger = {
+			leader = { NOT = { has_trait = "trait_ruler_fortifier" } }
+			has_technology = tech_space_defense_station_1
+		}
+		hidden_effect = {
+			leader = { add_trait = trait_ruler_fortifier }
+		}
+	}
+	
+	option = {
+		name = at_select_ruler_traits.o
+		custom_tooltip = at_select_ruler_traits.o.desc
+		trigger = {
+			leader = { NOT = { has_trait = "trait_ruler_from_the_ranks" } }
+			has_technology = tech_combat_training
+		}
+		hidden_effect = {
+			leader = { add_trait = trait_ruler_from_the_ranks }
+		}
+	}
+	
+	option = {
+		name = at_select_ruler_traits.p
+		custom_tooltip = at_select_ruler_traits.p.desc
+		trigger = {
+			leader = { NOT = { has_trait = "trait_ruler_frontier_spirit" } }
+			has_technology = tech_colonization_1
+		}
+		hidden_effect = {
+			leader = { add_trait = trait_ruler_frontier_spirit }
+		}
+	}
+	
+	option = {
+		name = at_select_ruler_traits.q
+		custom_tooltip = at_select_ruler_traits.q.desc
+		trigger = {
+			leader = { NOT = { has_trait = "trait_ruler_home_in_the_sky" } }
+		}
+		hidden_effect = {
+			leader = { add_trait = trait_ruler_home_in_the_sky }
+		}
+	}
+	
+	option = {
+		name = at_select_ruler_traits.r
+		custom_tooltip = at_select_ruler_traits.r.desc
+		trigger = {
+			leader = { NOT = { has_trait = "trait_ruler_industrialist" } }
+		}
+		hidden_effect = {
+			leader = { add_trait = trait_ruler_industrialist }
+		}
+	}
+	
+	option = {
+		name = at_select_ruler_traits.s
+		custom_tooltip = at_select_ruler_traits.s.desc
+		trigger = {
+			leader = { NOT = { has_trait = "trait_ruler_investor" } }
+		}
+		hidden_effect = {
+			leader = { add_trait = trait_ruler_investor }
+		}
+	}
+	
+	option = {
+		name = at_select_ruler_traits.t
+		custom_tooltip = at_select_ruler_traits.t.desc
+		trigger = {
+			leader = { NOT = { has_trait = "trait_ruler_logistic_understanding" } }
+			has_technology = tech_doctrine_navy_size_1
+		}
+		hidden_effect = {
+			leader = { add_trait = trait_ruler_logistic_understanding }
+		}
+	}
+	
+	option = {
+		name = at_select_ruler_traits.u
+		custom_tooltip = at_select_ruler_traits.u.desc
+		trigger = {
+			leader = { NOT = { has_trait = "trait_ruler_military_pioneer" } }
+			has_technology = tech_refit_standards
+		}
+		hidden_effect = {
+			leader = { add_trait = trait_ruler_military_pioneer }
+		}
+	}
+	
+	option = {
+		name = at_select_ruler_traits.v
+		custom_tooltip = at_select_ruler_traits.v.desc
+		trigger = {
+			leader = { NOT = { has_trait = "trait_ruler_recruiter" } }
+			has_technology = tech_centralized_command
+		}
+		hidden_effect = {
+			leader = { add_trait = trait_ruler_recruiter }
+		}
+	}
+	
+	option = {
+		name = at_select_ruler_traits.w
+		custom_tooltip = at_select_ruler_traits.w.desc
+		trigger = {
+			leader = { NOT = { has_trait = "leader_trait_reformer" } }
+		}
+		hidden_effect = {
+			leader = { add_trait = leader_trait_reformer }
+		}
+	}
+	
+	option = {
+		name = at_select_ruler_traits.x
+		custom_tooltip = at_select_ruler_traits.x.desc
+		trigger = {
+			leader = { NOT = { has_trait = "trait_ruler_space_miner" } }
+		}
+		hidden_effect = {
+			leader = {add_trait = trait_ruler_space_miner }
+		}
+	}
+	
+	option = {
+		name = at_select_ruler_traits.y
+		custom_tooltip = at_select_ruler_traits.y.desc
+		trigger = {
+			leader = { NOT = { has_trait = "trait_ruler_warlike" } }
+		}
+		hidden_effect = {
+			leader = { add_trait = trait_ruler_warlike }
+		}
+	}
+	
+	option = {
+		name = at_select_ruler_traits.z
+		custom_tooltip = at_select_ruler_traits.z.desc
+		trigger = {
+			leader = { NOT = { has_trait = "trait_ruler_world_shaper" } }
+			has_technology = tech_terrestrial_sculpting
+		}
+		hidden_effect = {
+			leader = { add_trait = trait_ruler_world_shaper }
+		}
+	}
+	
+	option = {
+		name = at_select_ruler_traits.re
+		custom_tooltip = at_select_ruler_traits.re.desc
+		trigger = { 
+			leader = {
+				has_leader_flag = ruler_first_trait_selected
+				NOT = { has_leader_flag = ruler_second_trait_selected }
+			}
+		}
+		hidden_effect = {
+			remove_ruler_traits = yes
+			leader = { remove_leader_flag = ruler_first_trait_selected }
+			set_country_flag = restart_ruler_trait_selection
+		}
+	}
+	
+	option = {
+		name = at_select_ruler_traits.no
+		custom_tooltip = at_select_ruler_traits.no.desc
+		trigger = { leader = { has_leader_flag = ruler_second_trait_selected } }
+	}
+	
+	after = {
+		hidden_effect = {
+			if = {
+				limit = {
+					leader = { has_leader_flag = ruler_first_trait_selected }
+					NOT = { leader = { has_leader_flag = ruler_bonus_trait_1 } }
+				}
+				leader = { set_leader_flag = ruler_second_trait_selected }
+				if = {
+					limit = {
+						has_country_flag = first_governor_trait
+					}
+					country_event = { id = at_start.04 }
+				}
+				if = {
+					limit = {
+						leader = {
+							has_level > 4
+						}
+						NOT = { leader = { has_leader_flag = ruler_bonus_trait_1 } }
+					}
+					leader = { set_leader_flag = ruler_bonus_trait_1 }
+					country_event = { id = at_select_ruler_traits.02 }
+				}
+				if = {
+					limit = {
+						leader = {
+							has_level > 7
+						}
+						NOT = { leader = { has_leader_flag = ruler_bonus_trait_2 } }
+					}
+					leader = { set_leader_flag = ruler_bonus_trait_2 }
+					country_event = { id = at_select_ruler_traits.02 }
+				}
+				break = yes
+			}
+			if = {
+				limit = {
+					NOT = {
+						leader = { has_leader_flag = ruler_first_trait_selected }
+					}
+					has_country_flag = restart_ruler_trait_selection
+				}
+				country_event = { id = at_select_ruler_traits.02 }
+				break = yes
+			}
+			if = { 
+				limit = {
+					NOT = {
+						leader = { has_leader_flag = ruler_first_trait_selected }
+						has_country_flag = restart_ruler_trait_selection
+					}
+				}
+				leader = { set_leader_flag = ruler_first_trait_selected }
+				country_event = { id = at_select_ruler_traits.02 }
+			}
+		}
+	}
+}

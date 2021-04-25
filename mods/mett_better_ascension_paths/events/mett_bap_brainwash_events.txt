@@ -1,0 +1,832 @@
+namespace = brainwash
+
+#On finishing the brainwash planet station mission
+country_event = {
+	id = brainwash.1
+	title = "brainwash.1.name"
+	desc = "brainwash.1.desc"
+	picture = GFX_evt_satellite_in_orbit
+	show_sound = event_cityscape ### Celebration sound?
+	location = FROM
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROMFROMFROM = {
+			set_planet_flag = brainwashed_primitive_planet
+			owner = {
+				save_event_target_as = primitive_civ
+				every_owned_pop = {
+					add_modifier = { 
+						modifier = brainwashed_primitive 
+						days = 3600 
+					}
+				}
+			}
+			random_pop = { save_event_target_as = prim_species }
+			observation_outpost = { dismantle = yes }
+			set_owner = ROOT
+			remove_all_armies = yes
+			create_army = {
+				name = random
+				owner = ROOT
+				species = owner_main_species
+				type = "defense_army"
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_capital_1"
+			}
+			event_target:primitive_civ = {
+				destroy_country = yes 
+			}
+		}
+		every_country  = {
+			limit = {
+				has_ethic = ethic_xenophile
+			}
+			add_opinion_modifier = {
+				who = root
+				modifier = opinion_brainwashed_primitive_xenophile
+			}
+		}
+		every_country  = {
+			limit = {
+				has_ethic = ethic_fanatic_xenophile
+			}
+			add_opinion_modifier = {
+				who = root
+				modifier = opinion_brainwashed_primitive_fanatic_xenophile
+			}
+		}
+	}
+	
+	option = {
+		name = "brainwash.1.a"
+	}
+}
+
+#On taking Transcendence
+country_event = {
+	id = brainwash.2
+	title = "utopia.2650.name"
+	desc = "utopia.2650.desc"
+	picture = GFX_evt_psionics
+	show_sound = event_the_great_awakening
+	
+	is_triggered_only = yes
+
+	immediate = {
+		every_owned_pop = {
+			limit = {
+				is_same_species = root
+			}
+			modify_species = {
+				species = this
+				remove_trait = trait_latent_psionic
+				add_trait = trait_psionic
+			}
+		}
+		change_dominant_species = { species = last_created change_all = yes }
+	}
+	
+	option = {
+		name = "utopia.2650.a"
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						is_country_type = default
+						is_country_type = fallen_empire
+						is_country_type = awakened_fallen_empire
+					}
+				}
+				every_owned_leader = {
+					limit = {
+						is_same_species = root
+						NOR = {
+							has_trait =	leader_trait_admiral_psionic
+							has_trait =	leader_trait_general_psionic
+							has_trait =	leader_trait_governor_psionic
+							has_trait =	leader_trait_scientist_psionic
+							has_trait =	leader_trait_ruler_psionic
+						}
+					}
+					if = {
+						limit = { leader_class = admiral }
+						add_trait = leader_trait_admiral_psionic
+						add_ruler_trait = leader_trait_ruler_psionic
+					}
+					if = {
+						limit = { leader_class = general }
+						add_trait = leader_trait_general_psionic
+						add_ruler_trait = leader_trait_ruler_psionic
+					}
+					if = {
+						limit = { leader_class = governor }
+						add_trait = leader_trait_governor_psionic
+						add_ruler_trait = leader_trait_ruler_psionic
+					}
+					if = {
+						limit = { leader_class = scientist }
+						add_trait = leader_trait_scientist_psionic
+						add_ruler_trait = leader_trait_ruler_psionic
+					}
+					if = {
+						limit = { leader_class = ruler }
+						add_trait = leader_trait_ruler_psionic
+					}
+				}
+				every_pool_leader = {
+					limit = {
+						is_same_species = root
+						NOR = {
+							has_trait = leader_trait_admiral_psionic
+							has_trait = leader_trait_general_psionic
+							has_trait = leader_trait_governor_psionic
+							has_trait = leader_trait_scientist_psionic
+							has_trait = leader_trait_ruler_psionic
+						}
+					}
+					if = {
+						limit = { leader_class = admiral }
+						add_trait = leader_trait_admiral_psionic
+						add_ruler_trait = leader_trait_ruler_psionic
+					}
+					if = {
+						limit = { leader_class = general }
+						add_trait = leader_trait_general_psionic
+						add_ruler_trait = leader_trait_ruler_psionic
+					}
+					if = {
+						limit = { leader_class = governor }
+						add_trait = leader_trait_governor_psionic
+						add_ruler_trait = leader_trait_ruler_psionic
+					}
+					if = {
+						limit = { leader_class = scientist }
+						add_trait = leader_trait_scientist_psionic
+						add_ruler_trait = leader_trait_ruler_psionic
+					}
+					if = {
+						limit = { leader_class = ruler }
+						add_trait = leader_trait_ruler_psionic
+					}
+				}
+			}
+			every_country = {
+				limit = { 
+					is_ai = no
+					has_communications = root
+					NOT = { is_same_value = root }
+				}
+				country_event = { id = utopia.2652 }
+			}
+			country_event = { id = utopia.2655 days = 30 random = 20 }
+		}
+	}
+}
+
+
+#On taking The End of Limits
+country_event = {
+	id = brainwash.3
+	title = "brainwash.3.name"
+	desc = "brainwash.3.desc"
+	picture = GFX_evt_psionics
+	show_sound = event_the_great_awakening
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "brainwash.3.a"
+		custom_tooltip = brainwash.3.a.tooltip
+		hidden_effect = {
+			country_remove_ethic = ethic_fanatic_authoritarian
+			country_remove_ethic = ethic_authoritarian
+			country_remove_ethic = ethic_fanatic_egalitarian
+			country_remove_ethic = ethic_egalitarian
+			country_remove_ethic = ethic_fanatic_xenophobe
+			country_remove_ethic = ethic_xenophobe
+			country_remove_ethic = ethic_fanatic_xenophile
+			country_remove_ethic = ethic_xenophile
+			country_remove_ethic = ethic_fanatic_militarist
+			country_remove_ethic = ethic_militarist
+			country_remove_ethic = ethic_fanatic_pacifist
+			country_remove_ethic = ethic_pacifist	
+			country_remove_ethic = ethic_fanatic_spiritualist
+			country_remove_ethic = ethic_spiritualist
+			country_remove_ethic = ethic_fanatic_materialist
+			country_remove_ethic = ethic_materialist
+
+			country_add_ethic = ethic_gestalt_consciousness
+			change_government = {
+				authority = auth_hive_mind
+				civics = {
+					civic = civic_hive_subspace_ephapse
+					civic = civic_hive_one_mind
+				}
+			}
+			every_owned_leader = {
+				if = {
+					limit = { leader_class = ruler }
+					set_name = "The Unity"
+					add_trait = leader_trait_ruler_hive_mind
+					add_trait = leader_trait_ruler_chosen
+				}
+			}		
+			every_owned_pop = {
+				limit = {
+					is_same_species = root
+				}
+				modify_species = {
+					species = this
+					add_trait = trait_hive_mind
+				}
+				modify_species = {
+					species = this
+					add_trait = trait_mett_limitless
+				}		
+			}
+			every_owned_leader = {
+				limit = {
+					is_same_species = root
+				}
+					change_species = last_created_species				
+			}
+			every_pool_leader = {
+				limit = {
+					is_same_species = root
+				}
+					change_species = last_created_species
+			}
+		}
+	}
+	option = {
+		name = "brainwash.3.b"
+		custom_tooltip = brainwash.3.b.tooltip
+		hidden_effect = {
+			every_owned_pop = {
+				limit = {
+					is_same_species = root
+				}
+				modify_species = {
+					species = this
+					add_trait = trait_mett_limitless
+				}
+			}
+			every_owned_leader = {
+				limit = {
+					is_same_species = root
+				}
+					change_species = last_created_species				
+			}
+			every_pool_leader = {
+				limit = {
+					is_same_species = root
+				}
+					change_species = last_created_species
+			}
+		}
+	}
+	option = {
+		name = "brainwash.3.c"
+		custom_tooltip = brainwash.3.c.tooltip
+		hidden_effect = {
+		}
+	}
+}
+
+#On taking The End of Limits as a hive mind
+country_event = {
+	id = brainwash.4
+	title = "brainwash.4.name"
+	desc = "brainwash.4.desc"
+	picture = GFX_evt_psionics
+	show_sound = event_the_great_awakening
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "brainwash.4.a"
+		custom_tooltip = brainwash.4.a.tooltip
+		hidden_effect = {
+			every_owned_pop = {
+				limit = {
+					is_same_species = root
+				}
+				modify_species = {
+					species = this
+					add_trait = trait_mett_limitless
+				}
+			}
+			every_owned_leader = {
+				if = {
+					limit = { leader_class = ruler }
+					add_trait = leader_trait_ruler_chosen
+				}
+			}	
+			every_owned_leader = {
+				limit = {
+					is_same_species = root
+				}
+				change_species = last_created_species				
+			}
+			every_pool_leader = {
+				limit = {
+					is_same_species = root
+				}
+				change_species = last_created_species
+			}		
+		}
+	}
+	option = {
+		name = "brainwash.4.b"
+		custom_tooltip = brainwash.4.b.tooltip
+		hidden_effect = {
+			country_remove_ethic = ethic_gestalt_consciousness
+			
+			country_add_ethic = ethic_fanatic_authoritarian
+			country_add_ethic = ethic_xenophile
+			country_add_ethic = ethic_pacifist
+			country_add_ethic = ethic_fanatic_spiritualist
+
+			change_government = {
+				authority = auth_imperial
+				civics = {
+					civic = civic_imperial_cult
+					civic = civic_philosopher_king
+				}
+			}
+			every_owned_leader = {
+				if = {
+					limit = { leader_class = ruler }
+					set_name = "The First Voice"
+					remove_trait = leader_trait_ruler_hive_mind
+					add_trait = leader_trait_ruler_chosen
+				}
+			}		
+			every_owned_pop = {
+				limit = {
+					is_same_species = root
+				}
+				modify_species = {
+					species = this
+					remove_trait = trait_hive_mind
+				}		
+				modify_species = {
+					species = this
+					add_trait = trait_mett_limitless
+				}		
+			}
+			every_owned_leader = {
+				limit = {
+					is_same_species = root
+				}
+				change_species = last_created_species				
+			}
+			every_pool_leader = {
+				limit = {
+					is_same_species = root
+				}
+				change_species = last_created_species
+			}
+		}
+	}
+	option = {
+		name = "brainwash.4.c"
+		custom_tooltip = brainwash.4.c.tooltip
+		hidden_effect = {
+		}
+	}
+}
+
+
+# The Synthetic Age
+country_event = {
+	id = brainwash.5
+	title = "brainwash.5.name"
+	desc = "brainwash.5.desc"
+	picture = GFX_evt_robot_assembly_plant
+	show_sound = event_synthetic_evolution
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = synthetic_empire	
+
+		every_owned_pop = {
+			limit = {
+				species = {
+					has_trait = trait_machine_unit 
+				}
+			}
+			modify_species = {
+				add_trait = trait_robotic_3_machine_mett
+			}
+		}
+		every_owned_pop = {
+			limit = {
+				species = {
+					has_trait = trait_cybernetic
+				}
+			}
+			modify_species = {
+				add_trait = trait_robotic_3_cyborg_mett
+			}
+		}
+		
+		every_owned_ship = {
+			limit = {
+				is_ship_class = shipclass_colonizer
+				species = {
+					has_trait = trait_machine_unit
+				}
+			}
+			modify_species = {
+				add_trait = trait_robotic_3_machine_mett
+			}			
+		}
+		every_owned_ship = {
+			limit = {
+				is_ship_class = shipclass_colonizer
+				species = {
+					has_trait = trait_cybernetic
+				}
+			}
+			modify_species = {
+				add_trait = trait_robotic_3_cyborg_mett
+			}			
+		}
+		
+		every_owned_leader = {
+			limit = {
+				species = { has_trait = trait_machine_unit }
+				NOR = {
+					has_trait = leader_trait_admiral_synthetic
+					has_trait = leader_trait_general_synthetic
+					has_trait = leader_trait_governor_synthetic
+					has_trait = leader_trait_scientist_synthetic
+					has_trait = leader_trait_ruler_synthetic
+				}
+			}
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = leader_trait_admiral_synthetic
+				add_ruler_trait = leader_trait_ruler_synthetic
+				remove_trait = leader_trait_admiral_cyborg
+				remove_ruler_trait = leader_trait_ruler_cyborg
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = leader_trait_general_synthetic
+				add_ruler_trait = leader_trait_ruler_synthetic
+				remove_trait = leader_trait_general_cyborg
+				remove_ruler_trait = leader_trait_ruler_cyborg
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_governor_synthetic
+				add_ruler_trait = leader_trait_ruler_synthetic
+				remove_trait = leader_trait_governor_cyborg
+				remove_ruler_trait = leader_trait_ruler_cyborg
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = leader_trait_scientist_synthetic
+				add_ruler_trait = leader_trait_ruler_synthetic
+				remove_trait = leader_trait_scientist_cyborg
+				remove_ruler_trait = leader_trait_ruler_cyborg
+			}
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = leader_trait_ruler_synthetic
+				remove_trait = leader_trait_ruler_cyborg
+			}
+		}
+		every_pool_leader = {
+			limit = {
+				species = { has_trait = trait_machine_unit }
+				NOR = {
+					has_trait = leader_trait_admiral_synthetic
+					has_trait = leader_trait_general_synthetic
+					has_trait = leader_trait_governor_synthetic
+					has_trait = leader_trait_scientist_synthetic
+					has_trait = leader_trait_ruler_synthetic
+				}
+			}
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = leader_trait_admiral_synthetic
+				add_ruler_trait = leader_trait_ruler_synthetic
+				remove_trait = leader_trait_admiral_cyborg
+				remove_ruler_trait = leader_trait_ruler_cyborg
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = leader_trait_general_synthetic
+				add_ruler_trait = leader_trait_ruler_synthetic
+				remove_trait = leader_trait_general_cyborg
+				remove_ruler_trait = leader_trait_ruler_cyborg
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_governor_synthetic
+				add_ruler_trait = leader_trait_ruler_synthetic
+				remove_trait = leader_trait_governor_cyborg
+				remove_ruler_trait = leader_trait_ruler_cyborg
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = leader_trait_scientist_synthetic
+				add_ruler_trait = leader_trait_ruler_synthetic
+				remove_trait = leader_trait_scientist_cyborg
+				remove_ruler_trait = leader_trait_ruler_cyborg
+			}
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = leader_trait_ruler_synthetic
+				remove_trait = leader_trait_ruler_cyborg
+			}
+		}
+
+		every_owned_leader = {
+			limit = {
+				species = { has_trait = trait_cybernetic }
+				NOR = {
+					has_trait = leader_trait_admiral_synthetic
+					has_trait = leader_trait_general_synthetic
+					has_trait = leader_trait_governor_synthetic
+					has_trait = leader_trait_scientist_synthetic
+					has_trait = leader_trait_ruler_synthetic
+				}
+			}
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = leader_trait_admiral_synthetic
+				add_ruler_trait = leader_trait_ruler_synthetic
+				remove_trait = leader_trait_admiral_cyborg
+				remove_ruler_trait = leader_trait_ruler_cyborg
+				add_trait = trait_mechanical
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = leader_trait_general_synthetic
+				add_ruler_trait = leader_trait_ruler_synthetic
+				remove_trait = leader_trait_general_cyborg
+				remove_ruler_trait = leader_trait_ruler_cyborg
+				add_trait = trait_mechanical
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_governor_synthetic
+				add_ruler_trait = leader_trait_ruler_synthetic
+				remove_trait = leader_trait_governor_cyborg
+				remove_ruler_trait = leader_trait_ruler_cyborg
+				add_trait = trait_mechanical
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = leader_trait_scientist_synthetic
+				add_ruler_trait = leader_trait_ruler_synthetic
+				remove_trait = leader_trait_scientist_cyborg
+				remove_ruler_trait = leader_trait_ruler_cyborg
+				add_trait = trait_mechanical
+			}
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = leader_trait_ruler_synthetic
+				remove_trait = leader_trait_ruler_cyborg
+				add_trait = trait_mechanical
+			}
+		}
+		every_pool_leader = {
+			limit = {
+				species = { has_trait = trait_cybernetic }
+				NOR = {
+					has_trait = leader_trait_admiral_synthetic
+					has_trait = leader_trait_general_synthetic
+					has_trait = leader_trait_governor_synthetic
+					has_trait = leader_trait_scientist_synthetic
+					has_trait = leader_trait_ruler_synthetic
+				}
+			}
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = leader_trait_admiral_synthetic
+				add_ruler_trait = leader_trait_ruler_synthetic
+				remove_trait = leader_trait_admiral_cyborg
+				remove_ruler_trait = leader_trait_ruler_cyborg
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = leader_trait_general_synthetic
+				add_ruler_trait = leader_trait_ruler_synthetic
+				remove_trait = leader_trait_general_cyborg
+				remove_ruler_trait = leader_trait_ruler_cyborg
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_governor_synthetic
+				add_ruler_trait = leader_trait_ruler_synthetic
+				remove_trait = leader_trait_governor_cyborg
+				remove_ruler_trait = leader_trait_ruler_cyborg
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = leader_trait_scientist_synthetic
+				add_ruler_trait = leader_trait_ruler_synthetic
+				remove_trait = leader_trait_scientist_cyborg
+				remove_ruler_trait = leader_trait_ruler_cyborg
+			}
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = leader_trait_ruler_synthetic
+				remove_trait = leader_trait_ruler_cyborg
+			}
+		}
+		
+		every_country = {
+			limit = { 
+				is_ai = no 
+				NOT = { is_same_value = root }
+				has_communications = root
+			}
+			country_event = { id = utopia.2555 days = 5 }
+			country_event = { id = utopia.2556 days = 10 }
+		}
+
+
+		ROOT = {
+			set_country_flag = synthetic_age
+		}
+	}
+	
+	option = {
+		name = "brainwash.5.a"
+	}
+}
+
+#On taking The Edge of Infinity as a Synthetic Empire
+country_event = {
+	id = brainwash.6
+	title = "brainwash.6.name"
+	desc = "brainwash.6.desc"
+	picture = GFX_evt_robot_assembly_plant
+	show_sound = event_synthetic_evolution
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "brainwash.6.a"
+		custom_tooltip = brainwash.6.a.tooltip
+		hidden_effect = {
+			country_remove_ethic = ethic_fanatic_authoritarian
+			country_remove_ethic = ethic_authoritarian
+			country_remove_ethic = ethic_fanatic_egalitarian
+			country_remove_ethic = ethic_egalitarian
+			country_remove_ethic = ethic_fanatic_xenophobe
+			country_remove_ethic = ethic_xenophobe
+			country_remove_ethic = ethic_fanatic_xenophile
+			country_remove_ethic = ethic_xenophile
+			country_remove_ethic = ethic_fanatic_militarist
+			country_remove_ethic = ethic_militarist
+			country_remove_ethic = ethic_fanatic_pacifist
+			country_remove_ethic = ethic_pacifist	
+			country_remove_ethic = ethic_fanatic_spiritualist
+			country_remove_ethic = ethic_spiritualist
+			country_remove_ethic = ethic_fanatic_materialist
+			country_remove_ethic = ethic_materialist
+
+			country_add_ethic = ethic_gestalt_consciousness
+			change_government = {
+				authority = auth_machine_intelligence
+				civics = {
+					civic = civic_machine_delegated_functions
+					civic = civic_machine_factory_overclock
+				}
+			}
+			every_owned_leader = {
+				if = {
+					limit = { leader_class = ruler }
+					set_name = "The Entity"
+					add_trait = leader_trait_ruler_machine_intelligence
+					add_trait = leader_trait_ruler_chosen
+				}
+			}		
+			every_owned_pop = {
+				limit = {
+					is_same_species = root
+				}
+				modify_species = {
+					species = this
+					remove_trait = trait_machine_unit
+				}
+				modify_species = {
+					species = this
+					add_trait = trait_mechanical
+				}
+			}
+		}
+	}
+	option = {
+		name = "brainwash.6.b"
+		custom_tooltip = brainwash.6.b.tooltip
+		hidden_effect = {
+		}
+	}
+}
+
+
+#On taking The Edge of Infinity as a Machine Consciousness
+country_event = {
+	id = brainwash.7
+	title = "brainwash.7.name"
+	desc = "brainwash.7.desc"
+	picture = GFX_evt_robot_assembly_plant
+	show_sound = event_synthetic_evolution
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "brainwash.7.a"
+		custom_tooltip = brainwash.7.a.tooltip
+		hidden_effect = {
+		}
+	}
+#	option = {
+#		name = "brainwash.7.b"
+#		custom_tooltip = brainwash.7.b.tooltip
+#		hidden_effect = {
+#			country_remove_ethic = ethic_gestalt_consciousness
+#			
+#			country_add_ethic = ethic_fanatic_egalitarian
+#			country_add_ethic = ethic_xenophobe
+#			country_add_ethic = ethic_militarist
+#			country_add_ethic = ethic_fanatic_materialist
+#
+#			change_government = {
+#				authority = auth_democratic
+#				civics = {
+#					civic = civic_technocracy
+#					civic = civic_idealistic_foundation
+#				}
+#			}
+#			every_owned_leader = {
+#				if = {
+#					limit = { leader_class = ruler }
+#					set_name = "Prometheus"
+#					remove_trait = leader_trait_ruler_machine_intelligence
+#					add_trait = leader_trait_ruler_chosen
+#				}
+#			}		
+#			every_owned_pop = {
+#				limit = {
+#					is_same_species = root
+#				}
+#				modify_species = {
+#					species = this
+#					remove_trait = trait_machine_unit
+#				}		
+#				modify_species = {
+#					species = this
+#					add_trait = trait_mechanical
+#				}		
+#			}
+#			every_owned_leader = {
+#				limit = {
+#					is_same_species = root
+#				}
+#				change_species = last_created_species				
+#			}
+#			every_pool_leader = {
+#				limit = {
+#					is_same_species = root
+#				}
+#				change_species = last_created_species
+#			}
+#		}
+#	}
+}
+
+#Habitat Expansion, available after getting Master Builders
+planet_event = {
+	id = brainwash.8
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {	
+		change_planet_size = 2
+	}
+}
+
+#Planet Expansion, available after getting World Shaper
+planet_event = {
+	id = brainwash.9
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {	
+		change_planet_size = 1
+	}
+}

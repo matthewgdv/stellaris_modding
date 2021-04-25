@@ -1,0 +1,143 @@
+# Hive Nexus
+building_hive_major_capital = {
+	base_buildtime = 480
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+
+	category = government
+	
+	potential = {
+		exists = owner
+		owner = { is_hive_empire = yes }
+	}
+	
+	convert_to = {
+		building_machine_major_capital
+		building_major_capital
+	}
+	
+	upgrades = { 
+		"building_hive_system_capital"
+	}
+	
+	allow = {
+		num_pops >= 40
+	}
+	
+	prerequisites = {
+		"tech_colonial_centralization"
+	}
+	
+	show_tech_unlock_if = { 
+		is_hive_empire = yes
+	}
+	
+	planet_modifier = {
+		planet_housing_add = 10
+		planet_amenities_add = 10
+		job_synapse_drone_add = 3
+		job_maintenance_drone_add = 5
+		job_patrol_drone_add = 2
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}			
+		upkeep = {
+			energy = 4
+		}
+	}
+	
+	triggered_desc = {
+		text = job_synapse_drone_effect_desc
+	}	
+
+	triggered_desc = {
+		text = job_maintenance_drone_effect_desc
+	}	
+	
+	triggered_desc = {
+		text = job_patrol_drone_effect_desc
+	}		
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+# Hive Confluence
+building_hive_system_capital = {
+	base_buildtime = 900
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	icon = building_hive_major_capital
+
+	category = government
+	
+	potential = {
+		exists = owner
+		owner = { is_hive_empire = yes }
+	}
+	
+	convert_to = {
+		building_machine_major_capital
+		building_major_capital
+		building_hive_major_capital
+	}
+	
+	allow = {
+		num_pops >= 100
+	}
+	
+	prerequisites = {
+		"tech_galactic_administration"
+	}
+	
+	show_tech_unlock_if = { 
+		is_hive_empire = yes
+	}
+	
+	planet_modifier = {
+		planet_housing_add = 15
+		planet_amenities_add = 15
+		job_synapse_drone_add = 5
+		job_maintenance_drone_add = 8
+		job_patrol_drone_add = 4
+		job_spawning_drone_add = 1
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 2000
+		}			
+		upkeep = {
+			energy = 10
+			food = 5
+		}
+	}
+	
+	triggered_desc = {
+		text = job_synapse_drone_effect_desc
+	}	
+
+	triggered_desc = {
+		text = job_maintenance_drone_effect_desc
+	}	
+	
+	triggered_desc = {
+		text = job_patrol_drone_effect_desc
+	}		
+
+	ai_weight = {
+		weight = 100
+	}
+}

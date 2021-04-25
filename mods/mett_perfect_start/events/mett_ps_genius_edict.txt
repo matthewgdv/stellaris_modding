@@ -1,0 +1,27 @@
+namespace = ps_genius_edict
+
+country_event = {
+	id = ps_genius_edict.00
+	title = "ps_genius_edict.00.name"
+	desc = "ps_genius_edict.00.desc"
+	picture = GFX_evt_star_chart
+	show_sound = event_administrative_work
+	
+	is_triggered_only = yes
+
+	immediate = {
+		create_leader = {
+			class = scientist
+			species = owner_main_species
+			name = random
+			leader_age_max = 35 
+		}
+		last_created_leader = {
+			remove_scientist_traits = yes
+			add_trait = leader_trait_spark_of_genius
+			save_event_target_as = researcher
+		}
+	}
+	
+	option = { name = EXCELLENT }
+}

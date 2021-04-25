@@ -1,0 +1,51 @@
+tech_mett_the_unity_ritual = {
+	cost = 3000
+	area = society
+	tier = 5
+	category = { psionics }
+	is_rare = yes	
+	is_reverse_engineerable = no
+	weight = 0
+	
+	feature_flags = {
+		unity_ritual_mett
+	}
+}
+
+#tech_mett_to_grant_ascension = {
+#	cost = 3000
+#	area = engineering
+#	tier = 5
+#	category = { industry }
+#	is_rare = yes	
+#	is_reverse_engineerable = no
+#	weight = 0
+#}
+
+tech_mett_perfected_machinery = {
+	cost = 3000
+	area = engineering
+	tier = 5
+	category = { industry }
+	is_rare = yes	
+	is_reverse_engineerable = no
+	weight = 0
+	
+	feature_flags = {
+		perfected_machinery_mett
+	}
+}
+
+tech_mett_perfected_cybernetics = {
+	cost = 3000
+	area = engineering
+	tier = 5
+	category = { industry }
+	is_rare = yes	
+	is_reverse_engineerable = no
+	weight = 0
+	
+	feature_flags = {
+		perfected_cybernetics_mett
+	}
+}

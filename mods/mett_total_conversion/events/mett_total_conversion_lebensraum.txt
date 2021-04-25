@@ -1,0 +1,53 @@
+namespace = lebensraum
+
+planet_event = {
+	id = lebensraum.1
+	hide_window = yes
+	is_triggered_only = yes
+
+
+	trigger = {
+		fromfrom = {
+			OR = {
+				has_ethic = ethic_gestalt_consciousness
+				has_policy_flag = appropriation_allowed
+			}
+		}
+	}
+	
+	immediate = {
+		set_planet_flag = mett_lebensraum_flag
+		controller = { country_event = { id = lebensraum.2 days = 1 } } #planet_event
+	}
+}
+
+country_event = {
+	id = lebensraum.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_planet = {
+			limit = { has_planet_flag = mett_lebensraum_flag }
+
+			if = {
+				limit = { free_pop_tiles > 0 }
+					random_tile = {
+						limit = { has_pop = no }
+						create_pop = { species = owner_main_species }
+					}
+				else = {
+					random_tile = {
+						limit = { has_pop = yes }
+						kill_pop = yes
+					}
+					random_tile = {
+						limit = { has_pop = no has_blocker = no}
+						create_pop = { species = owner_main_species }
+					}
+				}
+			}
+			remove_planet_flag = mett_lebensraum_flag
+		}
+	}
+}

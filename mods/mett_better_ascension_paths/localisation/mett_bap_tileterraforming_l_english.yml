@@ -1,0 +1,7 @@
+﻿l_english:
+
+ # Planet Edicts
+ edict_tile_terraform:0 "Tile Terraform"
+ edict_tile_terraform_desc:0 "This edict will increase the planet size by 1, adding 1 clear tile to the planet up to the max planet size of 25.\n\n" 
+ building_tile_terraformer:0 "Tile Terraformer"
+ building_tile_terraformer_desc:0 "This building will slowly add more tiles to a planet up to a maximum of 25 tiles.  The time it takes to add a tile is 100 days times the current planet size. Once the planet has increased to size 25 the building is automatically removed."

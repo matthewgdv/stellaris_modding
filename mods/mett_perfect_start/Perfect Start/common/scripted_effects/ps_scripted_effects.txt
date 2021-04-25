@@ -1,0 +1,48 @@
+remove_scientist_traits = {
+	leader = {
+		remove_trait = leader_trait_maniacal
+		remove_trait = leader_trait_expertise_materials
+		remove_trait = leader_trait_expertise_propulsion
+		remove_trait = leader_trait_expertise_voidcraft
+		remove_trait = leader_trait_expertise_industry
+		remove_trait = leader_trait_expertise_field_manipulation
+		remove_trait = leader_trait_expertise_particles
+		remove_trait = leader_trait_expertise_computing
+		remove_trait = leader_trait_expertise_new_worlds
+		remove_trait = leader_trait_expertise_statecraft
+		remove_trait = leader_trait_expertise_biology
+		remove_trait = leader_trait_expertise_military_theory
+		remove_trait = leader_trait_spark_of_genius
+		remove_trait = leader_trait_adaptable
+		remove_trait = leader_trait_flexible_programming
+		remove_trait = leader_trait_eager
+		remove_trait = leader_trait_newboot
+		remove_trait = leader_trait_resilient
+		#remove_trait = leader_trait_careful
+		remove_trait = leader_trait_meticulous
+		remove_trait = leader_trait_carefree
+		remove_trait = leader_trait_roamer
+		remove_trait = leader_trait_cataloger
+		remove_trait = leader_trait_archaeologist
+		remove_trait = leader_trait_paranoid
+	}
+}
+
+remove_admiral_traits = {
+	leader = {
+		remove_trait = leader_trait_trickster
+		remove_trait = leader_trait_fleet_logistician
+		remove_trait = leader_trait_engineer
+		remove_trait = leader_trait_aggressive
+		remove_trait = leader_trait_cautious
+		remove_trait = leader_trait_scout
+		remove_trait = leader_trait_unyielding
+		remove_trait = leader_trait_nervous
+		remove_trait = leader_trait_gale_speed
+		remove_trait = leader_trait_adaptable
+		remove_trait = leader_trait_flexible_programming
+		remove_trait = leader_trait_eager
+		remove_trait = leader_trait_newboot
+		remove_trait = leader_trait_resilient
+	}
+}

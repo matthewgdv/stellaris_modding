@@ -1,0 +1,1008 @@
+opinion_socialism_pos_1 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_socialism"
+		}
+	
+    from = {
+	     has_ethic = "ethic_socialism"
+		 }	
+		
+	}
+
+	opinion = {
+		base = 10
+	}
+}
+
+
+opinion_socialism_pos_2 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_socialism"
+		}
+	
+    from = {
+	  OR = {
+		has_ethic = "ethic_fanatic_socialism"
+		}
+		 }	
+		
+	}
+
+	opinion = {
+		base = 15
+	}
+}
+
+
+opinion_socialism_pos_3 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_fanatic_socialism"
+		}
+	
+    from = {
+	  OR = {
+		has_ethic = "ethic_socialism"
+		}
+		 }	
+		
+	}
+
+	opinion = {
+		base = 15
+	}
+}
+
+
+
+opinion_socialism_pos_4 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_fanatic_socialism"
+		}
+	
+    from = {
+	  OR = {
+		has_ethic = "ethic_fanatic_socialism"
+		}
+		 }	
+		
+	}
+
+	opinion = {
+		base = 25
+	}
+}
+
+
+
+
+opinion_socialism_neg_1 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_capitalism"
+		}
+	
+    from = {
+	     has_ethic = "ethic_socialism"
+		 }	
+		
+	}
+
+	opinion = {
+		base = -5
+	}
+}
+
+
+opinion_socialism_neg_2 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_capitalism"
+		}
+	
+    from = {
+	     has_ethic = "ethic_fanatic_socialism"
+		 }	
+		
+	}
+
+	opinion = {
+		base = -10
+	}
+}
+
+
+opinion_socialism_neg_3 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_fanatic_capitalism"
+		}
+	
+    from = {
+	     has_ethic = "ethic_socialism"
+		 }	
+		
+	}
+
+	opinion = {
+		base = -10
+	}
+}
+
+
+opinion_socialism_neg_4 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_fanatic_capitalism"
+		}
+	
+    from = {
+	     has_ethic = "ethic_fanatic_socialism"
+		 }	
+		
+	}
+
+	opinion = {
+		base = -15
+	}
+}
+
+
+
+
+
+
+opinion_capitalism_pos_1 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_capitalism"
+		}
+	
+    from = {
+	     has_ethic = "ethic_capitalism"
+		 }	
+		
+	}
+
+	opinion = {
+		base = 10
+	}
+}
+
+
+opinion_capitalism_pos_2 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_capitalism"
+		}
+	
+    from = {
+	  OR = {
+		has_ethic = "ethic_fanatic_capitalism"
+		}
+		 }	
+		
+	}
+
+	opinion = {
+		base = 15
+	}
+}
+
+
+opinion_capitalism_pos_3 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_fanatic_capitalism"
+		}
+	
+    from = {
+	  OR = {
+		has_ethic = "ethic_capitalism"
+		}
+		 }	
+		
+	}
+
+	opinion = {
+		base = 15
+	}
+}
+
+
+
+opinion_capitalism_pos_4 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_fanatic_capitalism"
+		}
+	
+    from = {
+	  OR = {
+		has_ethic = "ethic_fanatic_capitalism"
+		}
+		 }	
+		
+	}
+
+	opinion = {
+		base = 25
+	}
+}
+
+
+
+
+
+
+opinion_capitalism_neg_1 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_socialism"
+		}
+	
+    from = {
+	     has_ethic = "ethic_capitalism"
+		 }	
+		
+	}
+
+	opinion = {
+		base = -5
+	}
+}
+
+
+opinion_capitalism_neg_2 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_socialism"
+		}
+	
+    from = {
+	     has_ethic = "ethic_fanatic_capitalism"
+		 }	
+		
+	}
+
+	opinion = {
+		base = -10
+	}
+}
+
+
+opinion_capitalism_neg_3 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_fanatic_socialism"
+		}
+	
+    from = {
+	     has_ethic = "ethic_capitalism"
+		 }	
+		
+	}
+
+	opinion = {
+		base = -10
+	}
+}
+
+
+opinion_capitalism_neg_4 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_fanatic_socialism"
+		}
+	
+    from = {
+	     has_ethic = "ethic_fanatic_capitalism"
+		 }	
+		
+	}
+
+	opinion = {
+		base = -15
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+opinion_green_pos_1 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_green"
+		}
+	
+    from = {
+	     has_ethic = "ethic_green"
+		 }	
+		
+	}
+
+	opinion = {
+		base = 10
+	}
+}
+
+
+opinion_green_pos_2 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_green"
+		}
+	
+    from = {
+	  OR = {
+		has_ethic = "ethic_fanatic_green"
+		}
+		 }	
+		
+	}
+
+	opinion = {
+		base = 15
+	}
+}
+
+
+opinion_green_pos_3 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_fanatic_green"
+		}
+	
+    from = {
+	  OR = {
+		has_ethic = "ethic_green"
+		}
+		 }	
+		
+	}
+
+	opinion = {
+		base = 15
+	}
+}
+
+
+
+opinion_green_pos_4 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_fanatic_green"
+		}
+	
+    from = {
+	  OR = {
+		has_ethic = "ethic_fanatic_green"
+		}
+		 }	
+		
+	}
+
+	opinion = {
+		base = 25
+	}
+}
+
+
+
+
+opinion_green_neg_1 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_industrial"
+		}
+	
+    from = {
+	     has_ethic = "ethic_green"
+		 }	
+		
+	}
+
+	opinion = {
+		base = -5
+	}
+}
+
+
+opinion_green_neg_2 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_industrial"
+		}
+	
+    from = {
+	     has_ethic = "ethic_fanatic_green"
+		 }	
+		
+	}
+
+	opinion = {
+		base = -10
+	}
+}
+
+
+opinion_green_neg_3 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_fanatic_industrial"
+		}
+	
+    from = {
+	     has_ethic = "ethic_green"
+		 }	
+		
+	}
+
+	opinion = {
+		base = -10
+	}
+}
+
+
+opinion_green_neg_4 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_fanatic_industrial"
+		}
+	
+    from = {
+	     has_ethic = "ethic_fanatic_green"
+		 }	
+		
+	}
+
+	opinion = {
+		base = -15
+	}
+}
+
+
+
+
+
+
+opinion_industrial_pos_1 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_industrial"
+		}
+	
+    from = {
+	     has_ethic = "ethic_industrial"
+		 }	
+		
+	}
+
+	opinion = {
+		base = 10
+	}
+}
+
+
+opinion_industrial_pos_2 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_industrial"
+		}
+	
+    from = {
+	  OR = {
+		has_ethic = "ethic_fanatic_industrial"
+		}
+		 }	
+		
+	}
+
+	opinion = {
+		base = 15
+	}
+}
+
+
+opinion_industrial_pos_3 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_fanatic_industrial"
+		}
+	
+    from = {
+	  OR = {
+		has_ethic = "ethic_industrial"
+		}
+		 }	
+		
+	}
+
+	opinion = {
+		base = 15
+	}
+}
+
+
+
+opinion_industrial_pos_4 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_fanatic_industrial"
+		}
+	
+    from = {
+	  OR = {
+		has_ethic = "ethic_fanatic_industrial"
+		}
+		 }	
+		
+	}
+
+	opinion = {
+		base = 25
+	}
+}
+
+
+
+
+
+
+opinion_industrial_neg_1 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_green"
+		}
+	
+    from = {
+	     has_ethic = "ethic_industrial"
+		 }	
+		
+	}
+
+	opinion = {
+		base = -5
+	}
+}
+
+
+opinion_industrial_neg_2 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_green"
+		}
+	
+    from = {
+	     has_ethic = "ethic_fanatic_industrial"
+		 }	
+		
+	}
+
+	opinion = {
+		base = -10
+	}
+}
+
+
+opinion_industrial_neg_3 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_fanatic_green"
+		}
+	
+    from = {
+	     has_ethic = "ethic_industrial"
+		 }	
+		
+	}
+
+	opinion = {
+		base = -10
+	}
+}
+
+
+opinion_industrial_neg_4 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_fanatic_green"
+		}
+	
+    from = {
+	     has_ethic = "ethic_fanatic_industrial"
+		 }	
+		
+	}
+
+	opinion = {
+		base = -15
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+opinion_pluralist_pos_1 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_pluralist"
+		}
+	
+    from = {
+	     has_ethic = "ethic_pluralist"
+		 }	
+		
+	}
+
+	opinion = {
+		base = 10
+	}
+}
+
+
+opinion_pluralist_pos_2 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_pluralist"
+		}
+	
+    from = {
+	  OR = {
+		has_ethic = "ethic_fanatic_pluralist"
+		}
+		 }	
+		
+	}
+
+	opinion = {
+		base = 15
+	}
+}
+
+
+opinion_pluralist_pos_3 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_fanatic_pluralist"
+		}
+	
+    from = {
+	  OR = {
+		has_ethic = "ethic_pluralist"
+		}
+		 }	
+		
+	}
+
+	opinion = {
+		base = 15
+	}
+}
+
+
+
+opinion_pluralist_pos_4 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_fanatic_pluralist"
+		}
+	
+    from = {
+	  OR = {
+		has_ethic = "ethic_fanatic_pluralist"
+		}
+		 }	
+		
+	}
+
+	opinion = {
+		base = 25
+	}
+}
+
+
+
+
+opinion_pluralist_neg_1 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_elitist"
+		}
+	
+    from = {
+	     has_ethic = "ethic_pluralist"
+		 }	
+		
+	}
+
+	opinion = {
+		base = -5
+	}
+}
+
+
+opinion_pluralist_neg_2 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_elitist"
+		}
+	
+    from = {
+	     has_ethic = "ethic_fanatic_pluralist"
+		 }	
+		
+	}
+
+	opinion = {
+		base = -10
+	}
+}
+
+
+opinion_pluralist_neg_3 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_fanatic_elitist"
+		}
+	
+    from = {
+	     has_ethic = "ethic_pluralist"
+		 }	
+		
+	}
+
+	opinion = {
+		base = -10
+	}
+}
+
+
+opinion_pluralist_neg_4 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_fanatic_elitist"
+		}
+	
+    from = {
+	     has_ethic = "ethic_fanatic_pluralist"
+		 }	
+		
+	}
+
+	opinion = {
+		base = -15
+}
+
+
+
+
+
+
+opinion_elitist_pos_1 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_elitist"
+		}
+	
+    from = {
+	     has_ethic = "ethic_elitist"
+		 }	
+		
+	}
+
+	opinion = {
+		base = 10
+	}
+}
+
+
+opinion_elitist_pos_2 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_elitist"
+		}
+	
+    from = {
+	  OR = {
+		has_ethic = "ethic_fanatic_elitist"
+		}
+		 }	
+		
+	}
+
+	opinion = {
+		base = 15
+	}
+}
+
+
+opinion_elitist_pos_3 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_fanatic_elitist"
+		}
+	
+    from = {
+	  OR = {
+		has_ethic = "ethic_elitist"
+		}
+		 }	
+		
+	}
+
+	opinion = {
+		base = 15
+	}
+}
+
+
+
+opinion_elitist_pos_4 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_fanatic_elitist"
+		}
+	
+    from = {
+	  OR = {
+		has_ethic = "ethic_fanatic_elitist"
+		}
+		 }	
+		
+	}
+
+	opinion = {
+		base = 25
+	}
+}
+
+
+
+
+
+
+opinion_elitist_neg_1 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_pluralist"
+		}
+	
+    from = {
+	     has_ethic = "ethic_elitist"
+		 }	
+		
+	}
+
+	opinion = {
+		base = -5
+	}
+}
+
+
+opinion_elitist_neg_2 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_pluralist"
+		}
+	
+    from = {
+	     has_ethic = "ethic_fanatic_elitist"
+		 }	
+		
+	}
+
+	opinion = {
+		base = -10
+	}
+}
+
+
+opinion_elitist_neg_3 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_fanatic_pluralist"
+		}
+	
+    from = {
+	     has_ethic = "ethic_elitist"
+		 }	
+		
+	}
+
+	opinion = {
+		base = -10
+	}
+}
+
+
+opinion_elitist_neg_4 = {
+	trigger = {
+	
+	OR = {
+		has_ethic = "ethic_fanatic_pluralist"
+		}
+	
+    from = {
+	     has_ethic = "ethic_fanatic_elitist"
+		 }	
+		
+	}
+
+	opinion = {
+		base = -15
+	}
+}
+
+
+

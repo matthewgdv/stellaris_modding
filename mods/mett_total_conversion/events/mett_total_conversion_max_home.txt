@@ -1,0 +1,17 @@
+namespace = max_home
+
+country_event = {
+	id = max_home.1
+	hide_window = yes
+	is_triggered_only = yes
+
+
+	trigger = {
+		is_ai = no
+	}
+	
+	immediate = {
+		home_planet = { set_planet_size = 25 }
+	}
+}
+

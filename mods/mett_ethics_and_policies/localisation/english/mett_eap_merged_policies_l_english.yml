@@ -1,0 +1,749 @@
+﻿l_english:
+
+ ####################################
+ # [1] Social Justice
+ ####################################
+ 
+ #[1.0] Social Justice Tag
+ policy_soc_justice_tag:0 " ======= Social Justice ======= "
+ policy_soc_justice_tag_desc:0 "Our nation's stances and laws surrounding various social justice challenges.\n\n"
+ 
+ #[1.1] Gender
+ policy_gender:0 "Gender Dynamics"
+ policy_gender_desc:0 "Gender Policy is how the empire treats citizens baised on their sex, or gender. If a race has no biological gender, this policy instead determines the roles of more masculine or feminine members.\n\n"
+ 
+ gender_ambiguity:0 "Ambiguity"
+ gender_ambiguity_desc:0 "Our species has no gender, or even any concept of such. What use are such trifling labels?\n\n"
+ 
+ gender_equality:0 "Gender Equality"
+ gender_equality_desc:0 "All living beings, whether masculine or femenine, must be free to develop their personal abilities and make choices without the limitations set by stereotypes, rigid gender roles and prejudices.\n\n"
+
+ gender_slightly_mel:0 "Androcentric"
+ gender_slightly_mel_desc:0 "We understand that the more feminine members of our society are naturaly inferior to us, and this should be taken into account when hiring or educating them.\n\n"
+ 
+ gender_mel:0 "Patriarchy"
+ gender_mel_desc:0 "The feminine members of our society exist solely to raise our young and serve their masculine owners in whatever way is asked of them. They are possessions rather than equal citizens.\n\n"
+ 
+ gender_slightly_fem:0 "Gynocentric"
+ gender_slightly_fem_desc:0 "Feminine science has shown that masculinity makes people less intelligent and more prone to violence. We must think of this when considering jobs for them.\n\n"
+ 
+ gender_fem:0 "Matriarchy"
+ gender_fem_desc:0 "The masculine members of our society are degenerate savages who deserve to work. With their wilful nature out of the way, no one will defy us. You wouldn't want to be labeled 'masculine', would you?\n\n"
+
+ #[1.2] Sexuality
+ policy_sex:0 "Sexual Minorities"
+ policy_sex_desc:0 "The state's official stance on individuals that deviate from the norms of sexuality, such as those who are attracted to their own gender.\n\n"
+ 
+ sex_asexual:0 "Asexual"
+ sex_asexual_desc:0 "Our species does not engage in sexual activity, rendering such policies irrelevant.\n\n"
+ 
+ sex_lgb_inclusive:0 "LGB Inclusive"
+ sex_lgb_inclusive_desc:0 "Gay, lesbian and bisexual citizens are accomodated wherever possible, such as on official government paperwork, civil rights (marriage, adoption), pride events, media representation, etc. It is difficult enough to be a sexual minority already, the least we can do is ensure our LGB citizens are not isolated and disadvantaged.\n\n"
+
+ sex_neutral:0 "Neutral To Sexual Minorities"
+ sex_neutral_desc:0 "Our nation is safe for sexual minorities, and they recieve the same civil liberties and rights as their fellow citizens, but they should expect no special treatment from us beyond that.\n\n"
+ 
+ sex_heteronormative:0 "Heteronormative Values"
+ sex_heteronormative_desc:0 "The state proliferates heteronormative values which make the nation quite hostile to sexual minorities. Hate crimes are common and strong social pressures routinely force LGB citizens to pass as straight.\n\n"
+ 
+ sex_homophobia:0 "State-sanctioned Homophobia"
+ sex_homophobia_desc:0 "Sexual minorities are violently repressed by the state, and same-sex activities are deemed illegal.\n\n"
+ 
+ #[1.3] Transgender
+ policy_trans:0 "Transgender Tolerance"
+ policy_trans_desc:0 "Some members of our society are unhappy with the gender assigned to them at birth. We can force them to conform to biology, or we can aid them in looking on the outside how they feel on the inside.\n\n"
+ 
+ trans_unnecessary:0 "Unnecessary"
+ trans_unnecessary_desc:0 "With no concept of gender, what is there to change?\n\n"
+ 
+ trans_no_trans:0 "Biological Conformity"
+ trans_no_trans_desc:0 "Whether the cause is biology or the will of the gods, you are born the way you are, and to defy this fact is foolish and rebellious.\n\n"
+ 
+ trans_limited_trans:0 "Transgender Acceptance"
+ trans_limited_trans_desc:0 "Some people feel uncomfortable with their natural bodies. If they feel the need to change their gender or appearance, they are free to make that decision on their own, and to pursue it without state assistance.\n\n"
+ 
+ trans_full_trans:0 "Transgender Aid"
+ trans_full_trans_desc:0 "It is a fact that some people are born in a body that does not match their gender expression, causing them considerable suffering and dysphoria. It is our duty to help them and ensure that they feel comfortable and accepted with their decision to transition.\n\n"
+ 
+ trans_attack_helicopter:0 "Fanatical Social Revolution"
+ trans_attack_helicopter_desc:0 "Everyone is different, or they are bad. All cis people aren't actually cis and are really just being oppressed. "If it's normal it's wrong and probably homophobic" said the attack helicopter.\n\n"
+ 
+ #[1.4] Race
+ policy_race:0 "Racial Equality"
+ policy_race_desc:0 "Some members of our species are different than others. We can embrace or exaggerate these differences, if we so wish.\n\n"
+ 
+ race_identical:0 "Identical"
+ race_identical_desc:0 "We are identical. There are no phenotypical differences to be found within our species.\n\n"
+ 
+ race_equality:0 "Racial Equality"
+ race_equality_desc:0 "Yes, people are different, but these differences are superficial. We are all equally valuable to society.\n\n"
+ 
+ race_discrimination:0 "Racial Descrimination"
+ race_discrimination_desc:0 "Everyone is equal. Some people are just less equal then others. If they happen to fall into ethnical groups, then who are we to look a gift snoolik in the mouth?\n\n"
+ 
+ race_supremacy:0 "Racial Supremacy"
+ race_supremacy_desc:0 "The lower races are fit for little more than to be owned, sold, and used. They have less in common with the master race than they do with the dumb beasts of our world.\n\n"
+ 
+ #[1.5] Prostitution
+ policy_prostitution:0 "Prostitution Stance"
+ policy_prostitution_desc:0 "Determines the legal status of prostitution.\n\n"
+ 
+ prostitution_rights:0 "Sex Worker Rights Guaranteed"
+ prostitution_rights_desc:0 "The sex industry is treated like any other professon. Sex workers are guaranteed safety and fair treatment from their employers, and are required to undergo health tests regularly. Sex work is fully taxed.\n\n"
+  
+ prostitution_decriminalised:0 "Prostitution Decriminalised"
+ prostitution_decriminalised_desc:0 "Prostitution is not actively quashed, but it is still looked down upon and kept mostly on the streets.\n\n"
+ 
+ prostitution_forbidden:0 "Prostitution Forbidden"
+ prostitution_forbidden_desc:0 "Prostitution is forbidden by law. The police actively entraps prostitutes and those seeking their services and charges them in court.\n\n"
+
+ #[1.6] Abortion
+ policy_abortion:0 "Abortion Legality"
+ policy_abortion_desc:0 "Determines the legal status of abortion"
+ 
+ abortion_permitted:0 "Abortion Permitted"
+ abortion_permitted_desc:0 "The right of a woman to her own bodily autonomy must receive precedence over whatever dubious rights might be claimed for an unformed mass of cells. Down the other road lies suffering and poverty.\n\n"
+ 
+ abortion_banned:0 "Abortion Banned"
+ abortion_banned_desc:0 "Every life is precious and must be protected, even those that are only beginning and have not yet developed sentience. They carry the potential, and that is enough.\n\n"
+
+ #[1.7] Drug Legalization Status 
+ policy_drugs:0 "Drug Legalization Status"
+ policy_drugs_desc:1 "The legal state of solar dust in the empire.\n\n"
+ 
+ drugs_illegal:0 "War on Drugs"
+ drugs_illegal_desc:1 "Solar dust use is illegal. Government agencies are tasked with apprehending and imprisoning users and suppliers.\n\n"
+ 
+ drugs_medical:0 "Medical Use Only"
+ drugs_medical_desc:1 "Allow the use of solar dust for medical purposes in the empire.\n\n"
+ 
+ drugs_state:0 "State Supply"
+ drugs_state_desc:1 "The state provides solar dust at prices low enough to outcompete the black market and any cartels. Safe spaces are provided for users to inject themselves, with medical staff on hand. Harm prevention initiatives are run within these clinics, with detox programmes and counsellors working to reduce addicts' dependency on the drug and rehabilitate them into society.\n\n"
+ 
+ drugs_legal:0 "Full Legalization"
+ drugs_legal_desc:1 "Solar dust is fully legalized and may be bought and sold in the private sector like any other commodity, with no additional regulation or government oversight.\n\n"
+ 
+ ####################################
+ # [2] Economic Regulations
+ ####################################
+ 
+ #[2.0] Economic Regulations Tag
+ policy_economic_reg_tag:0 " ===== Economic Regulations ===== "
+ policy_economic_reg_tag_desc:0 "The laws governing our nation's economy, workforce, and property ownership.\n\n"
+ 
+ #[2.1] Land and property Ownership
+ policy_land:0 "Land and Property Ownership"
+ policy_land_desc:0 "Legal rights for private ownership of land and property.\n\n"
+ 
+ land_public:0 "Public Ownership"
+ land_public_desc:0 "There is no private land or property ownership. All land and property is owned by the state and rented out to citizens at variable costs based on size, quality, and location.\n\n"
+ 
+ land_subsidies:0 "State Subsidies"
+ land_subsidies_desc:0 "Most land and property can be privately owned but the state also retains important land for state use and will subsidise private development of land that benefits the state.\n\n"
+ 
+ land_pioneers:0 "Pioneer Rights"
+ land_pioneers_desc:0 "If you claim it and can keep it, then it is yours. If you build it and can keep it, then it is yours.\n\n"
+ 
+ land_private:0 "Full Private Ownership"
+ land_private_desc:0 "The land and property market is mostly left to run free of state involvement, except where the state requires land for state property. The state will usually then buy the land or leverage priority rights to claim land.\n\n"
+  
+ #[2.2] Business Ownership
+ policy_business:0 "Business Ownership"
+ policy_business_desc:0 "Legal rights to operate a privately owned profit-generating business.\n\n"
+ 
+ business_planned:0 "Planned Economy"
+ business_planned_desc:1 "The state owns and oversees all businesses, and employs citizens to work for them.\n\n"
+ 
+ business_essentials:0 "State-guaranteed Essentials"
+ business_essentials_desc:1 "All essentials such as food, education, residential housing, basic clothes, and healthcare are solely owned and provided by the state at affordable prices. Luxuries and entertainment are passed off the the private sector to allow market forces to act on them.\n\n"
+ 
+ business_regulated:0 "Regulated Private Sector"
+ business_regulated_desc:0 "Most services are privatised and businesses can grow as large as they are able. However, the state regulates private business to protect employee rights, keep natural monopolies and price gouging in check, and to ensure statuatory obligations are reliably met.\n\n"
+  
+ business_free:0 "Free Market"
+ business_free_desc:0 "There are few regulations and little oversight of private business. Businesses can grow to become mega-corporations. As long as a business does not interfere with the state, meets a few light statuatory obligations, pays its taxes and operates legally, the state leaves it to run as it sees fit.\n\n"
+ 
+ #[2.3] Income Variance
+ policy_income:0 "Income Variance"
+ policy_income_desc:0 "The state's stance towards income inequality. This includes not only salaries from employment, but also personal income from shares, stocks, bonds, property, and all other assets.\n\n"
+ 
+ income_deregulated:0 "No State Intervention"
+ income_deregulated_desc:1 "The natural state is the law of the jungle, where the strong step over the weak to climb to ever greater hights. Power and wealth will tend to consolidate at the top; that is simply the nature of the world. As it should be.\n\n"
+ 
+ income_100:0 "100x Variance"
+ income_100_desc:1 "Without a strong financial incentive, no one would bother to learn new skills and perform the most difficult and stressful jobs. Income inequality is not a bug, but a feature.\n\n"
+ 
+ income_25:0 "25x Variance"
+ income_25_desc:0 "Employers should be permitted to offer varying compensation within reason. Extreme income inequality has historically tended to precede the collapse of empires, however, and we learn from past mistakes.\n\n"
+  
+ income_5:0 "5x Variance"
+ income_5_desc:0 "Some room should be allowed for valuable individuals to be rewarded, but it is pure hubris to think that anyone is worth as much as a hundred, or even ten of their peers. No one ever accomplishes anything alone.\n\n"
+ 
+ income_identical:0 "Identical Income"
+ income_identical_desc:0 "No one's time and energy is worth more than any other person's. The state enforces equal income among all citizens, and nationalizes any earnings above the universal income threshold.\n\n"
+ 
+ #[2.4] Taxation Method
+ policy_tax:0 "Taxation Method"
+ policy_tax_desc:0 "How we tax the income of our citizenry. This includes the income from all private assets, not just employment salaries.\n\n"
+ 
+ tax_trickle:0 "Trickle-down Theory"
+ tax_trickle_desc:0 "Cutting taxes to near nothing on the wealthiest families, banks, and corporations is sure to create new jobs and reinvigorate the economy! It's genius! The benefits will definitely trickle down to the average worker...\n\n"
+ 
+ tax_flat:0 "Flat Taxation"
+ tax_flat_desc:0 "Everyone pays a flat percentage of their income as tax. The more you make, the more you pay, in a perfectly proportional manner.\n\n"
+ 
+ tax_brackets:0 "Tax Brackets"
+ tax_brackets_desc:0 "At set income thresholds the tax percentage increases for any income over that threshold. This causes a steeper increase in taxes for the wealthiest citizens, but there will still be some billionaires living in decadent luxury.\n\n"
+ 
+ tax_rich:0 "Harsh Taxes on the Rich"
+ tax_rich_desc:0 "In addition to a tax bracket system, additional taxes are leveraged to prevent the accumulation of significant wealth in any given family or corporate entity. This prevents undue influence from being wielded by any non-state actors.\n\n"
+ 
+ tax_redistribution:0 "Active Wealth Redistribution"
+ tax_redistribution_desc:0 "All forms of inheritence have been abolished. A person's assets may not be transferred outside the nation except as part of state-sanctioned trade and are nationalized upon their death. Depending on state needs this wealth is either employed for public services or distributed among citizens as a monthly allowance. This prevents the formation of economic dynasties and ensures that merit, and not the accident of birth, determines an individual's economic potential.\n\n"
+ 
+ #[2.5] Cost of Living
+ policy_livingcosts:0 "Cost of Living"
+ policy_livingcosts_desc:0 "How available and affordable are basic sustenance, consumer goods and luxuries.\n\n"
+ 
+ livingcosts_consumerism:0 "Subsidized Consumerism"
+ livingcosts_consumerism_desc:0 "Most food and drink is free and easily obtained, although some luxury goods will still cost a little to enjoy. Consumer goods and luxuries are still very cheap and easily obtained.\n\n"
+ 
+ livingcosts_basics:0 "Free Basics"
+ livingcosts_basics_desc:0 "Basic sustenance and consumer items needed for a modern lifestyle are freely available. Luxuries can still be expensive, but not prohibitively so.\n\n"
+ 
+ livingcosts_balanced:0 "Balanced Living Costs"
+ livingcosts_balanced_desc:0 "Basic sustenance and consumer goods are reasonably priced and easy to obtain. Luxuries typically cost a little more.\n\n"
+ 
+ livingcosts_high:0 "High Living Costs"
+ livingcosts_high_desc:0 "Basic sustenance and consumer goods aren't cheap and eating well or even regularly can get expensive quickly. Luxuries are something that can only really be enjoyed by the wealthy.\n\n"
+ 
+ livingcosts_extreme:0 "Extreme Living Costs"
+ livingcosts_extreme_desc:0 "Everything costs an appendage or two. Just being able to afford to eat regularly is a luxury.\n\n"
+ 
+ #[2.6] Work Hours
+ policy_schedule:0 "Work Hours"
+ policy_schedule_desc:0 "The ammount of hours a normal worker has to work on a day.\n\n"
+ 
+ schedule_assistance:0 "Basic Assistance"
+ schedule_assistance_desc:1 "Most of the population does not work, and relies on government-provided basic assistance. The few jobs that have not been automated have extremely flexible work hours which the employees can set for themselves.\n\n"
+ 
+ schedule_four:0 "Four Hours"
+ schedule_four_desc:1 "Four Hours of work per day.\n\n"
+
+ schedule_six:0 "Six Hours"
+ schedule_six_desc:1 "Six Hours of work per day.\n\n"
+ 
+ schedule_eight:0 "Eight Hours"
+ schedule_eight_desc:1 "Eight Hours of work per day.\n\n"
+ 
+ schedule_ten:0 "Ten Hours"
+ schedule_ten_desc:1 "Ten Hours of work per day.\n\n"
+ 
+ schedule_twelve:0 "Twelve Hours"
+ schedule_twelve_desc:1 "Twelve Hours of work per day.\n\n"
+ 
+ #[2.7] Union Regulation
+ policy_unions:0 "Union Regulation"
+ policy_unions_desc:0 "Rights and regulations for the forming and running of labour unions.\n\n"
+ 
+ unions_deregulated:0 "Deregulated Unions"
+ unions_deregulated_desc:0 "There are no restrictions or regulations on unionism.\n\n"
+ 
+ unions_lightly:0 "Lightly Regulated Unions"
+ unions_lightly_desc:0 "There are some small restrictions and regulations for unionism.\n\n"
+ 
+ unions_heavily:0 "Heavily Regulated Unions"
+ unions_heavily_desc:0 "There are heavy restrictions and regulations for unionism.\n\n"
+ 
+ unions_prohibited:0 "Unions Prohibited"
+ unions_prohibited_desc:0 "Unionism and being a member of a union is illegal.\n\n" 
+ 
+ ####################################
+ # [3] Resource Allocation
+ ####################################
+
+ #[3.0] Resource Allocation Tag
+ policy_resource_tag:0 " ======= Resource Allocation ======= "
+ policy_resource_tag_desc:0 "How our empire prioritizes the allocation of resources towards state interests.\n\n"
+ 
+ #[3.1] Food Distribution
+ policy_food:0 "Food distribution"
+ policy_food_desc:0 "Defines how we set food distribution controls.\n\n"
+ 
+ food_rationing:0 "Food Rationing"
+ food_rationing_desc:0 "Minimal food distribution to ensure our citizens stay alive. But not happy.\n\n" 
+ 
+ food_controls:0 "Moderate Food Controls"
+ food_controls_desc:0 "Higher control on food distribution. Our citizens will have to tighten their belts a little.\n\n"
+ 
+ food_balanced:0 "Balanced Food Distribution"
+ food_balanced_desc:0 "Standard food distribution polices.\n\n"
+ 
+ food_extra:0 "Extra Food Rations"
+ food_extra_desc:0 "A plump population is a happy population.\n\n"
+ 
+ food_lavish:0 "Lavish Food Allowances"
+ food_lavish_desc:0 "We can turn our bounty of food into luxurious food acessibility and diversity for our citizens.\n\n"
+ 
+ #[3.2] Production Focus
+ policy_production:0 "Production Focus"
+ policy_production_desc:0 "Focusing our production in a single area will boost it at the expense of a loss on the other.\n\n"
+ 
+ production_balanced:0 "Balanced Production Focus"
+ production_balanced_desc:0 "Balanced production between minerals and energy.\n\n"
+
+ production_energy:0 "Energy Production Focus"
+ production_energy_desc:0 "Production focused on energy credits over minerals.\n\n"
+ 
+ production_minerals:0 "Mineral Production Focus"
+ production_minerals_desc:0 "Production focused on minerals over energy credits.\n\n"
+ 
+ #[3.3] Taxation Level
+ policy_taxes:0 "Taxation Level"
+ policy_taxes_desc:0 "The level of taxes imposed upon the citizenry of our empire.\n\n"
+
+ taxes_minimal:0 "Minimal Taxation"
+ taxes_minimal_desc:0 "We barely impose any taxes on our citizens.\n\n"
+ 
+ taxes_low:0 "Low Taxes"
+ taxes_low_desc:0 "We impose low taxes on our citizens.\n\n"
+ 
+ taxes_balanced:0 "Balanced Taxes"
+ taxes_balanced_desc:0 "We impose balanced taxes on our citizens.\n\n"
+
+ taxes_high:0 "High Taxes"
+ taxes_high_desc:0 "We impose high taxes on our citizens.\n\n"
+
+ taxes_extreme:0 "Extreme Taxes"
+ taxes_extreme_desc:0 "We impose extremely high taxes on our citizens.\n\n"
+ 
+ #[3.4] Research Budget
+
+ policy_research:0 "Research Budget"
+ policy_research_desc:0 "Adopting an emphasis on either raw goods or scientific research, we can shift the priorities of our empire dramatically.\n\n"
+ 
+ research_extreme_research:0 "Extreme Research Focus"
+ research_extreme_research_name:0 "Extreme Research Focus"
+ research_extreme_research_desc:0 "We leverage the state's resources primarily towards scientific advancement, at a serious detriment to our ability to mine resources and generate wealth.\n\n"
+ 
+ research_research:0 "Research Focus"
+ research_research_name:0 "Research Focus"
+ research_research_desc:0 "The nation's future lies in science, even if our production potential must suffer for it today.\n\n"
+ 
+ research_slight_research:0 "Slight Research Focus"
+ research_slight_research_name:0 "Slight Research Focus"
+ research_slight_research_desc:0 "Our focus is slightly on research over production, but the trade-off isn't that steep.\n\n"
+ 
+ research_balanced:0 "Balanced"
+ research_balanced_name:0 "Balanced"
+ research_balanced_desc:0 "A balanced approach to research budgeting.\n\n"
+ 
+ research_slight_production:0 "Slight Production Focus"
+ research_slight_production_name:0 "Slight Production Focus"
+ research_slight_production_desc:0 "We may have to redirect some of our budget away from research in the short term, but it's nothing our scientists won't be able to catch up from.\n\n"
+ 
+ research_production:0 "Production Focus"
+ research_production_name:0 "Production Focus"
+ research_production_desc:0 "The mysteries of the universe will still be there when we get back to them. For now there are other priorities.\n\n"
+ 
+ research_extreme_production:0 "Extreme Production Focus"
+ research_extreme_production_name:0 "Extreme Production Focus"
+ research_extreme_production_desc:0 "We must gear our entire state apparatus towards production if we are to survive. We cannot afford the luxury of scientific pursuits at this time.\n\n"
+ 																					
+ #[3.5] Artistic Initiatives
+ policy_art:0 "Artistic Initiatives"
+ policy_art_desc:0 "The state's attitude towards artistic endeavors.\n\n"
+ 
+ art_none:0 "No Artistic Allotment"
+ art_none_desc:0 "Art is a luxury, not a necessity. The private sector must bear its weight.\n\n"
+ 
+ art_grants:0 "Art Grants"
+ art_grants_desc:0 "A society without art is one without culture. State-funded programmes for aspiring artists will encourage them to chase their passions.\n\n"
+ 
+ art_propaganda:0 "Propaganda Art Budget"
+ art_propaganda_desc:0 "Art is good and all, but the state's resources are finite and the government has needs of its own. Perhaps a mutually beneficial arrangement could be found...\n\n"
+ 
+ ####################################
+ # [4] Martial Stance
+ ####################################
+
+ #[4.0] Martial Stance Tag
+ policy_martial_tag:0 " ======= Martial Stance ======= "
+ policy_martial_tag_desc:0 "Our laws and regulations dealing with military matters.\n\n"
+ 
+ #[4.1] Baseline Military Readiness
+ policy_readiness:0 "Baseline Military Readiness"
+ policy_readiness_desc:0 "The level of readiness our military will maintain at all times.\n\n"
+
+ readiness_low:0 "Low Guard"
+ readiness_low_desc:0 "Our fleet will be on a resource-conserving low guard state, saving us resources and manteinance on non-essential peacetime assets and personnel.\n\n"
+ 
+ readiness_normal:0 "Normal Duties"
+ readiness_normal_desc:0 "Our fleet will maintain a reasonable degree of readiness at all times to respond to sudden threats.\n\n"
+ 
+ readiness_total:0 "Total Readiness"
+ readiness_total_desc:0 "Our fleet will permanently operate on a maximum readiness policy at all times, with all systems ready, all vessels operational and all personnel on permanent duty even during peacetime. We shall never be caught unawares.\n\n"
+ 
+ #[4.2] Fleet Focus
+ policy_fleet:0 "Fleet Focus"
+ policy_fleet_desc:0 "We must decide whether our fleet will be focused on quantity or quality.\n\n"
+ 
+ fleet_dawn:0 "The Lance of Dawn"
+ fleet_dawn_name:0 "The Lance of Dawn"
+ fleet_dawn_desc:0 "Each ship in our fleet is itself a nation, independent, free of all weakness. The deployment of a single vessel from our fleet can bring entire worlds to their knees.\n\n"
+ 
+ fleet_trans:0 "Transcendent Ship Quality"
+ fleet_trans_name:0 "Transcendent Ship Quality"
+ fleet_trans_desc:0 "Our fleet must be the best in the galaxy, even if this results in significantly higher military spending and lower fleet capacity.\n\n"
+ 
+ fleet_superior:0 "Superior Ship Quality"
+ fleet_superior_name:0 "Superior Ship Quality"
+ fleet_superior_desc:0 "Our fleet quality will be superior, even at the price of higher production time and construction costs.\n\n"
+ 
+ fleet_balanced:0 "Balanced Fleet"
+ fleet_balanced_name:0 "Balanced Fleet"
+ fleet_balanced_desc:0 "We will do our best to strike a balance between quantity and quality within our fleet.\n\n"
+ 
+ fleet_massive:0 "Massive Fleet Size"
+ fleet_massive_name:0 "Massive Fleet Size"
+ fleet_massive_desc:0 "A slight loss of quality is a small price to pay for a truly massive fleet.\n\n"
+ 
+ fleet_colossal:0 "Colossal Fleet Size"
+ fleet_colossal_name:0 "Colossal Fleet Size"
+ fleet_colossal_desc:0 "Our fleet shall be staggeringly colossal; when we outnumber the enemy in every engagement the quality of each individual ship shall be of little consequence.\n\n"
+ 
+ fleet_legion:0 "We Are Legion"
+ fleet_legion_name:0 "We Are Legion"
+ fleet_legion_desc:0 "We are legion, our numbers will blot out the sky of every world. They shall not escape their doom.\n\n"
+ 
+ #[4.3] Law Enforcement
+ policy_law:0 "Law Enforcement"
+ policy_law_desc:0 "The methods and scope of enforcing law and countering crime.\n\n"
+ 
+ law_personal:0 "Protect Yourself"
+ law_personal_desc:0 "The state does not enforce the law unless the criminal activity directly affects the state and/or is considered a security threat. Therefore day-to-day policing does not really exist and citizens must protect themselves from crime.\n\n"
+ 
+ law_militia:0 "Local Militias"
+ law_militia_desc:0 "Citizens are organised into official militias trained and equipped by the military.\n\n"
+ 
+ law_police:0 "Planetary Police"
+ law_police_desc:0 "Each local government funds and operates an official police force.\n\n"
+ 
+ law_justicars:0 "Imperial Justicars"
+ law_justicars_desc:0 "In addition to a planetary police force, imperial justicars roam the realm.\n\nThese errant judges are the incarnation of the empire's justice and have the power to investigate corruption and treason among the planetary administrations and corporations. They often personally execute even powerful officials and executives for relatively minor crimes to keep their peers in line.\n\nJusticars are drawn from the empire's orphanages and conditioned from childhood on to be fanatically loyal to the imperial rulership.\n\n"
+  
+ #[4.4] Personal Weapons
+ policy_weapons:0 "Personal Weapons"
+ policy_weapons_desc:0 "The legal status of personal weapons in our empire.\n\n"
+ 
+ weapons_banned:0 "Banned"
+ weapons_banned_desc:0 "Personal weapons are illegal in all circumstances. The state is the only entity permitted to employ lethal force.\n\n"
+ 
+ weapons_limited:0 "Limited"
+ weapons_limited_desc:0 "Personal weapons can be obtained after a stringent set of psychological assesments, safety tests, and background checks if a citizen can prove that require one in day-to-day life.\n\n"
+ 
+ weapons_allowed:0 "Allowed"
+ weapons_allowed_desc:0 "Citizens are allowed to carry and use personal weapons.\n\n"
+
+ ####################################
+ # [5] Social Approach
+ ####################################
+ 
+ #[5.0] Social Approach Tag
+ policy_social_tag:0 " ======= Social Approach ======= "
+ policy_social_tag_desc:0 "Laws and regulations regarding the social aspect of our country.\n\n"
+ 
+ #[5.1] Social Policy
+ 
+ policy_opinion:0 "Public Opinion"
+ policy_opinion_desc:0 "The approach that our government takes towards the opinion of the masses.\n\n"
+ 
+ opinion_engineering:0 "Social Engineering"
+ opinion_engineering_desc:0 "The opinion of the masses is fickle and dangerous. It must be reshaped with propaganda to align with the more enlightened rulership where possible, and suppressed where not.\n\n"
+ 
+ opinion_balanced:0 "Balanced Approach"
+ opinion_balanced_desc:0 "The opinion of the masses must be respected within reason, but some limits must be set to offset the tyranny of the majority.\n\n"
+ 
+ opinion_mob:0 "Mob Rule"
+ opinion_mob_desc:0 "The opinion of the masses gives shape to governments and empires. Those of us in positions of power are merely the instruments by which the people achieve their desires.\n\n"
+ 
+ #[5.2] Education Ideals
+ policy_ideals:0 "Educational Ideals"
+ policy_ideals_desc:0 "The educational system of our empire by which our citizens are educated.\n\n"
+ 
+ ideals_neutral:0 "Neutral Education"
+ ideals_neutral_desc:0 "Education must teach basic values without conditioning the ideology of anyone.\n\n"
+ 
+ ideals_state:0 "State Ideology"
+ ideals_state_desc:0 "Education should give priority to the values of our state, any other ideology must be repudiated.\n\n"
+ 
+ ideals_scientific:0 "Scientific Focus"
+ ideals_scientific_desc:0 "Scientific truth is the only truth, scientific values the only values. Nothing is certain and everything must be doubted. Facts are simply theories that have not yet been disproven. Nothing is real except what we can observe.\n\n"  
+ 
+ ideals_philosophy:0 "Philosophy and Civics"
+ ideals_philosophy_desc:0 "The man who has no tincture of philosophy goes through life imprisoned in the prejudices derived from common sense, from the habitual beliefs of his age or his nation, and from convictions which have grown up in his mind without the co-operation or consent of his deliberate reason. Our educational system encourages citizens to engage politically and think for themselves. The truth cannot be handed to you, you must seek it.\n\n"
+ 
+ ideals_supremacy:0 "Xeno-segregated Supremacy"
+ ideals_supremacy_desc:0 "Our nation is superior to all other nations, our people greater than all other people. These self-evident facts must be instilled into our children when they are young so they will not be misled by sympathy for the inferior races and stray from our glorious destiny.\n\n"
+ 
+ #[5.3] Education Distribution
+ policy_education:0 "Education Distribution"
+ policy_education_desc:0 "Education can provide skills for our citizens as well as nurturing of appropriate social behaviour and contribution.\n\n"
+ 
+ education_universal:0 "State Education For All"
+ education_universal_desc:0 "Taxation will fund state provision of education to all citizens, regardless of age.\n\n"
+ 
+ education_preadult:0 "State Education For Pre-adults"
+ education_preadult_desc:0 "Taxation will fund state provision of education to all pre-adult citizens.\n\n"
+ 
+ education_grants:0 "Targeted Education Grants"
+ education_grants_desc:0 "Education is a service and should be paid for. However, those who show the greatest talent in fields valuable to the state, should be funded by the state to receive an education.\n\n"
+ 
+ education_private:0 "Private Education Only"
+ education_private_desc:0 "Education is a service and should be paid for. If you cannot afford it, then get a job.\n\n"
+  
+ #[5.4] Religious Freedoms
+ policy_religion:0 "Religious Freedoms"
+ policy_religion_desc:1 "Laws regarding religious freedom.\n\n"
+ 
+ religion_banned: "All Religion Banned"
+ religion_banned_desc: "Religious movements, beliefs and faith are illegal.\n\n"
+ 
+ religion_secular:1 "Secular State"
+ religion_secular_desc:1 "Religion, while perfectly legal, is kept separated from state matters. Faiths are forbidden to engage politically and are granted no special privileges or tax exemptions. No religion is recognized as superior to any other.\n\n"
+ 
+ religion_freedom:1 "Freedom of Belief"
+ religion_freedom_desc:1 "Each citizen of your empire is entitled to their own beliefs.\n\n"
+ 
+ religion_ecumenicism: "Ecumenicism"
+ religion_ecumenicism_desc: "Religious diversity is promoted and celebrated. All faiths are free for as long as they do not conflict with law.\n\n"
+ 
+ religion_state:1 "Official State Religion"
+ religion_state_desc:1 "A single state religion is recognized and favoured, but other faiths and atheist movements are tolerated as long as they are not considered to clash with national interests by the state spiritual leaders.\n\n"
+ 
+ religion_one: "One Faith"
+ religion_one_desc: "The state recognises only one faith, which is administered by the government. All must follow it. Any other religious affilliation is a crime.\n\n"
+ 
+ religion_cult:1 "Personality Cult"
+ religion_cult_desc:1 "The leader of the empire is worshipped almost like a god.\n\n"
+ 
+ #[5.5] Penitentiary Laws
+ policy_prison:0 "Penitentiary Laws"
+ policy_prison_desc:1 "Laws about penitentiary management.\n\n"
+ 
+ prison_standard:1 "Standard Imprisonment"
+ prison_standard_desc:1 "Standard imprisonment laws.\n\n"
+ 
+ prison_labor:1 "Forced Labor"
+ prison_labor_desc:1 "Prisoners are forced to do hard physical labor. They may yet hold some value to the state, even if only as slaves.\n\n"
+ 
+ prison_rehabilitation:1 "Rehabilitation"
+ prison_rehabilitation_desc:1 "Prisoners must be rehabilitated to a life after prison. Otherwise, how can we expect them to get back on their feet?"
+ 
+ prison_death:1 "Death Penalty"
+ prison_death_desc:1 "The most dangerous criminals must be sentenced to death. They deserve no better.\n\n"
+ 
+ prison_conscription:1 "Conscription"
+ prison_conscription_desc:1 "Prisoners may be drugged and indoctrinated, then conscripted into the army. They shall serve on the front lines, performing the most dangerous tasks.\n\n"
+ 
+ #[5.6] Medical Care
+ policy_medicine:0 "Medical Care"
+ policy_medicine_desc:1 "The medical care our empire's citizens will have access to.\n\n"
+ 
+ medicine_minimal:1 "Minimal"
+ medicine_minimal_desc:1 "The health of our citizens is of little concern. If we coddle our sick and invalids the quality of our gene pool will diminish and our immune systems will atrophy. We would be denying the very evolutionary pressures that made us strong. Most disease occurs late in life regardless, and sustaining people through their pointless waning years is a grotesque misallocation of resources. Let us burn bright and die young, there will be more to take the place of the fallen, and they will be stronger for it.\n\n"
+ 
+ medicine_privatized:1 "Privatized Medicine"
+ medicine_privatized_desc:1 "All medical care is privatized, leading to price gouging on what is in reality and essential need. Most citizens must buy insurance to affort their care and those with pre-existing conditions, or of a certain gender or race are routinely turned away. Insurance companies often fight their hardest to renege on their contracts by finding loopholes.\n\n"
+ 
+ medicine_regulated:1 "Regulated Medical Sector"
+ medicine_regulated_desc:1 "The medical sector remains in public hands, but with heavy state regulations designed to make healthcare affordable for most citizens. Inevitably however, there will be some whose precise circumstances have been overlooked, finding that they are caught between two different financial assistance programmes, just barely unable to qualify for either...\n\n"
+ 
+ medicine_universal:1 "Universal State Healthcare"
+ medicine_universal_desc:1 "All healthcare is administered by the state, and all forms of private healthcare are banned. If the ruling elites wish to have better healthcare for themselves, so must they provide it for even the poorest street urchin on the galactic fringe.\n\n"
+ 
+ ####################################
+ # [6] Imperial Structure
+ ####################################
+ 
+ #[6.0] Imperial Structure Tag
+ policy_structure_tag:0 " ======= Imperial Structure ======= "
+ policy_structure_tag_desc:0 "Laws and policies relating to the way your empire is run and ordered.\n\n"
+ 
+ #[6.1] Regional Autonomy
+ policy_centralization:0 "Regional Autonomy"
+ policy_centralization_desc:0 "We now can decide if we should focus on a strong imperial control or decentralized rule.\n\n"
+ 
+ centralization_extreme_central:0 "Extreme Centralization"
+ centralization_extreme_central_name:0 "Extreme Centralization"
+ centralization_extreme_central_desc:0 "With an iron fist we rule from the capital. Almost every planet is controlled directly by the central government at an immense bureaucratic cost.\n\n"
+ 
+ centralization_strong_central:0 "Strong Centralization"
+ centralization_strong_central_name:0 "Strong Centralization"
+ centralization_strong_central_desc:0 "Stronge centralization polices allow us to manage more worlds. It takes a toll on our economy and political power however.\n\n" 
+ 
+ centralization_slight_central:0 "Slight Centralization"
+ centralization_slight_central_name:0 "Slight Centralization"
+ centralization_slight_central_desc:0 "A moderate approach to empire centralization.\n\n"
+
+ centralization_balanced:0 "Balance of Power"
+ centralization_balanced_name:0 "Balance of Power"
+ centralization_balanced_desc:0 "The default structure for our empire governance.\n\n"
+
+ decentralization_slight_decentral:0 "Slight Decentralization"
+ decentralization_slight_decentral_name:0 "Slight Decentralization"
+ decentralization_slight_decentral_desc:0 "A mildly decentralized rule can improve economic freedom and contentment.\n\n" 
+
+ decentralization_strong_decentral:0 "Strong Decentralization"
+ decentralization_strong_decentral_name:0 "Strong Decentralization"
+ decentralization_strong_decentral_desc:0 "Large-scale decentralization frees up resources but we lose some ability to intervene directly in regional matters.\n\n" 
+ 
+ decentralization_extreme_decentral:0 "Extreme Decentralization"
+ decentralization_extreme_decentral_name:0 "Extreme Decentralization"
+ decentralization_extreme_decentral_desc:0 "Almost every world is autonomous in our country. A trim bureaucracy and the added economic freedom boosts our economy greatly.\n\n"
+ 
+ #[6.2] Leader Selection System
+ policy_leader:0 "Leader Selection System"
+ policy_leader_desc:0 "The way we chose our leaders determines their quantity and quality.\n\n"
+
+ leader_merit:0 "Pure Meritocracy"
+ leader_merit_desc:0 "Merit should be the only factor considered in selecting leadership candidates. Positions of authority must go to the most skilled and deserving.\n\n"
+
+ leader_merit_and_loyalty:0 "Merit and Loyalty"
+ leader_merit_and_loyalty_desc:0 "A midpoint between loyalty and merits.\n\n"
+ 
+ leader_nepotism:0 "Institutionalized Nepotism"
+ leader_nepotism_desc:0 "Family members of polititians, their friends, executives representing special interests... These are the only people that ever had a chance of making it into a position of power. That is the way of the world.\n\n"
+
+ leader_conditioning:0 "Infant Conditioning"
+ leader_conditioning_desc:0 "All children are genetically tested at birth and the most promising are administered aptitude tests at three years old.\n\nThose that qualify for the leadership programmes are confiscated from their families by the state and stripped of their birth certificate, family name, and anything else linking them to their old life.\n\nThey become the property of the state, conditioned to be perfectly loyal, and receive the most intense and high-quality education we can provide.\n\nEven then, the attrition rate is high, but the few who remain in the programme when they come of age are granted positions of immense power within the empire.\n\n"
+ 
+ #[6.3] Propagation of Information
+ policy_information:0 "Information State"
+ policy_information_desc:1 "Our policies regarding internal freedom of information.\n\n"
+ 
+ information_freedom:1 "Total Freedom Of Information"
+ information_freedom_desc:1 "Citizens are free to be informed and spread information about anything. We have few, if any, state secrets.\n\n"
+ 
+ information_restricted:1 "Minor Restrictions"
+ information_restricted_desc:1 "Access to information is only restricted when it is deemed in the national interest.\n\n"
+ 
+ information_censored:1 "Extensive Censorship"
+ information_censored_desc:1 "Access to information is heavily censored and exclusive to the elites. All others must see the world as we paint it.\n\n"
+ 
+ #[6.4] Tourism
+ policy_tourism:0 "Tourism"
+ policy_tourism_desc:1 "The tourism policies in our empire.\n\n"
+ 
+ tourism_closed:1 "Closed Borders"
+ tourism_closed_desc:1 "Our borders are closed to any tourist.\n\n"
+ 
+ tourism_visa:1 "Visa Restricted"
+ tourism_visa_desc:1 "Access to our empire for tourism is limited to those in possession of a visa. The selection process is stringent, but this is a necessary precaution to keep our people safe from terrorism.\n\n"
+ 
+ tourism_passport:1 "Passport Restricted"
+ tourism_passport_desc:1 "Access to your empire for tourism is limited to those in possession of a valid passport. Tourists from rival empires or state enemies are unlikely to be granted entry.\n\n"
+ 
+ tourism_free:1 "Free Movement"
+ tourism_free_desc:1 "Tourists are allowed to visit your empire freely without a visa or passport.\n\n"
+ 
+ ####################################
+ # Techs
+ #################################### 
+  
+ tech_fleet_focus: "Doctrine: Fleet Flexibility"
+ tech_fleet_focus_desc: "We can now adopt an ephasis on quality or quantity in our ship construction.\n\n"
+ 
+ tech_mind_or_materials:0 "Research Budget"
+ tech_mind_or_materials_desc:0 "By emphasizing either research or production, we can further emphasize our empire's paradigm.\n\n"
+ 
+ tech_centralization_extent:0 "Centralization Extent"
+ tech_centralization_extent_desc:0 "Our burgeoning state should specify exactly how much it will interfere with people's lives.\n\n"
+ 
+ 
+ 
+ tech_mine_solar_dust:0 "Solar Dust Mining"
+ tech_mine_solar_dust_desc:1 "Allow the mining of the solar dust ressource.\n\n"
+ 
+ tech_medical_drug:0 "Medical Drugs"
+ tech_medical_drug_desc:1 "Allow the use of solar dust for medical purposes.\n\n"
+ 
+ tech_adv_medical_drug:0 "Advanced Medical Drugs"
+ tech_adv_medical_drug_desc:1 "Allow the use of solar dust for medical purposes.\n\n"
+ 
+ tech_social_laws:0 "Social Laws"
+ tech_social_laws_desc:1 "Enable the use of new policies and edicts.\n\n"
+ 
+ tech_imp_social_laws:0 "Improved Social Laws"
+ tech_imp_social_laws_desc:1 "Enable the use of new policies and greater levels of specialization in certain policies.\n\n"
+ 
+ tech_adv_social_laws:0 "Advanced Social Laws"
+ tech_adv_social_laws_desc:1 "Enable more policies and the maximum levels of specialization in certain policies.\n\n"
+ 
+ tech_education:0 "Education"
+ tech_education_desc:1 "Enable setting of education policies for your people.\n\n"
+ 
+ tech_adv_education:0 "Advanced Education"
+ tech_adv_education_desc:1 "Allow even further education options for your people.\n\n"
+ 
+ tech_tourism:0 "Tourism"
+ tech_tourism_desc:1 "Allow to ennact tourism policies.\n\n"
+ 
+ tech_military_science:0 "Military Science"
+ tech_military_science_desc:1 "Allow to enact laws related to the military.\n\n"
+ 
+ tech_propaganda_laws:0 "Propaganda Laws"
+ tech_propaganda_laws_desc:1 "Allow the use of propaganda policies.\n\n"
+ 
+ tech_adv_propaganda_laws:0 "Advanced Propaganda Laws"
+ tech_adv_propaganda_laws_desc:1 "Allow the use of advanced propaganda policies.\n\n"
+ 
+ ####################################
+ # Opinion Modifiers
+ #################################### 
+ 
+ opinion_equal_genders:0 "Gender Equality"
+ opinion_unequal_genders:0 "Gender Descrimination"
+ opinion_pro_trans:0 "Pro-Transgender"
+ opinion_no_trans:0 "Anti-Transgender"
+ 
+ ####################################
+ # Strategic Resources
+ ####################################  
+ 
+ sr_solar_dust:0 "Solar Dust"
+ sr_solar_dust_desc:1 "A resource used in medicine and drug use.\n\n"
+ 
+ ####################################
+ # Edicts
+ #################################### 
+ 
+ edict_regional_languages:0 "Regional Languages Ban"
+ edict_regional_languages_desc:1 "Ban of all regional and foreign languages in schools and public places.\n\n"
+ edict_military_service:0 "Military Service"
+ edict_military_service_desc:1 "Enlists all young adults into the army.\n\n"
+ edict_media_propaganda:0 "Media Propaganda"
+ edict_media_propaganda_desc:1 "Establishes propaganda in all types of media.\n\n"
+ edict_national_test:0 "National Tests"
+ edict_national_test_desc:1 "Perfoms national tests to find more suitable leaders.\n\n"
+ 
+ ####################################
+ # Buildings
+ ####################################  
+  
+ solar_dust_lab_1:0 "Solar Dust Laboratory"
+ solar_dust_lab_1_desc:1 "Laboratory researching medical uses for solar dust.\n\n"
+ solar_dust_lab_2:0 "Solar Dust Hospital"
+ solar_dust_lab_2_desc:1 "Laboratory working on rendering solar dust safe for recreational use.\n\n"
+ 
+# policy_gambling:0 "Gambling"
+# policy_gambling_desc:1 "State of gambling.\n"
+# not_monitored:0 "Not monitored"
+# not_monitored_desc:1 "Gambling is not monitored in your empire.\n"
+# legal_gambling:0 "Legal"
+# legal_gambling_desc:1 "Gambling is legal in your empire.\n"
+# state_controlled:0 "State Controlled"
+# state_controlled_desc:1 "Gambling is controlled by the state in your empire.\n"
+# illegal:0 "Illegal"
+# illegal_desc:1 "Gambling is illegal in your empire.\n"
+ 

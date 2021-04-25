@@ -1,0 +1,7 @@
+C:\Users\matth\Documents\Paradox Interactive\Stellaris\mod\mett_starbase_and_colossus_overhaul\common\component_templates\*
+C:\Users\matth\Documents\Paradox Interactive\Stellaris\mod\mett_starbase_and_colossus_overhaul\common\ship_behaviors\01_standard_ship_behaviors.txt
+C:\Users\matth\Documents\Paradox Interactive\Stellaris\mod\mett_starbase_and_colossus_overhaul\common\ship_sizes\00_ship_sizes.txt
+C:\Users\matth\Documents\Paradox Interactive\Stellaris\mod\mett_starbase_and_colossus_overhaul\common\ship_sizes\00_starbases.txt
+C:\Users\matth\Documents\Paradox Interactive\Stellaris\mod\mett_starbase_and_colossus_overhaul\common\starbase_buildings\00_starbase_buildings.txt
+C:\Users\matth\Documents\Paradox Interactive\Stellaris\mod\mett_starbase_and_colossus_overhaul\common\starbase_modules\00_starbase_modules.txt
+C:\Users\matth\Documents\Paradox Interactive\Stellaris\mod\mett_starbase_and_colossus_overhaul\common\technology\00_apocalypse_tech.txt

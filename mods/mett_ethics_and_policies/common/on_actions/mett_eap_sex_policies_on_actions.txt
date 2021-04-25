@@ -1,0 +1,21 @@
+on_leader_spawned = {
+	events = {
+		humanotypes_gender_policy_events.1  # Female Generals
+		humanotypes_gender_policy_events.2  # Male   Generals
+		humanotypes_gender_policy_events.3  # Female Admirals
+		humanotypes_gender_policy_events.4  # Male   Admirals
+		humanotypes_gender_policy_events.5  # Female Scientists
+		humanotypes_gender_policy_events.6  # Male   Scientists
+		humanotypes_gender_policy_events.7  # Female Governors
+		humanotypes_gender_policy_events.8  # Male   Governors
+		humanotypes_gender_policy_events.9  # Female Rulers
+		humanotypes_gender_policy_events.10 # Male   Rulers
+	}
+}
+
+#on_pop_birth = {
+#	events = {
+#		# humanotypes_gender_policy_events.11 # Female Pops # DOESN'T WORK BECAUSE POPS DON'T HAVE GENDER YET
+#		# humanotypes_gender_policy_events.12 # Male   Pops # DOESN'T WORK BECAUSE POPS DON'T HAVE GENDER YET
+#	}
+#}

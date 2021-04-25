@@ -1,0 +1,33 @@
+############################
+#
+# God-Emperor is Chosen
+#
+# Written by Mettpawwz
+#
+############################
+
+namespace = godemperor
+
+# Add and Remove God-Emperor trait each year if imperial cult civic is present
+event = {
+	id = godemperor.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = { has_civic = civic_imperial_cult }
+			every_owned_leader = {
+				limit = { leader_class = ruler }
+				add_trait = leader_trait_ruler_god_emperor_mett
+			}
+		}
+		every_country = {
+			limit = { NOT = { has_civic = civic_imperial_cult } }
+			every_owned_leader = {
+				limit = { leader_class = ruler }
+				remove_trait = leader_trait_ruler_god_emperor_mett
+			}
+		}
+	}
+}

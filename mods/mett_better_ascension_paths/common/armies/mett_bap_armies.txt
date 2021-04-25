@@ -1,0 +1,38 @@
+ta_army_hypno = {
+	defensive = yes
+	damage = 2.00
+	health = 2.00
+	morale = 5.00
+	maintenance = 0.15
+	icon_frame = 2
+
+	potential = {
+		always = no
+	}
+}
+
+ta_army_possess = {
+	defensive = yes
+	damage = 3.00
+	health = 3.00
+	morale = 10.00
+	maintenance = 0.15
+	icon_frame = 2
+
+	potential = {
+		always = no
+	}
+}
+
+ta_army_enrage = {
+	defensive = yes
+	damage = 3.00
+	health = 1.00
+	morale = 10.00
+	maintenance = 0.15
+	icon_frame = 2
+
+	potential = {
+		always = no
+	}
+}

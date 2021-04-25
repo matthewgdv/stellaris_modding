@@ -1,0 +1,46 @@
+on_war_won = {
+	events = {
+		ta_psi_event.31
+	}
+}
+
+on_war_won_forced = {
+	events = {
+		ta_psi_event.31
+	}
+}
+
+on_war_lost = {
+	events = {
+		ta_psi_event.31
+	}
+}
+
+on_war_lost_forced = {
+	events = {
+		ta_psi_event.31
+	}
+}
+
+on_monthly_pulse = {
+	events = {
+		ta_psi_event.1
+	}
+}
+
+
+on_planet_zero_health = {
+	events = {
+		ta_psi_event.10
+	}
+}
+
+
+on_planet_occupied = {
+	events = {
+		ta_psi_event.20
+	}
+}
+
+
+

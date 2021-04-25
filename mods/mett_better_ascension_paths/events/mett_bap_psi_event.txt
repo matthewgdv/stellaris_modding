@@ -1,0 +1,2082 @@
+namespace = ta_psi_event
+
+event = { ### psionic song planet event
+	id = ta_psi_event.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_country = {
+			is_country_type = default
+			has_ascension_perk = ap_many_minds_one_voice 
+		}
+	}
+
+	immediate = {
+				
+		every_country = {
+			limit = {
+				is_country_type = default
+				has_ascension_perk = ap_many_minds_one_voice 
+			}
+			every_owned_planet = {
+				IF = {
+					limit = { 
+						not = { has_modifier = ta_sm_psi_planet_1 }
+						count_pops = {	
+							limit = { has_trait = trait_psionic }
+							count > 3
+						}
+					}
+					add_modifier = { 
+						modifier = "ta_sm_psi_planet_1"
+						days = -1
+					}
+					if = {
+						limit = { has_modifier = ta_sm_psi_planet_2 }
+						remove_modifier = ta_sm_psi_planet_2 
+					}
+					if = {
+						limit = { has_modifier = ta_sm_psi_planet_3 }
+						remove_modifier = ta_sm_psi_planet_3 
+					}
+					if = {
+						limit = { has_modifier = ta_sm_psi_planet_4 }
+						remove_modifier = ta_sm_psi_planet_4 
+					}
+					if = {
+						limit = { has_modifier = ta_sm_psi_planet_5 }
+						remove_modifier = ta_sm_psi_planet_5
+					}
+				}						
+				IF = {
+					limit = { 
+						not = { has_modifier = ta_sm_psi_planet_2 }
+						count_pops = {	
+							limit = { has_trait = trait_psionic }
+							count > 7
+						}
+					}
+					add_modifier = { 
+						modifier = "ta_sm_psi_planet_2"
+						days = -1
+					}
+					if = {
+						limit = { has_modifier = ta_sm_psi_planet_1 }
+						remove_modifier = ta_sm_psi_planet_1 
+					}
+					if = {
+						limit = { has_modifier = ta_sm_psi_planet_3 }
+						remove_modifier = ta_sm_psi_planet_3 
+					}
+					if = {
+						limit = { has_modifier = ta_sm_psi_planet_4 }
+						remove_modifier = ta_sm_psi_planet_4 
+					}
+					if = {
+						limit = { has_modifier = ta_sm_psi_planet_5 }
+						remove_modifier = ta_sm_psi_planet_5
+					}
+				}
+				IF = {
+					limit = { 
+						not = { has_modifier = ta_sm_psi_planet_3 }
+						count_pops = {	
+							limit = { has_trait = trait_psionic }
+							count > 11
+						}
+					}
+					add_modifier = { 
+						modifier = "ta_sm_psi_planet_3"
+						days = -1
+					}
+					if = {
+						limit = { has_modifier = ta_sm_psi_planet_1 }
+						remove_modifier = ta_sm_psi_planet_1 
+					}
+					if = {
+						limit = { has_modifier = ta_sm_psi_planet_2 }
+						remove_modifier = ta_sm_psi_planet_2 
+					}
+					if = {
+						limit = { has_modifier = ta_sm_psi_planet_4 }
+						remove_modifier = ta_sm_psi_planet_4 
+					}
+					if = {
+						limit = { has_modifier = ta_sm_psi_planet_5 }
+						remove_modifier = ta_sm_psi_planet_5
+					}
+				}
+				IF = {
+					limit = { 
+						not = { has_modifier = ta_sm_psi_planet_4 }
+						count_pops = {	
+							limit = { has_trait = trait_psionic }
+							count > 15
+						}
+					}
+					add_modifier = { 
+						modifier = "ta_sm_psi_planet_4"
+						days = -1
+					}
+					if = {
+						limit = { has_modifier = ta_sm_psi_planet_1 }
+						remove_modifier = ta_sm_psi_planet_1 
+					}
+					if = {
+						limit = { has_modifier = ta_sm_psi_planet_2 }
+						remove_modifier = ta_sm_psi_planet_2 
+					}
+					if = {
+						limit = { has_modifier = ta_sm_psi_planet_3 }
+						remove_modifier = ta_sm_psi_planet_3 
+					}
+					if = {
+						limit = { has_modifier = ta_sm_psi_planet_5 }
+						remove_modifier = ta_sm_psi_planet_5
+					}
+				}
+				IF = {
+					limit = { 
+						not = { has_modifier = ta_sm_psi_planet_5 }
+						count_pops = {	
+							limit = { has_trait = trait_psionic }
+							count > 19
+						}
+					}
+					add_modifier = { 
+						modifier = "ta_sm_psi_planet_5"
+						days = -1
+					}
+					if = {
+						limit = { has_modifier = ta_sm_psi_planet_1 }
+						remove_modifier = ta_sm_psi_planet_1 
+					}
+					if = {
+						limit = { has_modifier = ta_sm_psi_planet_2 }
+						remove_modifier = ta_sm_psi_planet_2 
+					}
+					if = {
+						limit = { has_modifier = ta_sm_psi_planet_3 }
+						remove_modifier = ta_sm_psi_planet_3 
+					}
+					if = {
+						limit = { has_modifier = ta_sm_psi_planet_4 }
+						remove_modifier = ta_sm_psi_planet_4
+					}
+				}
+			}
+		}
+	}
+}
+
+planet_event = { 													### psionic bombardment trigger
+	id = ta_psi_event.10
+	hide_window = yes
+	is_triggered_only = yes
+
+
+	trigger = {
+		NOT = { has_planet_flag = psi_deafened }
+		FROM = {
+			has_ascension_perk = ap_many_minds_one_voice					### need perk
+			any_owned_fleet = {										### need at least 50 fleet strength
+				orbit = { is_planet = ROOT }
+				fleet_size > 49
+			}	
+		}
+		has_army = yes												### pointless without defending armies
+		any_planet_army = {											### prevents firing if certain army conditions aren't met
+			exists = species										### must have a species, mostly here to rule out xenomorphs
+			species = {
+				NOR = {
+					has_trait = trait_mechanical					### cant mind control robots
+					has_trait = trait_psionic						### full telepaths are resistant
+					has_trait = trait_hive_mind						### hive mind armies are controlled by the overmind
+				}
+			}
+			NOR = {
+				army_type = robotic_army 							### no robot armies
+				army_type = android_army  							### see above
+				army_type = psionic_army  							### just in case above check doesnt work
+				army_type = gene_warrior_army 						### precludes xenomorphs might as well these too
+				army_type = titanic_assault_army   					### balance issues
+				army_type = titanic_guardian_army    				### see above
+				army_type = shroud_army  							### see above
+				army_type = garrison_army							### needs more than garrison armies
+			}
+		}
+		owner = {
+			not = { has_ethic = ethic_hive_mind }					### can't trick the overmind
+		}
+	}
+	
+	immediate = {													### fire selection event
+		set_timed_planet_flag = { flag = psi_deafened days = 1800 }
+		IF = {													### low fleet strength trigger
+			limit = {
+				FROM = {
+					any_owned_fleet = {							
+						orbit = { is_planet = ROOT }
+						fleet_size > 49
+						fleet_size < 100
+					}
+				}
+			}
+			FROM = { country_event = { id = ta_psi_event.11 } }	### launch low fleet power selection event
+		}
+		IF = {													### medium fleet strength trigger
+			limit = {
+				FROM = {
+					any_owned_fleet = {							
+						orbit = { is_planet = ROOT }
+						fleet_size > 99
+						fleet_size < 150
+					}
+				}
+			}
+			FROM = { country_event = { id = ta_psi_event.12 } }	### launch medium fleet power selection event
+		}
+		IF = {													### high fleet strength trigger
+			limit = {
+				FROM = {
+					any_owned_fleet = {							
+						orbit = { is_planet = ROOT }
+						fleet_size > 149
+						fleet_size < 200
+					}
+				}
+			}
+			FROM = { country_event = { id = ta_psi_event.13 } }	### launch high fleet power selection event
+		}
+		IF = {													### super fleet strength trigger
+			limit = {
+				FROM = {
+					any_owned_fleet = {							
+						orbit = { is_planet = ROOT }
+						fleet_size > 199
+					}
+				}
+			}
+			FROM = { country_event = { id = ta_psi_event.14 } } ### launch super fleet power selection event
+		}
+	}
+}
+
+
+
+country_event = { 													### low fleet power bombing options
+	id = ta_psi_event.11
+	title = ta_psi_event.bombing.choice.name
+	desc = ta_psi_event.bombing.choice.desc
+	picture = GFX_evt_psionics
+	is_triggered_only = yes
+	
+	### Low Fleet Power Options ###
+	option = {														### Put Armies to Sleep					
+		trigger = {
+			NOT = { has_civic = civic_fanatic_purifiers }			### Purifiers don't spare anyone
+		}
+		name = "ta_psi_event.bombing.sleep.name"				
+		custom_tooltip = ta_psi_event.bombing.sleep.tooltip 
+		hidden_effect = {
+			FROM = {
+				set_planet_flag = ta_pf_psi_bomb_sleep
+				set_variable = {
+					which = ta_effected_armies
+					value = 1
+				}
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value < 3
+							}
+						}
+					}
+					random_planet_army = {
+						limit = {
+							exists = species
+							species = {
+								NOR = {
+									has_trait = trait_mechanical
+									has_trait = trait_psionic
+									has_trait = trait_hive_mind
+								}
+							}
+							NOR = {
+								army_type = robotic_army 
+								army_type = android_army  
+								army_type = psionic_army  
+								army_type = gene_warrior_army 
+								army_type = titanic_assault_army   
+								army_type = titanic_guardian_army    
+								army_type = shroud_army  
+								army_type = garrison_army
+							}
+						}
+						every_country = {
+							limit = {
+								has_communications = FROM
+								NOT = { is_country = FROM }
+								OR = {
+									has_ethic = ethic_militarist
+									has_ethic = ethic_fanatic_militarist
+								}									
+							}
+							add_opinion_modifier = { who = FROM modifier = ta_opinion_psi_cowards }
+						}
+						every_country = {
+							limit = {
+								has_communications = FROM
+								NOT = { is_country = FROM }
+								OR = {
+									has_ethic = ethic_pacifist
+									has_ethic = ethic_fanatic_pacifist
+								}									
+							}
+							add_opinion_modifier = { who = FROM modifier = ta_opinion_psi_mercy }
+						}
+						FROM = { 
+							change_variable = {
+								which = ta_effected_armies
+								value = 1
+							}
+						}
+						remove_army = yes
+					}
+				}
+			}
+		}
+	}
+	option = {														### Hypnotize Armies	
+		trigger = {
+			NOT = { has_civic = civic_fanatic_purifiers }			### Purifiers don't spare anyone
+		}
+		name = "ta_psi_event.bombing.hypno.name"				
+		custom_tooltip = ta_psi_event.bombing.hypno.tooltip 
+		hidden_effect = {
+			FROM = {
+				set_variable = {
+					which = ta_effected_armies
+					value = 1
+				}
+				set_planet_flag = ta_pf_psi_bomb_hypno
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value < 3
+							}
+						}
+					}
+					random_planet_army = {
+						limit = {
+							exists = species
+							species = {
+								NOR = {
+									has_trait = trait_mechanical
+									has_trait = trait_psionic
+									has_trait = trait_hive_mind
+								}
+							}
+							NOR = {
+								army_type = robotic_army 
+								army_type = android_army  
+								army_type = psionic_army  
+								army_type = gene_warrior_army 
+								army_type = titanic_assault_army   
+								army_type = titanic_guardian_army    
+								army_type = shroud_army  
+								army_type = garrison_army
+							}
+						}
+						FROM = { 
+							change_variable = {
+								which = ta_effected_armies
+								value = 1
+							}
+						}
+						species = { save_event_target_as = ta_army_target_species }
+						remove_army = yes
+						every_country = {
+							limit = {
+								has_communications = FROM
+								NOT = { is_country = FROM }
+							}
+							add_opinion_modifier = { who = FROM modifier = ta_opinion_psi_bomb_hypno }
+						}
+					}
+				}
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value > 1
+							}
+						}
+					}
+					create_army = {
+						name = "Hypnotized Army"
+						owner = root
+						type = "ta_army_hypno"
+						species = event_target:ta_army_target_species
+					}
+					FROM = {
+						change_variable = {
+							which = ta_effected_armies
+							value = -1
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {														### Possess Armies	
+		trigger = {
+			NOT = { has_civic = civic_fanatic_purifiers }			### Purifiers won't possess xeno scum
+			NOR = {													### Pacifists would never....
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+		name = "ta_psi_event.bombing.possess.name"				
+		custom_tooltip = ta_psi_event.bombing.possess.tooltip 
+		hidden_effect = {
+			FROM = {
+				set_planet_flag = ta_pf_psi_bomb_possess
+				set_variable = {
+					which = ta_effected_armies
+					value = 1
+				}
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value < 4
+							}
+						}
+					}
+					random_planet_army = {
+						limit = {
+							exists = species
+							species = {
+								NOR = {
+									has_trait = trait_mechanical
+									has_trait = trait_psionic
+									has_trait = trait_hive_mind
+								}
+							}
+							NOR = {
+								army_type = robotic_army 
+								army_type = android_army  
+								army_type = psionic_army  
+								army_type = gene_warrior_army 
+								army_type = titanic_assault_army   
+								army_type = titanic_guardian_army    
+								army_type = shroud_army  
+								army_type = garrison_army
+							}
+						}
+						FROM = { 
+							change_variable = {
+								which = ta_effected_armies
+								value = 1
+							}
+						}
+						species = { save_event_target_as = ta_army_target_species }
+						remove_army = yes
+						every_country = {
+							limit = {
+								has_communications = FROM
+								NOT = { is_country = FROM }
+							}
+							add_opinion_modifier = { who = FROM modifier = ta_opinion_psi_bomb_possess }
+						}
+					}
+				}
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value > 1
+							}
+						}
+					}
+					create_army = {
+						name = "Possessed Army"
+						owner = from
+						type = "ta_army_possess"
+						species = event_target:ta_army_target_species
+					}
+					FROM = {
+						change_variable = {
+							which = ta_effected_armies
+							value = -1
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {														### Enrage Armies					
+		trigger = {
+			OR = {													
+				has_civic = civic_fanatic_purifiers					### PURIFY XENO SCUM
+				has_policy_flag = purge_allowed
+			}
+			NOR = {													### Pacifists would never....
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+		name = "ta_psi_event.bombing.enrage.name"				
+		custom_tooltip = ta_psi_event.bombing.enrage.tooltip 
+		hidden_effect = {
+			FROM = {
+				set_variable = {
+					which = ta_effected_armies
+					value = 1
+				}
+				set_planet_flag = ta_pf_psi_bomb_enrage
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value < 4
+							}
+						}
+					}
+					random_planet_army = {
+						limit = {
+							exists = species
+							species = {
+								NOR = {
+									has_trait = trait_mechanical
+									has_trait = trait_psionic
+									has_trait = trait_hive_mind
+								}
+							}
+							NOR = {
+								army_type = robotic_army 
+								army_type = android_army  
+								army_type = psionic_army  
+								army_type = gene_warrior_army 
+								army_type = titanic_assault_army   
+								army_type = titanic_guardian_army    
+								army_type = shroud_army  
+								army_type = garrison_army
+							}
+						}
+						FROM = { 
+							change_variable = {
+								which = ta_effected_armies
+								value = 1
+							}
+						}
+						species = { save_event_target_as = ta_army_target_species }
+						remove_army = yes
+						every_country = {
+							limit = {
+								has_communications = FROM
+								NOT = { is_country = FROM }
+							}
+							add_opinion_modifier = { who = FROM modifier = ta_opinion_psi_bomb_enrage }
+						}
+					}
+				}
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value > 1
+							}
+						}
+					}
+					create_army = {
+						name = "Frenzied Army"
+						owner = root
+						type = "ta_army_enrage"
+						species = event_target:ta_army_target_species
+					}
+					FROM = {
+						change_variable = {
+							which = ta_effected_armies
+							value = -1
+						}
+					}
+				}
+				while = {
+					count = 1
+					random_pop = {
+						species = { save_event_target_as = ta_pop_target_species }
+						kill_pop = yes
+					}
+					every_country = {
+						limit = {
+							has_communications = FROM
+							NOT = { is_country = FROM }
+							NOT = { is_same_species = event_target:ta_pop_target_species }
+							NOT = { has_ai_personality_behaviour = purger }
+						}
+						add_opinion_modifier = { who = FROM modifier = opinion_genocidal }
+					}
+					every_country = {
+						limit = {
+							has_communications = FROM
+							NOT = { is_country = FROM }
+							is_same_species = event_target:ta_pop_target_species
+						}
+						add_opinion_modifier = { who = FROM modifier = opinion_genocidal_our_species }
+					}
+				}
+			}
+		}
+	}
+	option = {														### Take no action					
+		name = "ta_psi_event.bombing.no.psi.action"
+	}
+}
+
+country_event = { 													### medium fleet power bombing options
+	id = ta_psi_event.12
+	title = ta_psi_event.bombing.choice.name
+	desc = ta_psi_event.bombing.choice.desc
+	picture = GFX_evt_psionics
+	is_triggered_only = yes
+	
+	### Medium Fleet Power Options ###
+	option = {														### Sleep		
+		trigger = {
+			NOT = { has_civic = civic_fanatic_purifiers }			### Purifiers don't spare anyone
+		}
+		name = "ta_psi_event.bombing.sleep.name"				
+		custom_tooltip = ta_psi_event.bombing.sleep.tooltip 
+		hidden_effect = {
+			FROM = {
+				set_planet_flag = ta_pf_psi_bomb_sleep
+				set_variable = {
+					which = ta_effected_armies
+					value = 1
+				}
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value < 4
+							}
+						}
+					}
+					random_planet_army = {
+						limit = {
+							exists = species
+							species = {
+								NOR = {
+									has_trait = trait_mechanical
+									has_trait = trait_psionic
+									has_trait = trait_hive_mind
+								}
+							}
+							NOR = {
+								army_type = robotic_army 
+								army_type = android_army  
+								army_type = psionic_army  
+								army_type = gene_warrior_army 
+								army_type = titanic_assault_army   
+								army_type = titanic_guardian_army    
+								army_type = shroud_army  
+								army_type = garrison_army
+							}
+						}
+						every_country = {
+							limit = {
+								has_communications = FROM
+								NOT = { is_country = FROM }
+								OR = {
+									has_ethic = ethic_militarist
+									has_ethic = ethic_fanatic_militarist
+								}									
+							}
+							add_opinion_modifier = { who = FROM modifier = ta_opinion_psi_cowards }
+						}
+						every_country = {
+							limit = {
+								has_communications = FROM
+								NOT = { is_country = FROM }
+								OR = {
+									has_ethic = ethic_pacifist
+									has_ethic = ethic_fanatic_pacifist
+								}									
+							}
+							add_opinion_modifier = { who = FROM modifier = ta_opinion_psi_mercy }
+						}
+						FROM = { 
+							change_variable = {
+								which = ta_effected_armies
+								value = 1
+							}
+						}
+						remove_army = yes
+					}
+				}
+			}
+		}
+	}
+	option = {														### Hypnotize Armies			
+		trigger = {
+			NOT = { has_civic = civic_fanatic_purifiers }			### Purifiers don't spare anyone
+		}	
+		name = "ta_psi_event.bombing.hypno.name"				
+		custom_tooltip = ta_psi_event.bombing.hypno.tooltip 
+		hidden_effect = {
+			FROM = {
+				set_variable = {
+					which = ta_effected_armies
+					value = 1
+				}
+				set_planet_flag = ta_pf_psi_bomb_hypno
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value < 4
+							}
+						}
+					}
+					random_planet_army = {
+						limit = {
+							exists = species
+							species = {
+								NOR = {
+									has_trait = trait_mechanical
+									has_trait = trait_psionic
+									has_trait = trait_hive_mind
+								}
+							}
+							NOR = {
+								army_type = robotic_army 
+								army_type = android_army  
+								army_type = psionic_army  
+								army_type = gene_warrior_army 
+								army_type = titanic_assault_army   
+								army_type = titanic_guardian_army    
+								army_type = shroud_army  
+								army_type = garrison_army
+							}
+						}
+						FROM = { 
+							change_variable = {
+								which = ta_effected_armies
+								value = 1
+							}
+						}
+						species = { save_event_target_as = ta_army_target_species }
+						remove_army = yes
+						every_country = {
+							limit = {
+								has_communications = FROM
+								NOT = { is_country = FROM }
+							}
+							add_opinion_modifier = { who = FROM modifier = ta_opinion_psi_bomb_hypno }
+						}
+					}
+				}
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value > 1
+							}
+						}
+					}
+					create_army = {
+						name = "Hypnotized Army"
+						owner = root
+						type = "ta_army_hypno"
+						species = event_target:ta_army_target_species
+					}
+					FROM = {
+						change_variable = {
+							which = ta_effected_armies
+							value = -1
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {														### Possess Armies					
+		trigger = {
+			NOT = { has_civic = civic_fanatic_purifiers }			### Purifiers won't possess xeno scum
+			NOR = {													### Pacifists would never....
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+		name = "ta_psi_event.bombing.possess.name"				
+		custom_tooltip = ta_psi_event.bombing.possess.tooltip 
+		hidden_effect = {
+			FROM = {
+				set_planet_flag = ta_pf_psi_bomb_possess
+				set_variable = {
+					which = ta_effected_armies
+					value = 1
+				}
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value < 5
+							}
+						}
+					}
+					random_planet_army = {
+						limit = {
+							exists = species
+							species = {
+								NOR = {
+									has_trait = trait_mechanical
+									has_trait = trait_psionic
+									has_trait = trait_hive_mind
+								}
+							}
+							NOR = {
+								army_type = robotic_army 
+								army_type = android_army  
+								army_type = psionic_army  
+								army_type = gene_warrior_army 
+								army_type = titanic_assault_army   
+								army_type = titanic_guardian_army    
+								army_type = shroud_army  
+								army_type = garrison_army
+							}
+						}
+						FROM = { 
+							change_variable = {
+								which = ta_effected_armies
+								value = 1
+							}
+						}
+						species = { save_event_target_as = ta_army_target_species }
+						remove_army = yes
+						every_country = {
+							limit = {
+								has_communications = FROM
+								NOT = { is_country = FROM }
+							}
+							add_opinion_modifier = { who = FROM modifier = ta_opinion_psi_bomb_possess }
+						}
+					}
+				}
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value > 1
+							}
+						}
+					}
+					create_army = {
+						name = "Possessed Army"
+						owner = from
+						type = "ta_army_possess"
+						species = event_target:ta_army_target_species
+					}
+					FROM = {
+						change_variable = {
+							which = ta_effected_armies
+							value = -1
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {														### Enrage Armies					
+		trigger = {
+			OR = {													
+				has_civic = civic_fanatic_purifiers					### PURIFY XENO SCUM
+				has_policy_flag = purge_allowed
+			}
+			NOR = {													### Pacifists would never....
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+		name = "ta_psi_event.bombing.enrage.name"				
+		custom_tooltip = ta_psi_event.bombing.enrage.tooltip 
+		hidden_effect = {
+			FROM = {
+				set_variable = {
+					which = ta_effected_armies
+					value = 1
+				}
+				set_planet_flag = ta_pf_psi_bomb_enrage
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value < 5
+							}
+						}
+					}
+					random_planet_army = {
+						limit = {
+							exists = species
+							species = {
+								NOR = {
+									has_trait = trait_mechanical
+									has_trait = trait_psionic
+									has_trait = trait_hive_mind
+								}
+							}
+							NOR = {
+								army_type = robotic_army 
+								army_type = android_army  
+								army_type = psionic_army  
+								army_type = gene_warrior_army 
+								army_type = titanic_assault_army   
+								army_type = titanic_guardian_army    
+								army_type = shroud_army  
+								army_type = garrison_army
+							}
+						}
+						FROM = { 
+							change_variable = {
+								which = ta_effected_armies
+								value = 1
+							}
+						}
+						species = { save_event_target_as = ta_army_target_species }
+						remove_army = yes
+						every_country = {
+							limit = {
+								has_communications = FROM
+								NOT = { is_country = FROM }
+							}
+							add_opinion_modifier = { who = FROM modifier = ta_opinion_psi_bomb_enrage }
+						}
+					}
+				}
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value > 1
+							}
+						}
+					}
+					create_army = {
+						name = "Frenzied Army"
+						owner = root
+						type = "ta_army_enrage"
+						species = event_target:ta_army_target_species
+					}
+					FROM = {
+						change_variable = {
+							which = ta_effected_armies
+							value = -1
+						}
+					}
+				}
+				while = {
+					count = 2
+					random_pop = {
+						species = { save_event_target_as = ta_pop_target_species }
+						kill_pop = yes
+					}
+					every_country = {
+						limit = {
+							has_communications = FROM
+							NOT = { is_country = FROM }
+							NOT = { is_same_species = event_target:ta_pop_target_species }
+							NOT = { has_ai_personality_behaviour = purger }
+						}
+						add_opinion_modifier = { who = FROM modifier = opinion_genocidal }
+					}
+					every_country = {
+						limit = {
+							has_communications = FROM
+							NOT = { is_country = FROM }
+							is_same_species = event_target:ta_pop_target_species
+						}
+						add_opinion_modifier = { who = FROM modifier = opinion_genocidal_our_species }
+					}
+				}
+			}
+		}
+	}
+	option = {														### Take no action					
+		name = "ta_psi_event.bombing.no.psi.action"
+	}
+}
+
+country_event = { 													### high fleet power bombing options
+	id = ta_psi_event.13
+	title = ta_psi_event.bombing.choice.name
+	desc = ta_psi_event.bombing.choice.desc
+	picture = GFX_evt_psionics
+	is_triggered_only = yes
+	
+	### Medium Fleet Power Options ###
+	option = {														### Sleep				
+		trigger = {
+			NOT = { has_civic = civic_fanatic_purifiers }			### Purifiers don't spare anyone
+		}
+		name = "ta_psi_event.bombing.sleep.name"				
+		custom_tooltip = ta_psi_event.bombing.sleep.tooltip 
+		hidden_effect = {
+			FROM = {
+				set_planet_flag = ta_pf_psi_bomb_sleep
+				set_variable = {
+					which = ta_effected_armies
+					value = 1
+				}
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value < 5
+							}
+						}
+					}
+					random_planet_army = {
+						limit = {
+							exists = species
+							species = {
+								NOR = {
+									has_trait = trait_mechanical
+									has_trait = trait_psionic
+									has_trait = trait_hive_mind
+								}
+							}
+							NOR = {
+								army_type = robotic_army 
+								army_type = android_army  
+								army_type = psionic_army  
+								army_type = gene_warrior_army 
+								army_type = titanic_assault_army   
+								army_type = titanic_guardian_army    
+								army_type = shroud_army  
+								army_type = garrison_army
+							}
+						}
+						every_country = {
+							limit = {
+								has_communications = FROM
+								NOT = { is_country = FROM }
+								OR = {
+									has_ethic = ethic_militarist
+									has_ethic = ethic_fanatic_militarist
+								}									
+							}
+							add_opinion_modifier = { who = FROM modifier = ta_opinion_psi_cowards }
+						}
+						every_country = {
+							limit = {
+								has_communications = FROM
+								NOT = { is_country = FROM }
+								OR = {
+									has_ethic = ethic_pacifist
+									has_ethic = ethic_fanatic_pacifist
+								}									
+							}
+							add_opinion_modifier = { who = FROM modifier = ta_opinion_psi_mercy }
+						}
+						FROM = { 
+							change_variable = {
+								which = ta_effected_armies
+								value = 1
+							}
+						}
+						remove_army = yes
+					}
+				}
+			}
+		}
+	}
+	option = {														### Hypnotize Armies		
+		trigger = {
+			NOT = { has_civic = civic_fanatic_purifiers }			### Purifiers don't spare anyone
+		}
+		name = "ta_psi_event.bombing.hypno.name"				
+		custom_tooltip = ta_psi_event.bombing.hypno.tooltip 
+		hidden_effect = {
+			FROM = {
+				set_variable = {
+					which = ta_effected_armies
+					value = 1
+				}
+				set_planet_flag = ta_pf_psi_bomb_hypno
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value < 5
+							}
+						}
+					}
+					random_planet_army = {
+						limit = {
+							exists = species
+							species = {
+								NOR = {
+									has_trait = trait_mechanical
+									has_trait = trait_psionic
+									has_trait = trait_hive_mind
+								}
+							}
+							NOR = {
+								army_type = robotic_army 
+								army_type = android_army  
+								army_type = psionic_army  
+								army_type = gene_warrior_army 
+								army_type = titanic_assault_army   
+								army_type = titanic_guardian_army    
+								army_type = shroud_army  
+								army_type = garrison_army
+							}
+						}
+						FROM = { 
+							change_variable = {
+								which = ta_effected_armies
+								value = 1
+							}
+						}
+						species = { save_event_target_as = ta_army_target_species }
+						remove_army = yes
+						every_country = {
+							limit = {
+								has_communications = FROM
+								NOT = { is_country = FROM }
+							}
+							add_opinion_modifier = { who = FROM modifier = ta_opinion_psi_bomb_hypno }
+						}
+					}
+				}
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value > 1
+							}
+						}
+					}
+					create_army = {
+						name = "Hypnotized Army"
+						owner = root
+						type = "ta_army_hypno"
+						species = event_target:ta_army_target_species
+					}
+					FROM = {
+						change_variable = {
+							which = ta_effected_armies
+							value = -1
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {														### Possess Armies					
+		trigger = {
+			NOT = { has_civic = civic_fanatic_purifiers }			### Purifiers won't possess xeno scum
+			NOR = {													### Pacifists would never....
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+		name = "ta_psi_event.bombing.possess.name"				
+		custom_tooltip = ta_psi_event.bombing.possess.tooltip 
+		hidden_effect = {
+			FROM = {
+				set_planet_flag = ta_pf_psi_bomb_possess
+				set_variable = {
+					which = ta_effected_armies
+					value = 1
+				}
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value < 6
+							}
+						}
+					}
+					random_planet_army = {
+						limit = {
+							exists = species
+							species = {
+								NOR = {
+									has_trait = trait_mechanical
+									has_trait = trait_psionic
+									has_trait = trait_hive_mind
+								}
+							}
+							NOR = {
+								army_type = robotic_army 
+								army_type = android_army  
+								army_type = psionic_army  
+								army_type = gene_warrior_army 
+								army_type = titanic_assault_army   
+								army_type = titanic_guardian_army    
+								army_type = shroud_army  
+								army_type = garrison_army
+							}
+						}
+						FROM = { 
+							change_variable = {
+								which = ta_effected_armies
+								value = 1
+							}
+						}
+						species = { save_event_target_as = ta_army_target_species }
+						remove_army = yes
+						every_country = {
+							limit = {
+								has_communications = FROM
+								NOT = { is_country = FROM }
+							}
+							add_opinion_modifier = { who = FROM modifier = ta_opinion_psi_bomb_possess }
+						}
+					}
+				}
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value > 1
+							}
+						}
+					}
+					create_army = {
+						name = "Possessed Army"
+						owner = from
+						type = "ta_army_possess"
+						species = event_target:ta_army_target_species
+					}
+					FROM = {
+						change_variable = {
+							which = ta_effected_armies
+							value = -1
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {														### Enrage Armies					
+		name = "ta_psi_event.bombing.enrage.name"				
+		trigger = {
+			OR = {													
+				has_civic = civic_fanatic_purifiers					### PURIFY XENO SCUM
+				has_policy_flag = purge_allowed
+			}
+			NOR = {													### Pacifists would never....
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+		custom_tooltip = ta_psi_event.bombing.enrage.tooltip 
+		hidden_effect = {
+			FROM = {
+				set_variable = {
+					which = ta_effected_armies
+					value = 1
+				}
+				set_planet_flag = ta_pf_psi_bomb_enrage
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value < 6
+							}
+						}
+					}
+					random_planet_army = {
+						limit = {
+							exists = species
+							species = {
+								NOR = {
+									has_trait = trait_mechanical
+									has_trait = trait_psionic
+									has_trait = trait_hive_mind
+								}
+							}
+							NOR = {
+								army_type = robotic_army 
+								army_type = android_army  
+								army_type = psionic_army  
+								army_type = gene_warrior_army 
+								army_type = titanic_assault_army   
+								army_type = titanic_guardian_army    
+								army_type = shroud_army  
+								army_type = garrison_army
+							}
+						}
+						FROM = { 
+							change_variable = {
+								which = ta_effected_armies
+								value = 1
+							}
+						}
+						species = { save_event_target_as = ta_army_target_species }
+						remove_army = yes
+						every_country = {
+							limit = {
+								has_communications = FROM
+								NOT = { is_country = FROM }
+							}
+							add_opinion_modifier = { who = FROM modifier = ta_opinion_psi_bomb_enrage }
+						}
+					}
+				}
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value > 1
+							}
+						}
+					}
+					create_army = {
+						name = "Frenzied Army"
+						owner = root
+						type = "ta_army_enrage"
+						species = event_target:ta_army_target_species
+					}
+					FROM = {
+						change_variable = {
+							which = ta_effected_armies
+							value = -1
+						}
+					}
+				}
+				while = {
+					count = 3
+					random_pop = {
+						species = { save_event_target_as = ta_pop_target_species }
+						kill_pop = yes
+					}
+					every_country = {
+						limit = {
+							has_communications = FROM
+							NOT = { is_country = FROM }
+							NOT = { is_same_species = event_target:ta_pop_target_species }
+							NOT = { has_ai_personality_behaviour = purger }
+						}
+						add_opinion_modifier = { who = FROM modifier = opinion_genocidal }
+					}
+					every_country = {
+						limit = {
+							has_communications = FROM
+							NOT = { is_country = FROM }
+							is_same_species = event_target:ta_pop_target_species
+						}
+						add_opinion_modifier = { who = FROM modifier = opinion_genocidal_our_species }
+					}
+				}
+			}
+		}
+	}
+	option = {														### Take no action					
+		name = "ta_psi_event.bombing.no.psi.action"
+	}
+}
+
+country_event = { 													### very high fleet power bombing options
+	id = ta_psi_event.14
+	title = ta_psi_event.bombing.choice.name
+	desc = ta_psi_event.bombing.choice.desc
+	picture = GFX_evt_psionics
+	is_triggered_only = yes
+	
+	option = {														### Sleep			
+		trigger = {
+			NOT = { has_civic = civic_fanatic_purifiers }			### Purifiers don't spare anyone
+		}
+		name = "ta_psi_event.bombing.sleep.name"				
+		custom_tooltip = ta_psi_event.bombing.sleep.tooltip 
+		hidden_effect = {
+			FROM = {
+				set_planet_flag = ta_pf_psi_bomb_sleep
+				set_variable = {
+					which = ta_effected_armies
+					value = 1
+				}
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value < 6
+							}
+						}
+					}
+					random_planet_army = {
+						limit = {
+							exists = species
+							species = {
+								NOR = {
+									has_trait = trait_mechanical
+									has_trait = trait_psionic
+									has_trait = trait_hive_mind
+								}
+							}
+							NOR = {
+								army_type = robotic_army 
+								army_type = android_army  
+								army_type = psionic_army  
+								army_type = gene_warrior_army 
+								army_type = titanic_assault_army   
+								army_type = titanic_guardian_army    
+								army_type = shroud_army  
+								army_type = garrison_army
+							}
+						}
+						every_country = {
+							limit = {
+								has_communications = FROM
+								NOT = { is_country = FROM }
+								OR = {
+									has_ethic = ethic_militarist
+									has_ethic = ethic_fanatic_militarist
+								}									
+							}
+							add_opinion_modifier = { who = FROM modifier = ta_opinion_psi_cowards }
+						}
+						every_country = {
+							limit = {
+								has_communications = FROM
+								NOT = { is_country = FROM }
+								OR = {
+									has_ethic = ethic_pacifist
+									has_ethic = ethic_fanatic_pacifist
+								}									
+							}
+							add_opinion_modifier = { who = FROM modifier = ta_opinion_psi_mercy }
+						}
+						FROM = { 
+							change_variable = {
+								which = ta_effected_armies
+								value = 1
+							}
+						}
+						remove_army = yes
+					}
+				}
+			}
+		}
+	}
+	option = {														### Hypnotize Armies					
+		trigger = {
+			NOT = { has_civic = civic_fanatic_purifiers }			### Purifiers don't spare anyone
+		}
+		name = "ta_psi_event.bombing.hypno.name"				
+		custom_tooltip = ta_psi_event.bombing.hypno.tooltip 
+		hidden_effect = {
+			FROM = {
+				set_planet_flag = ta_pf_psi_bomb_hypno
+				set_variable = {
+					which = ta_effected_armies
+					value = 1
+				}
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value < 6
+							}
+						}
+					}
+					random_planet_army = {
+						limit = {
+							exists = species
+							species = {
+								NOR = {
+									has_trait = trait_mechanical
+									has_trait = trait_psionic
+									has_trait = trait_hive_mind
+								}
+							}
+							NOR = {
+								army_type = robotic_army 
+								army_type = android_army  
+								army_type = psionic_army  
+								army_type = gene_warrior_army 
+								army_type = titanic_assault_army   
+								army_type = titanic_guardian_army    
+								army_type = shroud_army  
+								army_type = garrison_army
+							}
+						}
+						FROM = { 
+							change_variable = {
+								which = ta_effected_armies
+								value = 1
+							}
+						}
+						species = { save_event_target_as = ta_army_target_species }
+						remove_army = yes
+						every_country = {
+							limit = {
+								has_communications = FROM
+								NOT = { is_country = FROM }
+							}
+							add_opinion_modifier = { who = FROM modifier = ta_opinion_psi_bomb_hypno }
+						}
+					}
+				}
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value > 1
+							}
+						}
+					}
+					create_army = {
+						name = "Hypnotized Army"
+						owner = root
+						type = "ta_army_hypno"
+						species = event_target:ta_army_target_species
+					}
+					FROM = { 
+						change_variable = {
+							which = ta_effected_armies
+							value = -1
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {														### Possess Armies					
+		trigger = {
+			NOT = { has_civic = civic_fanatic_purifiers }			### Purifiers won't possess xeno scum
+			NOR = {													### Pacifists would never....
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+		name = "ta_psi_event.bombing.possess.name"				
+		custom_tooltip = ta_psi_event.bombing.possess.tooltip 
+		hidden_effect = {
+			FROM = {
+				set_planet_flag = ta_pf_psi_bomb_possess
+				set_variable = {
+					which = ta_effected_armies
+					value = 1
+				}
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value < 7
+							}
+						}
+					}
+					random_planet_army = {
+						limit = {
+							exists = species
+							species = {
+								NOR = {
+									has_trait = trait_mechanical
+									has_trait = trait_psionic
+									has_trait = trait_hive_mind
+								}
+							}
+							NOR = {
+								army_type = robotic_army 
+								army_type = android_army  
+								army_type = psionic_army  
+								army_type = gene_warrior_army 
+								army_type = titanic_assault_army   
+								army_type = titanic_guardian_army    
+								army_type = shroud_army  
+								army_type = garrison_army
+							}
+						}
+						FROM = { 
+							change_variable = {
+								which = ta_effected_armies
+								value = 1
+							}
+						}
+						species = { save_event_target_as = ta_army_target_species }
+						remove_army = yes
+						every_country = {
+							limit = {
+								has_communications = FROM
+								NOT = { is_country = FROM }
+							}
+							add_opinion_modifier = { who = FROM modifier = ta_opinion_psi_bomb_possess }
+						}
+					}
+				}
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value > 1
+							}
+						}
+					}
+					create_army = {
+						name = "Possessed Army"
+						owner = from
+						type = "ta_army_possess"
+						species = event_target:ta_army_target_species
+					}
+					FROM = {
+						change_variable = {
+							which = ta_effected_armies
+							value = -1
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {														### Enrage Armies					
+		trigger = {
+			OR = {													
+				has_civic = civic_fanatic_purifiers					### PURIFY XENO SCUM
+				has_policy_flag = purge_allowed
+			}
+			NOR = {													### Pacifists would never....
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+		name = "ta_psi_event.bombing.enrage.name"				
+		custom_tooltip = ta_psi_event.bombing.enrage.tooltip 
+		hidden_effect = {
+			FROM = {
+				set_variable = {
+					which = ta_effected_armies
+					value = 1
+				}
+				set_planet_flag = ta_pf_psi_bomb_enrage
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value < 7
+							}
+						}
+					}
+					random_planet_army = {
+						limit = {
+							exists = species
+							species = {
+								NOR = {
+									has_trait = trait_mechanical
+									has_trait = trait_psionic
+									has_trait = trait_hive_mind
+								}
+							}
+							NOR = {
+								army_type = robotic_army 
+								army_type = android_army  
+								army_type = psionic_army  
+								army_type = gene_warrior_army 
+								army_type = titanic_assault_army   
+								army_type = titanic_guardian_army    
+								army_type = shroud_army  
+								army_type = garrison_army
+							}
+						}
+						FROM = { 
+							change_variable = {
+								which = ta_effected_armies
+								value = 1
+							}
+						}
+						species = { save_event_target_as = ta_army_target_species }
+						remove_army = yes
+						every_country = {
+							limit = {
+								has_communications = FROM
+								NOT = { is_country = FROM }
+							}
+							add_opinion_modifier = { who = FROM modifier = ta_opinion_psi_bomb_enrage }
+						}
+					}
+				}
+				while = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = ta_effected_armies
+								value > 1
+							}
+						}
+					}
+					create_army = {
+						name = "Frenzied Army"
+						owner = root
+						type = "ta_army_enrage"
+						species = event_target:ta_army_target_species
+					}
+					FROM = {
+						change_variable = {
+							which = ta_effected_armies
+							value = -1
+						}
+					}
+				}
+				while = {
+					count = 4
+					random_pop = {
+						species = { save_event_target_as = ta_pop_target_species }
+						kill_pop = yes
+					}
+					every_country = {
+						limit = {
+							has_communications = FROM
+							NOT = { is_country = FROM }
+							NOT = { is_same_species = event_target:ta_pop_target_species }
+							NOT = { has_ai_personality_behaviour = purger }
+						}
+						add_opinion_modifier = { who = FROM modifier = opinion_genocidal }
+					}
+					every_country = {
+						limit = {
+							has_communications = FROM
+							NOT = { is_country = FROM }
+							is_same_species = event_target:ta_pop_target_species
+						}
+						add_opinion_modifier = { who = FROM modifier = opinion_genocidal_our_species }
+					}
+				}
+			}
+		}
+	}
+	option = {														### Take no action					
+		name = "ta_psi_event.bombing.no.psi.action"
+	}
+}
+
+planet_event = { 												### psionic bombardment post-invasion trigger
+	id = ta_psi_event.20
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_planet_flag = ta_pf_psi_bomb_sleep
+			has_planet_flag = ta_pf_psi_bomb_hypno
+			has_planet_flag = ta_pf_psi_bomb_possess
+			has_planet_flag = ta_pf_psi_bomb_enrage
+		}
+	}
+	
+	immediate = {
+		IF = {
+			limit = { has_planet_flag = ta_pf_psi_bomb_sleep }
+			remove_planet_flag = ta_pf_psi_bomb_sleep
+			FROMFROM = { country_event = { id = ta_psi_event.21 days = 1} }
+		}
+		IF = {
+			limit = { has_planet_flag = ta_pf_psi_bomb_hypno }
+			remove_planet_flag = ta_pf_psi_bomb_hypno
+			planet_event = { id = ta_psi_event.22 days = 1 }
+		}
+		IF = {
+			limit = { has_planet_flag = ta_pf_psi_bomb_possess }
+			remove_planet_flag = ta_pf_psi_bomb_possess
+			planet_event = { id = ta_psi_event.25 days = 1 }
+		}
+		IF = {
+			limit = { has_planet_flag = ta_pf_psi_bomb_enrage }
+			remove_planet_flag = ta_pf_psi_bomb_enrage
+			planet_event = { id = ta_psi_event.28 days = 1 }
+		}
+	}
+}
+
+country_event = { 													### sleep feedback
+	id = ta_psi_event.21
+	title = ta_psi_event.bombing.sleep.event.name
+	desc = ta_psi_event.bombing.sleep.event.desc
+	picture = GFX_evt_psionics
+	is_triggered_only = yes
+	
+	option = {
+		name = "ta_psi_event.bombing.sleep.answer"
+	}
+}
+
+planet_event = { 													### hypno feedback trigger
+	id = ta_psi_event.22
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		controller = { country_event = { id = ta_psi_event.23 } }
+		controller = { country_event = { id = ta_psi_event.24 } }
+	}
+}
+
+country_event = { 													### dead hypno soldiers feedback
+	id = ta_psi_event.23
+	title = ta_psi_event.bombing.hypno.troopsdead.name
+	desc = ta_psi_event.bombing.hypno.troopsdead.desc
+	picture = GFX_evt_psionics
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { 
+			FROM = {
+				controller = {
+					any_owned_army = {
+						army_type = ta_army_hypno
+						planet = { is_planet = FROM }
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "ta_psi_event.bombing.hypno.troopsdead.answer"
+	}
+}
+
+country_event = { 													### living hypno soldiers feedback
+	id = ta_psi_event.24
+	title = ta_psi_event.bombing.hypno.troopsalive.name
+	desc = ta_psi_event.bombing.hypno.troopsalive.desc
+	picture = GFX_evt_psionics
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			controller = {
+				any_owned_army = {
+					army_type = ta_army_hypno
+					planet = { is_planet = FROM }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "ta_psi_event.bombing.hypno.troopsalive.answer"
+	}
+}
+
+planet_event = { 													### possess feedback trigger
+	id = ta_psi_event.25
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		controller = { country_event = { id = ta_psi_event.26 } }
+		controller = { country_event = { id = ta_psi_event.27 } }
+	}
+}
+
+country_event = { 													### dead possess soldiers feedback
+	id = ta_psi_event.26
+	title = ta_psi_event.bombing.possess.troopsdead.name
+	desc = ta_psi_event.bombing.possess.troopsdead.desc
+	picture = GFX_evt_psionics
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { 
+			FROM = {
+				controller = {
+					any_owned_army = {
+						army_type = ta_army_possess
+						planet = { is_planet = FROM }
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "ta_psi_event.bombing.possess.troopsdead.answer"
+	}
+}
+
+country_event = { 													### living possess soldiers feedback
+	id = ta_psi_event.27
+	title = ta_psi_event.bombing.possess.troopsalive.name
+	desc = ta_psi_event.bombing.possess.troopsalive.desc
+	picture = GFX_evt_psionics
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			controller = {
+				any_owned_army = {
+					army_type = ta_army_possess
+					planet = { is_planet = FROM }
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		every_owned_army = {
+			limit = {
+				army_type = ta_army_possess
+				planet = { is_planet = FROM }
+			}
+			remove_army = yes
+		}
+	}
+	
+	option = {
+		name = "ta_psi_event.bombing.possess.troopsalive.answer"
+	}
+}
+
+planet_event = { 													### enraged feedback trigger
+	id = ta_psi_event.28
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		controller = { country_event = { id = ta_psi_event.29 } }
+		controller = { country_event = { id = ta_psi_event.30 } }
+	}
+}
+
+country_event = { 													### dead enraged soldiers feedback
+	id = ta_psi_event.29
+	title = ta_psi_event.bombing.enraged.troopsdead.name
+	desc = ta_psi_event.bombing.enraged.troopsdead.desc
+	picture = GFX_evt_psionics
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { 
+			FROM = {
+				controller = {
+					any_owned_army = {
+						army_type = ta_army_enrage
+						planet = { is_planet = FROM }
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "ta_psi_event.bombing.enraged.troopsdead.answer"
+	}
+}
+
+country_event = { 													### living enraged soldiers feedback
+	id = ta_psi_event.30
+	title = ta_psi_event.bombing.enraged.troopsalive.name
+	desc = ta_psi_event.bombing.enraged.troopsalive.desc
+	picture = GFX_evt_psionics
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			controller = {
+				any_owned_army = {
+					army_type = ta_army_enrage
+					planet = { is_planet = FROM }
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		every_owned_army = {
+			limit = {
+				army_type = ta_army_enrage
+				planet = { is_planet = FROM }
+			}
+			remove_army = yes
+		}
+	}
+	
+	option = {
+		name = "ta_psi_event.bombing.enraged.troopsalive.answer"
+	}
+}
+
+country_event = {													### post-war cleanup event #1
+	id = ta_psi_event.31
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		fromfrom = {
+			every_war_participant = {
+				country_event = { id = ta_psi_event.32 days = 1 }			### removing armies still in combat screws everything up so a delayed pass-through is needed
+			}
+		}
+	}
+}
+
+country_event = {													### post-war cleanup event #2
+	id = ta_psi_event.32
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_ascension_perk = ap_many_minds_one_voice
+	}
+	
+	immediate = {
+		every_owned_army = {										### kill spawned armies in case any are still alive
+			limit = {
+				OR = {
+					army_type = ta_army_possess
+					army_type = ta_army_enrage
+				}
+			}
+			remove_army = yes
+		}
+		every_planet = {
+			limit = {
+				OR = {
+					has_planet_flag = ta_pf_psi_bomb_sleep
+					has_planet_flag = ta_pf_psi_bomb_hypno
+					has_planet_flag = ta_pf_psi_bomb_possess
+					has_planet_flag = ta_pf_psi_bomb_enrage
+				}
+			}
+			remove_planet_flag = ta_pf_psi_bomb_sleep
+			remove_planet_flag = ta_pf_psi_bomb_hypno
+			remove_planet_flag = ta_pf_psi_bomb_possess
+			remove_planet_flag = ta_pf_psi_bomb_enrage
+		}
+	}
+}

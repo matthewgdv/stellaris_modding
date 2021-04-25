@@ -1,0 +1,6 @@
+sr_solar_dust = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_mine_solar_dust" }
+	tradable = yes
+	is_rare = yes
+}

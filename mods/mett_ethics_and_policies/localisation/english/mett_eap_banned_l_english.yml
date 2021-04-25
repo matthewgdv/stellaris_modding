@@ -1,0 +1,26 @@
+﻿l_english: 
+ BAN_FACTION: "Ban Faction"
+ BAN_FACTION_DESC: "Banning a faction will severely reduce attraction to the faction and guiding ethic for ten years and will effectively kill the faction, making now ex faction members very unhappy."
+ CANCEL_BAN_FACTION: "Lift Faction Ban"
+ CANCEL_BAN_FACTION_DESC: "Lift the ban of this faction."
+ 
+
+ banned_authoritarian: "Authoritians Banned"
+ banned_egalitarian: "Egalitarians Banned"
+ banned_militarist: "Militarists Banned"
+ banned_pacifist: "Pacifists Banned"
+ banned_materialist: "Materialists Banned"
+ banned_spiritualist: "Spiritualists Banned"
+ banned_xenophobe: "Isolationists Banned"
+ banned_xenophobe2: "Supremacists Banned"
+ banned_xenophile: "Xenophiles Banned"
+ 
+ banned_capitalism: "Capitalists Banned"
+ banned_socialism: "Socialists Banned"
+ banned_green: "Environmentalists Banned"
+ banned_industrial: "Industrialists Banned"
+ banned_pluralist: "Pluralists Banned"
+ banned_elitist: "Elitists Banned"
+ 
+ banned_faction: "Banned"
+ pop_faction_banned: "Banned Faction"

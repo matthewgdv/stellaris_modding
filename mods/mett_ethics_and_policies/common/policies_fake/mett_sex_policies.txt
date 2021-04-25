@@ -1,0 +1,365 @@
+
+
+#========================================================================
+# Army
+#========================================================================
+
+humanotypes_army_leader_recruitment_gender_policy = {
+
+	potential = {
+		always = yes
+	}
+
+	option = {
+		name = "humanotypes_army_leader_recruitment_gender_policy_option_both"
+
+		policy_flags = {
+			humanotypes_recruit_generals_male_female
+		}
+	}
+
+	option = {
+		name = "humanotypes_army_leader_recruitment_gender_policy_option_male"
+
+		policy_flags = {
+			humanotypes_recruit_generals_male
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 100
+				OR = {
+					has_policy_flag = humanotypes_recruit_generals_male
+				}
+			}
+		}
+	}
+
+
+	option = {
+		name = "humanotypes_army_leader_recruitment_gender_policy_option_female"
+
+		policy_flags = {
+			humanotypes_recruit_generals_female
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 100
+				OR = {
+					has_policy_flag = humanotypes_recruit_generals_female
+				}
+			}
+		}
+	}
+
+}
+
+
+
+#========================================================================
+# Fleet
+#========================================================================
+
+humanotypes_fleet_leader_recruitment_gender_policy = {
+
+	potential = {
+		always = yes
+	}
+
+	option = {
+		name = "humanotypes_fleet_leader_recruitment_gender_policy_option_both"
+
+		policy_flags = {
+			humanotypes_recruit_admirals_male_female
+		}
+	}
+
+	option = {
+		name = "humanotypes_fleet_leader_recruitment_gender_policy_option_male"
+
+		policy_flags = {
+			humanotypes_recruit_admirals_male
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 100
+				OR = {
+					has_policy_flag = humanotypes_recruit_admirals_male
+				}
+			}
+		}
+	}
+
+
+	option = {
+		name = "humanotypes_fleet_leader_recruitment_gender_policy_option_female"
+
+		policy_flags = {
+			humanotypes_recruit_admirals_female
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 100
+				OR = {
+					has_policy_flag = humanotypes_recruit_admirals_female
+				}
+			}
+		}
+	}
+
+}
+
+#========================================================================
+# Science
+#========================================================================
+
+
+
+humanotypes_science_leader_recruitment_gender_policy = {
+
+	potential = {
+		always = yes
+	}
+
+	option = {
+		name = "humanotypes_science_leader_recruitment_gender_policy_option_both"
+
+		policy_flags = {
+			humanotypes_recruit_scientists_male_female
+		}
+	}
+
+	option = {
+		name = "humanotypes_science_leader_recruitment_gender_policy_option_male"
+
+		policy_flags = {
+			humanotypes_recruit_scientists_male
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 100
+				OR = {
+					has_policy_flag = humanotypes_recruit_scientists_male
+				}
+			}
+		}
+	}
+
+
+	option = {
+		name = "humanotypes_science_leader_recruitment_gender_policy_option_female"
+
+		policy_flags = {
+			humanotypes_recruit_scientists_female
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 100
+				OR = {
+					has_policy_flag = humanotypes_recruit_scientists_female
+				}
+			}
+		}
+	}
+
+}
+
+
+
+#========================================================================
+# Governors
+#========================================================================
+
+
+
+humanotypes_governor_recruitment_gender_policy = {
+
+	potential = {
+		always = yes
+	}
+
+	option = {
+		name = "humanotypes_governor_recruitment_gender_policy_option_both"
+
+		policy_flags = {
+			humanotypes_recruit_governors_male_female
+		}
+	}
+
+	option = {
+		name = "humanotypes_governor_recruitment_gender_policy_option_male"
+
+		policy_flags = {
+			humanotypes_recruit_governors_male
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 100
+				OR = {
+					has_policy_flag = humanotypes_recruit_governors_male
+				}
+			}
+		}
+	}
+
+
+	option = {
+		name = "humanotypes_governor_recruitment_gender_policy_option_female"
+
+		policy_flags = {
+			humanotypes_recruit_governors_female
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 100
+				OR = {
+					has_policy_flag = humanotypes_recruit_governors_female
+				}
+			}
+		}
+	}
+
+}
+
+
+
+
+#========================================================================
+# Rulers
+#========================================================================
+
+
+
+humanotypes_ruler_recruitment_gender_policy = {
+
+	potential = {
+		always = yes
+	}
+
+	option = {
+		name = "humanotypes_ruler_recruitment_gender_policy_option_both"
+		policy_flags = {
+			humanotypes_recruit_rulers_male_female
+		}
+		AI_weight = {
+			modifier = {
+				factor = 100
+				OR = {
+					has_policy_flag = humanotypes_recruit_rulers_male_female
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "humanotypes_ruler_recruitment_gender_policy_option_male"
+
+		policy_flags = {
+			humanotypes_recruit_rulers_male
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 100
+				OR = {
+					has_policy_flag = humanotypes_recruit_rulers_male
+				}
+			}
+		}
+	}
+
+
+	option = {
+		name = "humanotypes_ruler_recruitment_gender_policy_option_female"
+
+		policy_flags = {
+			humanotypes_recruit_rulers_female
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 100
+				OR = {
+					has_policy_flag = humanotypes_recruit_rulers_female
+				}
+			}
+		}
+	}
+
+}
+
+
+
+
+
+
+#========================================================================
+# Pops
+#========================================================================
+
+# DOESN'T WORK BECAUSE POPS DON'T HAVE GENDER YET ?
+
+#humanotypes_pop_spawning_gender_policy = {
+#
+#	potential = {
+#		always = yes
+#	}
+#
+#	option = {
+#		name = "humanotypes_pop_spawning_gender_policy_option_both"
+#		policy_flags = {
+#			humanotypes_spawn_pops_male_female
+#		}
+#		AI_weight = {
+#			modifier = {
+#				factor = 100
+#				OR = {
+#					has_policy_flag = humanotypes_spawn_pops_male_female
+#				}
+#			}
+#		}
+#	}
+#
+#	option = {
+#		name = "humanotypes_pop_spawning_gender_policy_option_male"
+#
+#		policy_flags = {
+#			humanotypes_spawn_pops_male
+#		}
+#
+#		AI_weight = {
+#			modifier = {
+#				factor = 100
+#				OR = {
+#					has_policy_flag = humanotypes_spawn_pops_male
+#				}
+#			}
+#		}
+#	}
+#
+#
+#	option = {
+#		name = "humanotypes_pop_spawning_gender_policy_option_female"
+#
+#		policy_flags = {
+#			humanotypes_spawn_pops_female
+#		}
+#
+#		AI_weight = {
+#			modifier = {
+#				factor = 100
+#				OR = {
+#					has_policy_flag = humanotypes_spawn_pops_female
+#				}
+#			}
+#		}
+#	}
+#
+#}

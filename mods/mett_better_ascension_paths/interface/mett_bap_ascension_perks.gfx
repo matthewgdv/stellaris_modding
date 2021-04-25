@@ -1,0 +1,23 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ap_many_minds_one_voice"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_many_minds_one_voice.dds"
+		alwaystransparent = yes
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ap_the_end_of_limits"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_the_end_of_limits.dds"
+		alwaystransparent = yes
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ap_the_edge_of_infinity"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_the_edge_of_infinity.dds"
+		alwaystransparent = yes
+	}
+}

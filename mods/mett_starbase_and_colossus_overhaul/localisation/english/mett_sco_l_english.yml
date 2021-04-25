@@ -1,0 +1,70 @@
+﻿l_english:
+
+    #Techs
+    tech_defense_platform_hull_2:0 "Improved Structural Integrity"
+    tech_defense_platform_hull_2_desc:0 "A reinforced framework and blast shields with enhanced impact absorption will ensure the structural integrity of the platform even under immense pressure."
+    tech_defense_platform_hull_3:0 "Improved Structural Integrity"
+    tech_defense_platform_hull_3_desc:0 "A reinforced framework and blast shields with enhanced impact absorption will ensure the structural integrity of the platform even under immense pressure."
+    tech_pk_plague:0 "Gene Drives"
+    tech_pk_plague_desc:0 "The development of a hyper-efficient genetic delivery vector allows for the development of splice plagues, pandemic diseases with the single purpose of modifying the genomes of the infected to the exact specifications of the designer."
+    
+    #Misc
+    shipclass_military_station_medium_hull_mult:0 "Defense Station Hull Points"
+    shipsize_military_station_medium_hull_add:0 "$shipclass_military_station_medium_hull_mult$"
+    shipclass_military_station_large_hull_mult:0 "Fortress Hull Points"
+    shipsize_military_station_large_hull_add:0 "$shipclass_military_station_large_hull_mult$"
+    
+    #Sections
+    MISSILE_LARGE_MILITARY_STATION_SECTION:0 "Missile Station Section"
+    
+    #Components
+    PLATFORM_FISSION_REACTOR_DESC:0 "This energy source generates power through induced fission, but it also produces harmful nuclear waste."
+    PLATFORM_FISSION_REACTOR_M:0 "Fission Reactor"
+    PLATFORM_FISSION_REACTOR_M_DESC:0 "This energy source generates power through induced fission, but it also produces harmful nuclear waste."
+    PLATFORM_FISSION_REACTOR_L:0 "Fission Reactor"
+    PLATFORM_FISSION_REACTOR_L_DESC:0 "This energy source generates power through induced fission, but it also produces harmful nuclear waste."
+    
+    PLATFORM_FUSION_REACTOR_DESC:0 "Nuclear fusion processes generate a great amount of power, but without many of the risks associated with fission power."
+    PLATFORM_FUSION_REACTOR_M:0 "Fusion Reactor"
+    PLATFORM_FUSION_REACTOR_M_DESC:0 "Nuclear fusion processes generate a great amount of power, but without many of the risks associated with fission power."
+    PLATFORM_FUSION_REACTOR_L:0 "Fusion Reactor"
+    PLATFORM_FUSION_REACTOR_L_DESC:0 "Nuclear fusion processes generate a great amount of power, but without many of the risks associated with fission power."
+    
+    PLATFORM_COLD_FUSION_REACTOR_DESC:0 "The ability to sustain a fusion reaction at relatively low temperatures will result in a new generation of fusion reactors."
+    PLATFORM_COLD_FUSION_REACTOR_M:0 "Cold Fusion Reactor"
+    PLATFORM_COLD_FUSION_REACTOR_M_DESC:0 "The ability to sustain a fusion reaction at relatively low temperatures will result in a new generation of fusion reactors."
+    PLATFORM_COLD_FUSION_REACTOR_L:0 "Cold Fusion Reactor"
+    PLATFORM_COLD_FUSION_REACTOR_L_DESC:0 "The ability to sustain a fusion reaction at relatively low temperatures will result in a new generation of fusion reactors."
+    
+    PLATFORM_ZERO_POINT_REACTOR_DESC:0 "These reactors extract vacuum energy, providing an almost limitless supply of power. There is no more efficient way to generate energy."
+    PLATFORM_ZERO_POINT_REACTOR_M:0 "Zero Point Reactor"
+    PLATFORM_ZERO_POINT_REACTOR_M_DESC:0 "These reactors extract vacuum energy, providing an almost limitless supply of power. There is no more efficient way to generate energy."
+    PLATFORM_ZERO_POINT_REACTOR_L:0 "Zero Point Reactor"
+    PLATFORM_ZERO_POINT_REACTOR_L_DESC:0 "These reactors extract vacuum energy, providing an almost limitless supply of power. There is no more efficient way to generate energy."
+   
+    PLATFORM_ANTIMATTER_REACTOR_DESC:0 "By harnessing the energy produced by matter/antimatter annihilations, our efficiency at generating power will be orders of magnitude better than fusion."
+    PLATFORM_ANTIMATTER_REACTOR_M:0 "Antimatter Reactor"
+    PLATFORM_ANTIMATTER_REACTOR_M_DESC:0 "By harnessing the energy produced by matter/antimatter annihilations, our efficiency at generating power will be orders of magnitude better than fusion."
+    PLATFORM_ANTIMATTER_REACTOR_L:0 "Antimatter Reactor"
+    PLATFORM_ANTIMATTER_REACTOR_L_DESC:0 "By harnessing the energy produced by matter/antimatter annihilations, our efficiency at generating power will be orders of magnitude better than fusion."
+    
+    PLATFORM_DARK_MATTER_REACTOR_DESC:0 "$tech_dark_matter_power_core_desc$"
+    PLATFORM_DARK_MATTER_REACTOR_M:0 "Dark Matter Reactor"
+    PLATFORM_DARK_MATTER_REACTOR_M_DESC:0 "$tech_dark_matter_power_core_desc$"
+    PLATFORM_DARK_MATTER_REACTOR_L:0 "Dark Matter Reactor"
+    PLATFORM_DARK_MATTER_REACTOR_L_DESC:0 "$tech_dark_matter_power_core_desc$"
+    
+    #Nerve Plague
+    PLANET_KILLER_PLAGUE:1 "Nerve Plague"
+    PLANET_KILLER_PLAGUE_ACTION:0 "Infest"
+    PLANET_KILLER_PLAGUE_DESC:0 "The planet's atmosphere is bathed with a gene drive designed to extinguish the individuality of all organic beings and render them §Yhive-minded§!.\n\nWhen used by a §YDevouring Swarm§!, organic pops are §Ynerve-stapled§! instead, allowing them to be devoured without resistance.\n\nIn addition, the plague causes positronic brains to malfunction and shut down.\n\nWhen used by an §YInfestor Brood§!, the planet itself is also infested."
+    FLEETORDER_DESTROY_PLANET_WITH_PLANET_KILLER_PLAGUE:0 "Preparing to infest $PLANET|Y$"
+    MESSAGE_DESC_FOR_PLANET_KILLER_PLAGUE: "was subsumed into the hive mind by a Gene Drive from"
+    
+    planet_destruction.701.name:0 "Infestation Complete"
+    planet_destruction.701.desc:0 "The [From.From.GetName] has completed deployment of the Nerve Plague payload, splicing the slave gene into all organic life on the surface of [From.GetName], and disabling all positronic intelligences.\n\nWe did not build the [From.From.GetName] with any sensors or instruments to measure our success, but we know. We open our eyes for the first time down on [From.GetName]. We see ourselves and are seen by ourselves.\n\nOn [From.GetName]'s surface, there is only us."
+    planet_destruction.701.tooltip:0 "All §Yorganic§! Pops gain the §Y$trait_cybernetic$§! trait
+    
+    god_rayed_mett:0 "Celestial Echoes"
+    god_rayed_mett_desc:0 "The effects of the Celestial Enforcer linger in the atmosphere, the soil, the local flora, and the fauna."
+    

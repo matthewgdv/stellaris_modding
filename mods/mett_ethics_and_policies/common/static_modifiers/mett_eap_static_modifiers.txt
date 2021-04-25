@@ -1,0 +1,196 @@
+capitalism_unrest = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_unknown.dds"
+	icon_frame = 2
+	pop_ethic_capitalism_attraction_mult = 1
+}
+
+socialism_unrest = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_unknown.dds"
+	icon_frame = 2
+	pop_ethic_socialism_attraction_mult = 1
+}
+
+green_unrest = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_unknown.dds"
+	icon_frame = 2
+	pop_ethic_green_attraction_mult = 1
+}
+
+industrial_unrest = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_unknown.dds"
+	icon_frame = 2
+	pop_ethic_industrial_attraction_mult = 1
+}
+
+pluralist_unrest = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_unknown.dds"
+	icon_frame = 2
+	pop_ethic_pluralist_attraction_mult = 1
+}
+
+elitist_unrest = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_unknown.dds"
+	icon_frame = 2
+	pop_ethic_elitist_attraction_mult = 1
+}
+
+
+
+
+
+promoted_capitalism = {
+	pop_ethic_capitalism_attraction_mult = 1
+	country_resource_influence_add = -1
+}
+
+promoted_socialism = {
+	pop_ethic_socialism_attraction_mult = 1
+	country_resource_influence_add = -1
+}
+
+promoted_green = {
+	pop_ethic_green_attraction_mult = 1
+	country_resource_influence_add = -1
+}
+
+promoted_industrial = {
+	pop_ethic_industrial_attraction_mult = 1
+	country_resource_influence_add = -1
+}
+
+promoted_pluralist = {
+	pop_ethic_pluralist_attraction_mult = 1
+	country_resource_influence_add = -1
+}
+
+promoted_elitist = {
+	pop_ethic_elitist_attraction_mult = 1
+	country_resource_influence_add = -1
+}
+
+
+
+
+
+suppressed_capitalism = {
+	pop_ethic_capitalism_attraction_mult = -0.5
+	country_resource_influence_add = -1
+}
+
+suppressed_socialism = {
+	pop_ethic_socialism_attraction_mult = -0.5
+	country_resource_influence_add = -1
+}
+
+suppressed_green = {
+	pop_ethic_green_attraction_mult = -0.5
+	country_resource_influence_add = -1
+}
+
+suppressed_industrial = {
+	pop_ethic_industrial_attraction_mult = -0.5
+	country_resource_influence_add = -1
+}
+
+suppressed_pluralist = {
+	pop_ethic_pluralist_attraction_mult = -0.5
+	country_resource_influence_add = -1
+}
+
+suppressed_elitist = {
+	pop_ethic_elitist_attraction_mult = -0.5
+	country_resource_influence_add = -1
+}
+
+
+
+
+
+banned_militarist = {
+	pop_ethic_militarist_attraction_mult = -0.99
+	country_resource_influence_add = -1
+}
+
+banned_spiritualist = {
+	pop_ethic_spiritualist_attraction_mult = -0.99
+	country_resource_influence_add = -1
+}
+
+banned_xenophobe = {
+	pop_ethic_xenophobe_attraction_mult = -0.49
+	country_resource_influence_add = -0.5
+}
+
+banned_xenophobe2 = {
+	pop_ethic_xenophobe_attraction_mult = -0.49
+	country_resource_influence_add = -0.5
+}
+
+banned_xenophile = {
+	pop_ethic_xenophile_attraction_mult = -0.99
+	country_resource_influence_add = -1
+}
+
+banned_pacifist = {
+	pop_ethic_pacifist_attraction_mult = -0.99
+	country_resource_influence_add = -1
+}
+
+banned_materialist = {
+	pop_ethic_materialist_attraction_mult = -0.99
+	country_resource_influence_add = -1
+}
+
+banned_authoritarian = {
+	pop_ethic_authoritarian_attraction_mult = -0.99
+	country_resource_influence_add = -1
+}
+
+banned_egalitarian = {
+	pop_ethic_egalitarian_attraction_mult = -0.99
+	country_resource_influence_add = -1
+}
+
+banned_capitalism = {
+	pop_ethic_capitalism_attraction_mult = -0.99
+	country_resource_influence_add = -1
+}
+
+banned_socialism = {
+	pop_ethic_socialism_attraction_mult = -0.99
+	country_resource_influence_add = -1
+}
+
+banned_green = {
+	pop_ethic_green_attraction_mult = -0.99
+	country_resource_influence_add = -1
+}
+
+banned_industrial = {
+	pop_ethic_industrial_attraction_mult = -0.99
+	country_resource_influence_add = -1
+}
+
+banned_pluralist = {
+	pop_ethic_pluralist_attraction_mult = -0.99
+	country_resource_influence_add = -1
+}
+
+banned_elitist = {
+	pop_ethic_elitist_attraction_mult = -0.99
+	country_resource_influence_add = -1
+}
+
+
+
+
+
+banned_faction = {
+	faction_happiness = -0.5
+}
+
+pop_faction_banned = {
+	pop_happiness = -0.5
+}
+
+

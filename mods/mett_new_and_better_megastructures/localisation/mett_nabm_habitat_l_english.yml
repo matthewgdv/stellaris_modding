@@ -1,0 +1,16 @@
+﻿l_english:
+
+
+ requires_no_colonized_planets:1 "$TRIGGER_FAIL$Cannot build in systems with colonised planets."
+ requires_no_capital:1 "$TRIGGER_FAIL$Cannot build in systems with a capital."
+ opinion_ring_genocidal:1 "Ring World Colony Recycler."
+ opinion_sphere_genocidal:1 "Dyson Sphere Colony Freezer."
+ requires_at_least_9_perks:0 "Requires at least 9 Ascension Perks."
+ 
+ 
+ tb_unbuilt_habitat:0 "£blocker  Unbuilt Habitat Station"
+ tb_unbuilt_habitat_desc:0 "Space within the habitat frame awaiting development."
+ tb_expand_habitat:0 "£blocker  Potential Habitat Expansion Site"
+ tb_expand_habitat_desc:0 "Direction the habitat could be expanded towards."
+ tech_tb_expand_habitat:0 "Habitat Expansion"
+ tech_tb_expand_habitat_desc:0 "A habitat may be expanded beyond the original frame with the right advances in structural engineering and voidcraft."

@@ -1,0 +1,176 @@
+﻿l_english:
+ 
+ SEPARATOR:0 "---"
+ 
+ 
+ 
+ 
+ #=======================================
+ # Policies                       
+ #=======================================
+ 
+ # Gender policy for Army Leaders
+ # ------------------------------- start -------------------------------------
+ policy_humanotypes_army_leader_recruitment_gender_policy:0             "Gender Policy - Army"
+ policy_humanotypes_army_leader_recruitment_gender_policy_desc:0        "Army draft policy. (Male/Female/Both)"
+ 
+ humanotypes_army_leader_recruitment_gender_policy_option_both_name:0   "Male & Female Generals"
+ humanotypes_army_leader_recruitment_gender_policy_option_both:0        "Male & Female Generals"
+ humanotypes_army_leader_recruitment_gender_policy_option_both_desc:0   "Can recruit both male and female generals."
+ 
+ humanotypes_army_leader_recruitment_gender_policy_option_male_name:0   "Male Generals"
+ humanotypes_army_leader_recruitment_gender_policy_option_male:0        "Male Generals"
+ humanotypes_army_leader_recruitment_gender_policy_option_male_desc:0   "Only recruit male generals."
+ 
+ humanotypes_army_leader_recruitment_gender_policy_option_female_name:0 "Female Generals"
+ humanotypes_army_leader_recruitment_gender_policy_option_female:0      "Female Generals"
+ humanotypes_army_leader_recruitment_gender_policy_option_female_desc:0 "Only recruit female generals."
+ 
+ 
+ humanotypes_recruit_generals_male_female_name:0 "Flag to recruit both male and female generals"
+ humanotypes_recruit_generals_male_name:0        "Flag to recruit male generals"
+ humanotypes_recruit_generals_female_name:0      "Flag to recruit female generals"
+ 
+ # ------------------------------- end -------------------------------------
+ 
+ 
+ 
+ 
+ 
+ 
+ # Gender policy for Fleet Leaders
+ # ------------------------------- start -------------------------------------
+ policy_humanotypes_fleet_leader_recruitment_gender_policy:0             "Gender Policy - Fleet"
+ policy_humanotypes_fleet_leader_recruitment_gender_policy_desc:0        "Fleet impressment policy. (Male/Female/Both)"
+ 
+ humanotypes_fleet_leader_recruitment_gender_policy_option_both_name:0   "Male & Female Admirals"
+ humanotypes_fleet_leader_recruitment_gender_policy_option_both:0        "Male & Female Admirals"
+ humanotypes_fleet_leader_recruitment_gender_policy_option_both_desc:0   "Can recruit both male and female admirals."
+ 
+ humanotypes_fleet_leader_recruitment_gender_policy_option_male_name:0   "Male Admirals"
+ humanotypes_fleet_leader_recruitment_gender_policy_option_male:0        "Male Admirals"
+ humanotypes_fleet_leader_recruitment_gender_policy_option_male_desc:0   "Only recruit male admirals."
+ 
+ humanotypes_fleet_leader_recruitment_gender_policy_option_female_name:0 "Female Admirals"
+ humanotypes_fleet_leader_recruitment_gender_policy_option_female:0      "Female Admirals"
+ humanotypes_fleet_leader_recruitment_gender_policy_option_female_desc:0 "Only recruit female admirals."
+ 
+ 
+ humanotypes_recruit_admirals_male_female_name:0 "Flag to recruit both male and female admirals"
+ humanotypes_recruit_admirals_male_name:0        "Flag to recruit male admirals"
+ humanotypes_recruit_admirals_female_name:0      "Flag to recruit female admirals"
+ 
+ # ------------------------------- end -------------------------------------
+ 
+ 
+ 
+ 
+ 
+ 
+ # Gender policy for Science Leaders
+ # ------------------------------- start -------------------------------------
+ policy_humanotypes_science_leader_recruitment_gender_policy:0             "Gender Policy - Science"
+ policy_humanotypes_science_leader_recruitment_gender_policy_desc:0        "Scientist scholarship policy. (Male/Female/Both)"
+ 
+ humanotypes_science_leader_recruitment_gender_policy_option_both_name:0   "Male & Female Scientists"
+ humanotypes_science_leader_recruitment_gender_policy_option_both:0        "Male & Female Scientists"
+ humanotypes_science_leader_recruitment_gender_policy_option_both_desc:0   "Can recruit both male and female scientists."
+ 
+ humanotypes_science_leader_recruitment_gender_policy_option_male_name:0   "Male Scientists"
+ humanotypes_science_leader_recruitment_gender_policy_option_male:0        "Male Scientists"
+ humanotypes_science_leader_recruitment_gender_policy_option_male_desc:0   "Only recruit male scientists."
+ 
+ humanotypes_science_leader_recruitment_gender_policy_option_female_name:0 "Female Scientists"
+ humanotypes_science_leader_recruitment_gender_policy_option_female:0      "Female Scientists"
+ humanotypes_science_leader_recruitment_gender_policy_option_female_desc:0 "Only recruit female scientists."
+ 
+ 
+ humanotypes_recruit_scientists_male_female_name:0 "Flag to recruit both male and female scientists"
+ humanotypes_recruit_scientists_male_name:0        "Flag to recruit male scientists"
+ humanotypes_recruit_scientists_female_name:0      "Flag to recruit female scientists"
+ 
+ # ------------------------------- end -------------------------------------
+ 
+ 
+ 
+ 
+ 
+ # Gender policy for Governors
+ # ------------------------------- start -------------------------------------
+ policy_humanotypes_governor_recruitment_gender_policy:0             "Gender Policy - Governors"
+ policy_humanotypes_governor_recruitment_gender_policy_desc:0        "Governor appointment policy. (Male/Female/Both)"
+ 
+ humanotypes_governor_recruitment_gender_policy_option_both_name:0   "Male & Female Governors"
+ humanotypes_governor_recruitment_gender_policy_option_both:0        "Male & Female Governors"
+ humanotypes_governor_recruitment_gender_policy_option_both_desc:0   "Can recruit both male and female governors."
+ 
+ humanotypes_governor_recruitment_gender_policy_option_male_name:0   "Male Governors"
+ humanotypes_governor_recruitment_gender_policy_option_male:0        "Male Governors"
+ humanotypes_governor_recruitment_gender_policy_option_male_desc:0   "Only recruit male governors."
+ 
+ humanotypes_governor_recruitment_gender_policy_option_female_name:0 "Female Governors"
+ humanotypes_governor_recruitment_gender_policy_option_female:0      "Female Governors"
+ humanotypes_governor_recruitment_gender_policy_option_female_desc:0 "Only recruit female governors."
+ 
+ 
+ humanotypes_recruit_governors_male_female_name:0 "Flag to recruit both male and female governors"
+ humanotypes_recruit_governors_male_name:0        "Flag to recruit male governors"
+ humanotypes_recruit_governors_female_name:0      "Flag to recruit female governors"
+ 
+ # ------------------------------- end -------------------------------------
+ 
+ 
+ 
+ 
+ # Gender policy for Rulers
+ # ------------------------------- start -------------------------------------
+ policy_humanotypes_ruler_recruitment_gender_policy:0             "Gender Policy - Rulers"
+ policy_humanotypes_ruler_recruitment_gender_policy_desc:0        "Ruler inheritance policy. (Male/Female/Both)\n\n§RNote: Only for monarchy. Does not effect elections.!§!\n"
+ 
+ humanotypes_ruler_recruitment_gender_policy_option_both_name:0   "Male & Female Rulers"
+ humanotypes_ruler_recruitment_gender_policy_option_both:0        "Male & Female Rulers"
+ humanotypes_ruler_recruitment_gender_policy_option_both_desc:0   "Heirs can be either male or female."
+ 
+ humanotypes_ruler_recruitment_gender_policy_option_male_name:0   "Male Rulers"
+ humanotypes_ruler_recruitment_gender_policy_option_male:0        "Male Rulers"
+ humanotypes_ruler_recruitment_gender_policy_option_male_desc:0   "Only male heirs."
+ 
+ humanotypes_ruler_recruitment_gender_policy_option_female_name:0 "Female Rulers"
+ humanotypes_ruler_recruitment_gender_policy_option_female:0      "Female Rulers"
+ humanotypes_ruler_recruitment_gender_policy_option_female_desc:0 "Only female heirs."
+ 
+ 
+ humanotypes_recruit_rulers_male_female_name:0 "Flag to recruit both male and female rulers"
+ humanotypes_recruit_rulers_male_name:0        "Flag to recruit male rulers"
+ humanotypes_recruit_rulers_female_name:0      "Flag to recruit female rulers"
+ 
+ # ------------------------------- end -------------------------------------
+ 
+ 
+ 
+ # Gender policy for Pops
+ # ------------------------------- start -------------------------------------
+ #policy_humanotypes_pop_spawning_gender_policy:0             "Gender Policy - Pops"
+ #policy_humanotypes_pop_spawning_gender_policy_desc:0        "These policies affect which genders are allowed to be born on planet tiles"
+ 
+ #humanotypes_pop_spawning_gender_policy_option_both_name:0   "Male & Female Pops"
+ #humanotypes_pop_spawning_gender_policy_option_both:0        "Male & Female Pops"
+ #humanotypes_pop_spawning_gender_policy_option_both_desc:0   "Male and female pops can both be born."
+ 
+ #humanotypes_pop_spawning_gender_policy_option_male_name:0   "Male Pops"
+ #humanotypes_pop_spawning_gender_policy_option_male:0        "Male Pops"
+ #humanotypes_pop_spawning_gender_policy_option_male_desc:0   "Only spawn male pops."
+ 
+ #humanotypes_pop_spawning_gender_policy_option_female_name:0 "Female Pops"
+ #humanotypes_pop_spawning_gender_policy_option_female:0      "Female Pops"
+ #humanotypes_pop_spawning_gender_policy_option_female_desc:0 "Only spawn female pops."
+ 
+ 
+ #humanotypes_spawn_pops_male_female:0 "Flag to spawn both male and female Pops"
+ #humanotypes_spawn_pops_male:0        "Flag to spawn male Pops"
+ #humanotypes_spawn_pops_female:0      "Flag to spawn female Pops"
+ 
+ # ------------------------------- end -------------------------------------
+ 
+ 
+ 

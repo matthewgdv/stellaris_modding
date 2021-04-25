@@ -1,0 +1,16 @@
+tech_automated_exploration = {
+	area = physics
+	cost = 0
+    tier = 0
+    start_tech = yes
+	category = { computing }
+
+	#allow auto-explore on science ships
+	feature_flags = {
+		tech_automated_exploration
+	}
+
+	modifier = {
+		science_ship_survey_speed = 0.25
+	}
+}

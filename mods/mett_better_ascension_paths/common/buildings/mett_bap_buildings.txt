@@ -1,0 +1,45 @@
+
+building_tile_terraformer = {
+	base_buildtime = 360
+	requires_pop = no
+	
+	cost = {
+		minerals = 1000
+		energy = 10000
+		influence = 250
+	}
+	
+	planet_unique = yes
+	
+	produced_resources = {
+	}
+	
+	required_resources = {
+		energy = 50
+#		food = 50
+		minerals = 20
+		influence = 1
+#		sr_terraform_gases = 1
+#		sr_terraform_liquids = 1
+	}
+	
+	planet_modifier = {
+		pop_happiness = -0.10
+	}
+
+	prerequisites = {
+		"tech_climate_restoration"
+	}
+	
+	potential = {
+		planet = {
+			NOT = {
+				planet_size > 24
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 0	
+	}
+}

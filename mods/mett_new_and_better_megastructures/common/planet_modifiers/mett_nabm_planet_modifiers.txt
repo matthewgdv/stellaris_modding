@@ -1,0 +1,3 @@
+apm_speed_ring = {
+	modifier = "ring_port_speed_mod"
+}

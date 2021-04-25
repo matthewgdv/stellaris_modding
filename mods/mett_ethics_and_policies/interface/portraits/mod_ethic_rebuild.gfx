@@ -1,0 +1,63 @@
+spriteTypes = {
+
+		spriteType = {
+		name = "GFX_ethics_elitist"
+		texturefile = "gfx/interface/icons/ethics/ethic_elitist.dds"
+	}
+	
+		spriteType = {
+		name = "GFX_ethics_fanatic_elitist"
+		texturefile = "gfx/interface/icons/ethics/ethic_fanatic_elitist.dds"
+	}
+	
+		spriteType = {
+		name = "GFX_ethics_pluralist"
+		texturefile = "gfx/interface/icons/ethics/ethic_pluralist.dds"
+	}
+	
+		spriteType = {
+		name = "GFX_ethics_fanatic_pluralist"
+		texturefile = "gfx/interface/icons/ethics/ethic_fanatic_pluralist.dds"
+	}
+	
+		spriteType = {
+		name = "GFX_ethics_capitalism"
+		texturefile = "gfx/interface/icons/ethics/ethic_capitalism.dds"
+	}
+	
+		spriteType = {
+		name = "GFX_ethics_fanatic_capitalism"
+		texturefile = "gfx/interface/icons/ethics/ethic_fanatic_capitalism.dds"
+	}
+	
+		spriteType = {
+		name = "GFX_ethics_socialism"
+		texturefile = "gfx/interface/icons/ethics/ethic_socialism.dds"
+	}
+	
+		spriteType = {
+		name = "GFX_ethics_fanatic_socialism"
+		texturefile = "gfx/interface/icons/ethics/ethic_fanatic_socialism.dds"
+	}	
+	
+		spriteType = {
+		name = "GFX_ethics_green"
+		texturefile = "gfx/interface/icons/ethics/ethic_green.dds"
+	}	
+
+		spriteType = {
+		name = "GFX_ethics_fanatic_green"
+		texturefile = "gfx/interface/icons/ethics/ethic_fanatic_green.dds"
+	}	
+
+		spriteType = {
+		name = "GFX_ethics_industrial"
+		texturefile = "gfx/interface/icons/ethics/ethic_industrial.dds"
+	}		
+
+		spriteType = {
+		name = "GFX_ethics_fanatic_industrial"
+		texturefile = "gfx/interface/icons/ethics/ethic_fanatic_industrial.dds"
+	}	
+	
+}

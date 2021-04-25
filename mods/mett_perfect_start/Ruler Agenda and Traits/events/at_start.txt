@@ -1,0 +1,473 @@
+namespace = at_start
+
+event = {
+	id = at_start.00
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = { is_ai = no }
+			country_event = { id = at_start.01 }
+		}
+	}
+}
+
+country_event = {
+	id = at_start.01
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = national_agenda_notification #prevent selecting agenda policies until events finish
+		every_pool_leader = { set_leader_flag = starting_leader }
+		every_owned_leader = { set_leader_flag = starting_leader }
+		every_owned_leader = {
+			limit = { leader_class = governor }
+			remove_trait = leader_trait_iron_fist
+			remove_trait = leader_trait_architectural_interest
+			remove_trait = leader_trait_agrarian_upbringing
+			remove_trait = leader_trait_intellectual
+			remove_trait = leader_trait_analytical
+			remove_trait = leader_trait_environmental_engineer
+			remove_trait = leader_trait_bulldozer
+			remove_trait = leader_trait_adaptable
+			remove_trait = leader_trait_flexible_programming
+			remove_trait = leader_trait_eager
+			remove_trait = leader_trait_newboot
+			remove_trait = leader_trait_resilient
+			remove_trait = leader_trait_righteous
+		}
+		if = {
+			limit = { 
+				OR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+			country_event = { id = at_start.04 }
+			else = { 
+				set_country_flag = first_governor_trait
+				if = {
+					limit = { has_authority = auth_democratic }
+					country_event = { id = at_select_ruler_traits.01 }
+					else = { country_event = { id = at_start.02 } }
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = at_start.02
+	title = "at_start.02.name"
+	desc = "at_start.02.desc"
+	picture = GFX_evt_throne_room
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		leader = {
+			save_event_target_as = starting_ruler
+		}
+	}
+	
+	option = {
+		name = at_start.02.a
+		custom_tooltip = at_start.02.a.desc
+		hidden_effect = {
+			set_policy = {
+				policy = national_agenda
+				option = select_agenda_welfare
+				cooldown = no
+			}
+		}
+	}
+	
+	option = {
+		name = at_start.02.b
+		custom_tooltip = at_start.02.b.desc
+		hidden_effect = {
+			set_policy = {
+				policy = national_agenda
+				option = select_agenda_industrial
+				cooldown = no
+			}
+		}
+	}
+	
+	option = {
+		name = at_start.02.c
+		custom_tooltip = at_start.02.c.desc
+		hidden_effect = {
+			set_policy = {
+				policy = national_agenda
+				option = select_agenda_expansionist_overtures
+				cooldown = no
+			}
+		}
+	}
+	
+	option = {
+		name = at_start.02.d
+		custom_tooltip = at_start.02.d.desc
+		hidden_effect = {
+			set_policy = {
+				policy = national_agenda
+				option = select_agenda_naval_focus
+				cooldown = no
+			}
+		}
+	}
+	
+	option = {
+		name = at_start.02.e
+		custom_tooltip = at_start.02.e.desc
+		hidden_effect = {
+			set_policy = {
+				policy = national_agenda
+				option = select_agenda_finanical
+				cooldown = no
+			}
+		}
+	}
+	
+	option = {
+		name = at_start.02.f
+		custom_tooltip = at_start.02.f.desc
+		hidden_effect = {
+			set_policy = {
+				policy = national_agenda
+				option = select_agenda_import_export
+				cooldown = no
+			}
+		}
+	}
+	
+	option = {
+		name = at_start.02.g
+		custom_tooltip = at_start.02.g.desc
+		trigger = {
+			NOR = {
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"
+			}
+		}
+		hidden_effect = {
+			set_policy = {
+				policy = national_agenda
+				option = select_agenda_national_purity
+				cooldown = no
+			}
+		}
+	}
+	
+	option = {
+		name = at_start.02.h
+		custom_tooltip = at_start.02.h.desc
+		trigger = {
+			NOR = {
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"
+			}
+		}
+		hidden_effect = {
+			set_policy = {
+				policy = national_agenda
+				option = select_agenda_native_privilege
+				cooldown = no
+			}
+		}
+	}
+	
+	option = {
+		name = at_start.02.i
+		custom_tooltip = at_start.02.i.desc
+		trigger = {
+			NOT = { mid_game_years_passed < 0 }
+		}
+		hidden_effect = {
+			set_policy = {
+				policy = national_agenda
+				option = select_agenda_public_debates
+				cooldown = no
+			}
+		}
+	}
+	
+	option = {
+		name = at_start.02.j
+		custom_tooltip = at_start.02.j.desc
+		hidden_effect = {
+			set_policy = {
+				policy = national_agenda
+				option = select_agenda_science
+				cooldown = no
+			}
+		}
+	}
+	
+	option = {
+		name = at_start.02.k
+		custom_tooltip = at_start.02.k.desc
+		hidden_effect = {
+			set_policy = {
+				policy = national_agenda
+				option = select_agenda_defensive_focus
+				cooldown = no
+			}
+		}
+	}
+	
+	option = {
+		name = at_start.02.l
+		custom_tooltip = at_start.02.l.desc
+		hidden_effect = {
+			set_policy = {
+				policy = national_agenda
+				option = select_agenda_selective_nostalgia
+				cooldown = no
+			}
+		}
+	}
+	
+	option = {
+		name = at_start.02.m
+		custom_tooltip = at_start.02.m.desc
+		hidden_effect = {
+			set_policy = {
+				policy = national_agenda
+				option = select_agenda_skill_development
+				cooldown = no
+			}
+		}
+	}
+	
+	option = {
+		name = at_start.02.n
+		custom_tooltip = at_start.02.n.desc
+		trigger = {
+			from = { has_policy_flag = slavery_allowed }
+		}
+		hidden_effect = {
+			set_policy = {
+				policy = national_agenda
+				option = select_agenda_slave_optimization
+				cooldown = no
+			}
+		}
+	}
+	
+	option = {
+		name = at_start.02.o
+		custom_tooltip = at_start.02.o.desc
+		trigger = {
+			NOR = {
+				has_ethic = "ethic_xenophobe"
+				has_ethic = "ethic_fanatic_xenophobe"
+			}
+		}
+		hidden_effect = {
+			set_policy = {
+				policy = national_agenda
+				option = select_agenda_xeno_outreach
+				cooldown = no
+			}
+		}
+	}
+	
+	option = {
+		name = at_start.02.p
+		custom_tooltip = at_start.02.p.desc
+		hidden_effect = {
+			set_country_flag = skip_agenda
+			country_event = { id = at_select_ruler_traits.01 }
+		}
+	}
+
+	after = {
+		if = {
+			limit = { NOT = { has_country_flag = skip_agenda } }
+			hidden_effect = {
+				new_ruler_agenda = yes
+				country_event = { id = at_start.03 }
+				remove_country_flag = skip_agenda
+			}
+		}
+	}
+}
+
+country_event = {
+	id = at_start.03
+	title = "at_start.03.name"
+	desc = {
+		trigger = {
+			hidden:from = {
+				switch = {
+					trigger = has_policy_flag
+					select_agenda_welfare = { text = at_start.03.desc.select_agenda_welfare }
+					select_agenda_industrial = { text = at_start.03.desc.select_agenda_industrial }
+					select_agenda_naval_focus = { text = at_start.03.desc.select_agenda_naval_focus }
+					select_agenda_finanical = { text = at_start.03.desc.select_agenda_finanical }
+					select_agenda_import_export = { text = at_start.03.desc.select_agenda_import_export }
+					select_agenda_national_purity = { text = at_start.03.desc.select_agenda_national_purity }
+					select_agenda_native_privilege = { text = at_start.03.desc.select_agenda_native_privilege }
+					select_agenda_public_debates = { text = at_start.03.desc.select_agenda_public_debates }
+					select_agenda_science = { text = at_start.03.desc.select_agenda_science }
+					select_agenda_defensive_focus = { text = at_start.03.desc.select_agenda_defensive_focus }
+					select_agenda_selective_nostalgia = { text = at_start.03.desc.select_agenda_selective_nostalgia }
+					select_agenda_skill_development = { text = at_start.03.desc.select_agenda_skill_development }
+					select_agenda_slave_optimization = { text = at_start.03.desc.select_agenda_slave_optimization }
+					select_agenda_xeno_outreach = { text = at_start.03.desc.select_agenda_xeno_outreach }
+					select_agenda_none = { text = at_start.03.desc.select_agenda_none }
+					default = { text = "ERROR" }
+				}
+			}
+		}
+	}
+	picture = GFX_evt_throne_room
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+	
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = at_start.04
+	title = "at_start.04.name"
+	desc = "at_start.04.desc"
+	picture = GFX_evt_throne_room
+	
+	is_triggered_only = yes
+	
+	immediate = { 
+		remove_country_flag = first_governor_trait
+		remove_country_flag = national_agenda_notification
+	}
+
+	option = {
+		name = at_start.04.h
+		custom_tooltip = at_start.04.h.desc
+		trigger= { NOT = { has_authority = auth_machine_intelligence } }
+		hidden_effect = {
+			every_owned_leader = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_adaptable
+			}
+		}
+	}
+	
+	option = {
+		name = at_start.04.a
+		custom_tooltip = at_start.04.a.desc
+		trigger= { NOT = { has_authority = auth_machine_intelligence } }
+		hidden_effect = {
+			every_owned_leader = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_agrarian_upbringing
+			}
+		}
+	}
+	
+	option = {
+		name = at_start.04.f
+		custom_tooltip = at_start.04.d.desc
+		trigger= { has_authority = auth_machine_intelligence }
+		hidden_effect = {
+			every_owned_leader = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_analytical
+			}
+		}
+	}
+	
+	option = {
+		name = at_start.04.b
+		custom_tooltip = at_start.04.b.desc
+		hidden_effect = {
+			every_owned_leader = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_architectural_interest
+			}
+		}
+	}
+	
+	option = {
+		name = at_start.04.g
+		custom_tooltip = at_start.04.c.desc
+		trigger= { has_authority = auth_machine_intelligence }
+		hidden_effect = {
+			every_owned_leader = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_bulldozer
+			}
+		}
+	}
+	
+	option = {
+		name = at_start.04.c
+		custom_tooltip = at_start.04.c.desc
+		trigger= { NOT = { has_authority = auth_machine_intelligence } }
+		hidden_effect = {
+			every_owned_leader = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_environmental_engineer
+			}
+		}
+	}
+	
+	option = {
+		name = at_start.04.i
+		custom_tooltip = at_start.04.h.desc
+		trigger= { has_authority = auth_machine_intelligence }
+		hidden_effect = {
+			every_owned_leader = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_flexible_programming
+			}
+		}
+	}
+	
+	option = {
+		name = at_start.04.d
+		custom_tooltip = at_start.04.d.desc
+		trigger= { NOT = { has_authority = auth_machine_intelligence } }
+		hidden_effect = {
+			every_owned_leader = {
+				limit =  { leader_class = governor }
+				add_trait = leader_trait_intellectual
+			}
+		}
+	}
+	
+	option = {
+		name = at_start.04.e
+		custom_tooltip = at_start.04.e.desc
+		trigger= { NOT = { has_authority = auth_machine_intelligence } }
+		hidden_effect = {
+			every_owned_leader = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_iron_fist
+			}
+		}
+	}
+	
+	option = {
+		name = at_start.04.j
+		custom_tooltip = at_start.04.j.desc
+		trigger= { NOT = { has_authority = auth_machine_intelligence } }
+		hidden_effect = {
+			every_owned_leader = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_righteous
+			}
+		}
+	}
+}

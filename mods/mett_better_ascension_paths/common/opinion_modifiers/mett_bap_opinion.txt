@@ -1,0 +1,183 @@
+opinion_brainwashed_primitive_xenophile = {
+	opinion = {
+		base = -10
+	}
+	decay = {
+		base = 1 
+	}
+}
+opinion_brainwashed_primitive_fanatic_xenophile = {
+	opinion = {
+		base = -20
+	}
+	decay = {
+		base = 2 
+	}	
+}
+
+ta_opinion_psi_cowards = {
+	opinion = {
+		base = 0
+		modifier = {
+			add = -2
+			is_country_type = default
+			has_ethic = "ethic_militarist"
+		}
+		modifier = {
+			add = -4
+			is_country_type = default
+			has_ethic = "ethic_fanatic_militarist"
+		}
+	}
+
+	min = -100
+
+	accumulative = yes
+
+	decay = {
+		base = 5
+	}
+
+}
+
+ta_opinion_psi_mercy = {
+	opinion = {
+		base = 0
+		modifier = {
+			add = 2
+			is_country_type = default
+			has_ethic = "ethic_pacifist"
+		}
+		modifier = {
+			add = 3
+			is_country_type = default
+			has_ethic = "ethic_fanatic_pacifist"
+		}
+	}
+
+	max = 100
+
+	accumulative = yes
+
+	decay = {
+		base = 1
+	}
+
+}
+
+ta_opinion_psi_bomb_hypno = {
+	opinion = {
+		base = 0
+		modifier = {
+			add = -3
+			is_country_type = default
+			OR = { 
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_militarist"
+			}
+		}
+		modifier = {
+			add = -4
+			is_country_type = default
+			OR = { 
+				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_militarist"
+			}
+		}
+		modifier = {
+			add = -2
+			is_country_type = default
+			NOR = {
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
+	}
+
+	min = -60
+
+	accumulative = yes
+
+	decay = {
+		base = 3
+	}
+
+}
+
+ta_opinion_psi_bomb_possess = {
+	opinion = {
+		base = 0
+		modifier = {
+			add = -4
+			is_country_type = default
+			OR = { 
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_militarist"
+			}
+		}
+		modifier = {
+			add = -5
+			is_country_type = default
+			OR = { 
+				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_militarist"
+			}
+		}
+		modifier = {
+			add = -3
+			is_country_type = default
+			NOR = {
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
+	}
+
+	min = -100
+
+	accumulative = yes
+
+	decay = {
+		base = 5
+	}
+
+}
+
+ta_opinion_psi_bomb_enrage = {
+	opinion = {
+		base = 0
+		modifier = {
+			add = -5
+			is_country_type = default
+			OR = {
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_militarist"
+			}
+		}
+		modifier = {
+			add = -6
+			is_country_type = default
+			OR = { 
+				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_militarist"
+			}
+		}
+		modifier = {
+			add = -4
+			is_country_type = default
+			NOR = {
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
+	}
+
+	min = -200
+
+	accumulative = yes
+
+	decay = {
+		base = 5
+	}
+
+}

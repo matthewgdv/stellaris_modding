@@ -1,0 +1,57 @@
+namespace = ps_start
+
+event = {
+	id = ps_start.00
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = { is_ai = no }
+			country_event = { id = ps_start.01 }
+		}
+	}
+}
+
+country_event = {
+	id = ps_start.01
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		every_owned_leader = {
+			limit = { leader_class = scientist }
+			remove_scientist_traits = yes
+			
+			if = {
+				limit = {
+					is_researching_area = society
+				}			
+				add_society_traits = yes
+			}
+			else_if {
+				limit = {
+					is_researching_area = engineering
+				}
+				add_engineering_traits = yes
+			}
+			else_if {
+				limit = {
+					is_researching_area = engineering
+				}
+				add_engineering_traits = yes
+			}
+			else_if {
+				limit = {
+					is_researching_area = physics
+				}
+				add_physics_traits = yes
+			}
+			else = {
+				add_survey_traits = yes
+			}
+		}
+	}
+}

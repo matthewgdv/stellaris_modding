@@ -1,0 +1,30 @@
+ta_pm_psi_1 = {
+	spawn_chance = {
+		value = 0
+	}
+	modifier = "ta_sm_psi_planet_1"
+}
+ta_pm_psi_2 = {
+	spawn_chance = {
+		value = 0
+	}
+	modifier = "ta_sm_psi_planet_2"
+}
+ta_pm_psi_3 = {
+	spawn_chance = {
+		value = 0
+	}
+	modifier = "ta_sm_psi_planet_3"
+}
+ta_pm_psi_4 = {
+	spawn_chance = {
+		value = 0
+	}
+	modifier = "ta_sm_psi_planet_4"
+}
+ta_pm_psi_5 = {
+	spawn_chance = {
+		value = 0
+	}
+	modifier = "ta_sm_psi_planet_5"
+}

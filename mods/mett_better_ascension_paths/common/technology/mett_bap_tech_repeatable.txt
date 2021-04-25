@@ -1,0 +1,57 @@
+
+###########################
+### TECH COSTS - REPEATABLE  ###
+###########################
+
+@repeatableTechBaseCost = 10000
+@repeatableTechLevelCost = 2000
+@repeatableTechTier = 5
+
+###########################
+### TECH WEIGHTS - REPEATABLE  ###
+###########################
+
+@repeatableTechWeight = 25
+@repatableTechFactor = 0.5
+
+
+### This tech is no longer used, and should no longer show up, but keeping it to avoid breaking save games
+ta_tech_repeatable_ascension_perks = {
+	area = physics
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	#category = { computing }
+	levels = 10
+	prerequisites = { "tech_ascension_theory_apoc" }
+	weight = 25
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.5 ### base repeatable weight
+		}
+		modifier = {
+			factor = 0
+			Or = {
+				num_ascension_perks < 12 ### if you dont have 12 perks already this wont show up
+				num_ascension_perks > 19 ### if you already have 20 this won't show up
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 0
+	}
+	
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+	
+	modifier = {
+		ascension_perks_add = 1
+	}
+}
+

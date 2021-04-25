@@ -1,0 +1,558 @@
+# Habitat Power Hubs
+
+building_hab_power_hub_1 = {
+	base_buildtime = 360
+	planet_unique = yes
+	
+	cost = {
+		minerals = 180
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			has_tradition = tr_prosperity_pursuit_of_profit
+			resources = {
+				unity = 2
+			}
+		}
+	}
+	
+	potential = {
+		planet = {		
+			is_planet_class = pc_habitat
+			has_building = "building_hab_capital"
+		}	
+	}
+	upgrades = { building_hab_power_hub_2 }
+	produced_resources = {		
+		energy = 2
+	}
+	
+}
+
+building_hab_power_hub_2 = {
+	base_buildtime = 180
+	planet_unique = yes
+	is_listed = no
+	
+	cost = {
+		minerals = 240
+	}
+	
+	upgrades = { building_hab_power_hub_3 }
+	
+	potential = {
+		planet = {		
+			is_planet_class = pc_habitat
+			has_building = "building_hab_capital"
+		}	
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			has_tradition = tr_prosperity_pursuit_of_profit
+			resources = {
+				unity = 2
+			}
+		}
+	}
+	
+	produced_resources = {		
+		energy = 2
+	}
+	
+	prerequisites = {
+		"tech_power_plant_2"
+	}
+	
+	planet_modifier = {
+		tile_building_resource_energy_add = 1
+	}
+}
+
+building_hab_power_hub_3 = {
+	base_buildtime = 180
+	planet_unique = yes
+	is_listed = no
+	
+	cost = {
+		minerals = 300
+	}
+	
+	upgrades = { building_hab_power_hub_4 }
+	
+	potential = {
+		planet = {		
+			is_planet_class = pc_habitat
+			has_building = "building_hab_capital"
+		}	
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			has_tradition = tr_prosperity_pursuit_of_profit
+			resources = {
+				unity = 2
+			}
+		}
+	}	
+	
+	produced_resources = {		
+		energy = 2
+	}
+	
+	prerequisites = {
+		"tech_power_plant_3"
+	}
+	
+	planet_modifier = {
+		tile_building_resource_energy_add = 2
+	}
+}
+
+building_hab_power_hub_4 = {
+	base_buildtime = 180
+	planet_unique = yes
+	is_listed = no
+	
+	cost = {
+		minerals = 360
+	}
+	
+	upgrades = { building_hab_power_hub_5 }
+	
+	potential = {
+		planet = {		
+			is_planet_class = pc_habitat
+			has_building = "building_hab_capital"
+		}	
+	}
+
+	produced_resource_trigger = {
+		modifier = {
+			has_tradition = tr_prosperity_pursuit_of_profit
+			resources = {
+				unity = 2
+			}
+		}
+	}
+	
+	produced_resources = {		
+		energy = 2
+	}
+	
+	prerequisites = {
+		"tech_power_plant_4"
+	}
+	
+	planet_modifier = {
+		tile_building_resource_energy_add = 4
+	}
+}
+
+building_hab_power_hub_5 = {
+	base_buildtime = 180
+	planet_unique = yes
+	is_listed = no
+	
+	cost = {
+		minerals = 420
+	}
+	
+	potential = {
+		planet = {		
+			is_planet_class = pc_habitat
+			has_building = "building_hab_capital"
+		}	
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_ap_master_builders"
+			owner = { has_ascension_perk = ap_master_builders }
+		}
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			has_tradition = tr_prosperity_pursuit_of_profit
+			resources = {
+				unity = 2
+			}
+		}
+	}
+	
+	produced_resources = {		
+		energy = 3
+	}
+	
+	planet_modifier = {
+		tile_building_resource_energy_add = 6
+	}
+}
+
+#Research hubs
+
+building_hab_research_hub_1 = {
+	base_buildtime = 360
+	planet_unique = yes
+	
+	cost = {
+		minerals = 180
+	}
+	
+	upgrades = { building_hab_research_hub_2 }
+	
+	potential = {
+		planet = {		
+			is_planet_class = pc_habitat
+			has_building = "building_hab_capital"
+		}	
+	}
+	
+	required_resources = { energy = 1 }
+	
+	produced_resources = {		
+		engineering_research = 1
+		physics_research = 1
+		society_research = 1
+	}
+	
+}
+
+building_hab_research_hub_2 = {
+	base_buildtime = 180
+	planet_unique = yes
+	is_listed = no
+	
+	cost = {
+		minerals = 240
+	}
+	
+	upgrades = { building_hab_research_hub_3 }
+	
+	potential = {
+		planet = {		
+			is_planet_class = pc_habitat
+			has_building = "building_hab_capital"
+		}	
+	}
+	
+	required_resources = { energy = 2 }
+	
+	produced_resources = {		
+		engineering_research = 1
+		physics_research = 1
+		society_research = 1
+	}
+	
+	prerequisites = {
+	"tech_biolab_1"
+	"tech_engineering_lab_1"
+	"tech_physics_lab_1"
+	}
+	
+	planet_modifier = {
+		tile_building_resource_physics_research_add = 0.5
+		tile_building_resource_society_research_add = 0.5
+		tile_building_resource_engineering_research_add = 0.5
+	}
+}
+
+
+building_hab_research_hub_3 = {
+	base_buildtime = 180
+	planet_unique = yes
+	is_listed = no
+	
+	cost = { minerals = 300 }
+	
+	potential = {
+		planet = {		
+			is_planet_class = pc_habitat
+			has_building = "building_hab_capital"
+		}	
+	}
+	
+	required_resources = { energy = 3 }
+
+	upgrades = { building_hab_research_hub_4 }
+	
+	produced_resources = {		
+		engineering_research = 1
+		physics_research = 1
+		society_research = 1
+	}
+	
+	prerequisites = { "tech_biolab_2" "tech_engineering_lab_2" "tech_physics_lab_2" }
+	
+	planet_modifier = {
+		tile_building_resource_physics_research_add = 1
+		tile_building_resource_society_research_add = 1
+		tile_building_resource_engineering_research_add = 1
+	}
+}
+
+
+building_hab_research_hub_4 = {
+	base_buildtime = 180
+	planet_unique = yes
+	is_listed = no
+	
+	cost = { minerals = 360 }
+	
+	potential = {
+		planet = {		
+			is_planet_class = pc_habitat
+			has_building = "building_hab_capital"
+		}	
+	}
+	
+	required_resources = { energy = 4 }
+
+	upgrades = { building_hab_research_hub_5 }
+	
+	produced_resources = {		
+		engineering_research = 1
+		physics_research = 1
+		society_research = 1
+	}
+	
+	prerequisites = { "tech_biolab_3" "tech_engineering_lab_3" "tech_physics_lab_3" }
+	
+	planet_modifier = {
+		tile_building_resource_physics_research_add = 1.5
+		tile_building_resource_society_research_add = 1.5
+		tile_building_resource_engineering_research_add = 1.5
+	}
+}
+
+building_hab_research_hub_5 = {
+	base_buildtime = 180
+	planet_unique = yes
+	is_listed = no
+	
+	cost = { minerals = 420 }
+	
+	potential = {
+		planet = {		
+			is_planet_class = pc_habitat
+			has_building = "building_hab_capital"
+		}	
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_ap_master_builders"
+			owner = { has_ascension_perk = ap_master_builders }
+		}
+	}
+	
+	required_resources = { energy = 5 }
+	
+	produced_resources = {		
+		engineering_research = 1
+		physics_research = 1
+		society_research = 1
+	}
+	
+	prerequisites = { "tech_biolab_3" "tech_engineering_lab_3" "tech_physics_lab_3" }
+	
+	planet_modifier = {
+		tile_building_resource_physics_research_add = 2
+		tile_building_resource_society_research_add = 2
+		tile_building_resource_engineering_research_add = 2
+	}
+}
+
+
+# Naval capacity buildings
+
+#building_hab_fleetcap_1 = {
+#	base_buildtime = 540
+#	planet_unique = yes
+#	
+#	cost = {
+#		minerals = 600
+#		influence = 50
+#	}
+#	
+#	upgrades = { building_hab_fleetcap_2 }
+#	
+#	potential = {
+#		planet = {		
+#			is_planet_class = pc_habitat
+#			has_building = "building_hab_capital"
+#		}	
+#	}
+#	
+#	required_resources = { energy = 4 }
+#	
+#	country_modifier = {
+#		navy_size_add = 5
+#	}
+#}
+
+#building_hab_fleetcap_2 = {
+#	base_buildtime = 360
+#	planet_unique = yes
+#	is_listed = no
+#	
+#	cost = {
+#		minerals = 400
+#		influence = 40
+#	}
+#	
+#	upgrades = { building_hab_fleetcap_3 }
+#
+#	potential = {
+#		planet = {		
+#			is_planet_class = pc_habitat
+#			has_building = "building_hab_capital"
+#		}	
+#	}
+#	
+#	required_resources = { energy = 6 }
+#	
+#	prerequisites = { "tech_spaceport_4" }
+#	
+#	country_modifier = {
+#		navy_size_add = 9
+#	}
+#}
+
+#building_hab_fleetcap_3 = {
+#	base_buildtime = 360
+#	planet_unique = yes
+#	is_listed = no
+#	
+#	cost = {
+#		minerals = 400
+#		influence = 40
+#	}
+#
+#	allow = {
+#		custom_tooltip = {
+#			fail_text = "requires_ap_master_builders"
+#			owner = { has_ascension_perk = ap_master_builders }
+#		}
+#	}
+#	
+#	potential = {
+#		planet = {		
+#			is_planet_class = pc_habitat
+#			has_building = "building_hab_capital"
+#		}	
+#	}
+#	
+#	allow = {
+#		custom_tooltip = {
+#			fail_text = "requires_ap_master_builders"
+#			owner = { has_ascension_perk = ap_master_builders }
+#		}
+#	}
+#	
+#	prerequisites = { "tech_spaceport_6" }
+#
+#	required_resources = { energy = 8 }
+#	
+#	country_modifier = {
+#		navy_size_add = 14
+#	}
+#}
+
+# Empire uniques
+
+building_hab_mineral_hub = {
+	base_buildtime = 360
+	empire_unique = yes
+	
+	cost = { minerals = 450 }
+	
+	potential = {
+		planet = {		
+			is_planet_class = pc_habitat
+			has_building = "building_hab_capital"
+		}	
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_ap_master_builders"
+			owner = { has_ascension_perk = ap_master_builders }
+		}
+		custom_tooltip = {
+			fail_text = "requires_not_hab_food_hub"
+			planet = { 
+				NOT = { has_building = "building_hab_food_hub" }
+			}
+		}
+	}
+	
+	required_resources = { energy = 4 }
+	
+	produced_resources = {		
+		minerals = 5
+	}
+	
+	planet_modifier = {
+		tile_building_resource_minerals_add = 3
+		tile_resource_minerals_mult = 0.5
+	}
+}
+
+building_hab_food_hub = {
+	base_buildtime = 360
+	empire_unique = yes
+	
+	cost = { minerals = 450 }
+	
+	potential = {
+		planet = {		
+			is_planet_class = pc_habitat
+			has_building = "building_hab_capital"
+		}	
+	}
+
+	produced_resources = {		
+		food = 5
+	}
+	
+	required_resources = { energy = 3 }
+	
+	planet_modifier = {
+		tile_building_resource_food_add = 4
+		tile_resource_food_mult = 0.5
+	}
+}
+
+
+building_hab_singularity_lab = {
+	base_buildtime = 180
+	empire_unique = yes
+	is_listed = no
+	
+	cost = { minerals = 360 }
+	
+	potential = {
+		solar_system = {
+				is_star_class = sc_black_hole	
+			}
+		planet = {		
+			is_planet_class = pc_habitat
+			has_building = "building_hab_capital"
+			}	
+	}
+	
+	required_resources = { energy = 3 }
+	
+	produced_resources = {		
+		physics_research = 50
+	}
+	
+	prerequisites = { "tech_physics_lab_3" }
+	
+	planet_modifier = {
+		tile_resource_physics_research_mult = 0.25
+	}
+}

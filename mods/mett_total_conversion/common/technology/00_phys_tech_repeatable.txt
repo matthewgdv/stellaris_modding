@@ -1,0 +1,53 @@
+
+###########################
+### TECH COSTS - REPEATABLE  ###
+###########################
+
+@repeatableTechBaseCost = 50000
+@repeatableTechLevelCost = 50000
+@repeatableTechTier = 5
+
+###########################
+### TECH WEIGHTS - REPEATABLE  ###
+###########################
+
+@repeatableTechWeight = 25
+@repatableTechFactor = 0.5
+
+tech_repeatable_physics = {
+	area = physics
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+#	category = { field_manipulation }
+	levels = -1
+	prerequisites = { "tech_matter_generator" }
+	weight = @repeatableTechWeight
+	
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+	
+	modifier = {
+		planet_jobs_energy_produces_mult = 0.05
+		ship_shield_mult = 0.05
+		weapon_type_energy_weapon_damage_mult = 0.05
+		weapon_type_energy_weapon_fire_rate_mult = 0.05
+		planet_buildings_cost_mult = -0.05
+	}
+}
+
+
+		
+

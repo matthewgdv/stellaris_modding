@@ -1,0 +1,83 @@
+	NGameplay = {
+		EMPIRE_SIZE_FROM_SYSTEMS					= 1			#																											(2)
+		EMPIRE_SIZE_FROM_COLONIES					= 5			# Per planet																								(2)
+		LEADER_POOL_LEAD_TIME						= 2			# Years leaders will remain in the leader pool until replaced 												(10)
+		LEADER_MAX_SKILL_CAP						= 20 		#																											(10)
+		LEADER_EXPERIENCE_REQUIREMENT_BASE_VALUE	= 100 		# Base value when calculating required experience for next skill level 										(125)
+		LEADER_EXPERIENCE_REQUIREMENT_SCALE_VALUE	= 25 		# Scale factor when calculating required experience for next skill level 									(75)
+
+		POLICY_YEARS								= 5 		# Years a set policy can not be changed for 																(10)
+		SPECIES_POLICY_YEARS						= 2			# I wrote this: Years a species' rights can not be changed for 												(10)
+
+		TRUCE_YEARS									= 3 		# Truce last for X years 																					(10)
+		GOVERNMENT_COOLDOWN_YEARS					= 10		# Cooldown years after changing government before you can change it again 									(20)
+		TRADITION_COST_TRADITION_EXP				= 1.4 		# numbers like 1.656 or 1.639 1.639) 1.3 was slightly too fast, 1.5 was super slow							(1.7)
+		TRADITION_COST_MULT_TRADITION_GROUP			= 0.05		# each adopted group adds +X% to total cost																	(0.05)
+		INTEGRATE_SUBJECT_MIN_DAYS 					= 1800 		# Amount of days the subject has been a subject before we can integrate it 									(3600)
+		SUBJECTS_INTEGRATION_CAP					= 2 		# Amount of integrations you're allowed to have at the same time 											(1)
+		COMMAND_LIMIT_MAX							= 335		# Max value of Command Limit 																				(200)
+		NAVAL_CAPACITY_MAX							= 1000		# Max value of Naval Capacity																				(9999)
+		STARBASE_CAPACITY_MAX						= 50		# Max value of Starbase Capacity																			(999)
+	}
+
+	NSpecies = {
+		TRAIT_MODIFICATION_BASE_COST 				= 500		# This cost is always added to a species modification project so modifying single pops isn't efficient 		(5000)
+		TRAIT_MODIFICATION_COST_MULT 				= 3 		# species modification cost to be multiplied with the absolute trait cost of all changes applied, per pop 	(30)
+		UPLIFT_COST_BASE							= 2000.0 	#																											(5000.0)
+	}
+
+	NGraphics = {
+		SHIP_RANDOM_HEIGHT_OFFSET 					= 100 		#																											(15.0)
+	}
+
+	NShip = {
+		FLEET_BASE_FORMATION_SCALE					= 3.5		#																											(2)
+		FLEET_BASE_FORMATION_DIV					= 7			#																											(10)
+
+		MILITARY_POWER_SCALE						= 0.01 		#																											(0.12)
+		MILITARY_POWER_EXPONENT						= 0.5		# math: power = ( ( effective_health * damage_per_day ) ^ exponent ) * scale 								(0.75)
+
+		SHIP_EXP_GAIN_COMBAT						= 10.0		# Gained each day ship is in combat																			(1.0)
+		SHIP_EXP_EXPERIENCED						= 200		# Amount of exp to reach experienced rank																	(100)
+		SHIP_EXP_VETERAN							= 1000		# Amount of exp to reach veteran rank																		(1000)
+		SHIP_EXP_ELITE								= 3600		# Amount of exp to reach elite rank																			(10000)
+	}
+
+	NPop = {
+		FORCED_SPECIES_PENALTY						= 0.2		# This amount of progress is lost on setting a forced species												(0.5)
+
+		NEW_POP_SPECIES_RANDOMNESS					= 0.5		# The higher this is, the more random species selection of new pops will be									(1.0)
+		NEW_POP_SAME_SPECIES_WEIGHT					= 1.2		# The higher this is, the more new pops will be weighted by number of exact same species pops				(1.0)
+		NEW_POP_EXACT_SPECIES_WEIGHT				= 0.5		# The higher this is, the more new pops will be weighted by number of same or subspecies pops				(0.5)
+		NEW_POP_SLAVERY_WEIGHT						= 0.5		# The higher this is, the more new pops will tend to be balanced between enslaved and non-enslaved species	(0.5)
+		NEW_POP_SPECIES_DIV							= 0.2		# The higher this is, the more planets will tend to grow species that are underrepresented on the planet	(0.5)
+		NEW_POP_HABITABILITY_THRESHOLD				= 0.6		# If habitability is under this, apply exponentinally increasing penalties to new pop weight				(0.6)
+		NEW_POP_HOMEWORLD_MULT						= 2			# Pops have increased weight for growing on their homeworld													(2)
+		NEW_POP_ASSEMBLY_TRAIT_MULT					= 1			# Extra weight per trait point for assembled pops															(1)
+		NEW_POP_GROWTH_MOD_MULT						= 0.66		# How much does species growth mod trait matter for new pop weight											(0.66)
+		NEW_POP_IMMIGRATION_MOD_MULT				= 1			# How much does species immigration growth mod trait matter for new pop weight (when there is immigration)	(1)
+
+		DEFAULT_CHANGE_JOB_THRESHOLD				= 1.1		# A job must have this much higher weight in order for a pop to switch to it from their current job			(1.5)
+
+		RECENTLY_CONQUERED_DAYS						= 1800 		# How long the recently conquered modifier stays on pops. 													(3650)
+	}
+
+	NEconomy = {
+		COLONY_MAINTENANCE_COST 					= 5			# Base cost per month for a new colony. 																	(8)
+		FLEET_UPGRADE_TIME_COST_MULT				= 0.25		# Upgrade fleet cost 																						(0.75)
+	}
+
+	NAI = {
+		MAX_TRUST = 200											# trust can never be more than this 																		(100)
+		MAX_TRUST_DEFENSIVE_PACT = 150							# trust can tick up to this if defensive pact 																(100)
+		MAX_TRUST_ASSOCIATE = 100								# trust can tick up to this if federation associate 														(100)
+		MAX_TRUST_NAP = 75										# trust can tick up to this if non-aggression pact 															(75)
+		MAX_TRUST_MIN = 50										# trust can always tick up to at least this 																(50)
+		
+		MAX_EXPANSION_DISTANCE = 1								# Max number of jumps away AI will build starbases															(5)
+		MAX_EXPANSION_DISTANCE_SUBJECT = 1						# Max number of jumps away AI subjects will build starbases													(5)
+	}
+
+	NCamera = {
+		EDGE_SCROLLING_PIXELS = 0								#
+	}

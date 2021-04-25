@@ -1,0 +1,48 @@
+trigger_is_socialism = {
+	OR = {
+		has_ethic = ethic_fanatic_socialism
+		has_ethic = ethic_socialism
+	}
+}
+
+trigger_is_capitalism = {
+	OR = {
+		has_ethic = ethic_fanatic_capitalism
+		has_ethic = ethic_capitalism
+	}
+}
+
+trigger_is_green = {
+	OR = {
+		has_ethic = ethic_fanatic_green
+		has_ethic = ethic_green
+	}
+}
+
+trigger_is_industrial = {
+	OR = {
+		has_ethic = ethic_fanatic_industrial
+		has_ethic = ethic_industrial
+	}
+}
+
+trigger_is_elitist = {
+	OR = {
+		has_ethic = ethic_fanatic_elitist 
+		has_ethic = ethic_elitist 
+	}
+}
+
+trigger_is_pluralist = {
+	OR = {
+		has_ethic = ethic_fanatic_pluralist 
+		has_ethic = ethic_pluralist 
+	}
+}
+
+
+
+
+
+
+

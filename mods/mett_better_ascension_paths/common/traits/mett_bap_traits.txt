@@ -1,0 +1,68 @@
+trait_mett_limitless = {
+	cost = 0
+	sorting_priority = 25
+	initial = no
+	randomized = no
+	modification = yes
+	opposites = { "trait_venerable" "trait_enduring" "trait_fleeting" "trait_mett_immortal" }
+	prerequisites = { tech_mett_the_unity_ritual }
+	immortal_leaders = yes
+	allowed_archetypes = { BIOLOGICAL }
+	modifier = {
+	}
+}
+
+#trait_mett_limitless_hive = {
+#	cost = 0
+#	sorting_priority = 25
+#	initial = no
+#	randomized = no
+#	modification = yes
+#	opposites = { "mett_trait_perfect_bodies" "trait_venerable" "trait_enduring" "trait_fleeting" "trait_mett_immortal" }
+#	prerequisites = { tech_mett_the_unity_ritual }
+#	immortal_leaders = yes
+#	allowed_archetypes = { BIOLOGICAL }
+#	modifier = {
+#	}
+#}
+
+trait_robotic_3_machine_mett = {
+	cost = 0
+	sorting_priority = 25
+	initial = no
+	randomized = no
+	modification = yes
+	opposites = { }
+	prerequisites = { tech_mett_perfected_machinery }
+	allowed_archetypes = { MACHINE }
+	modifier = {
+		tile_resource_engineering_research_mult = 0.20
+		tile_resource_physics_research_mult = 0.20
+		tile_resource_society_research_mult = 0.20
+		tile_resource_unity_mult = 0.20
+		tile_resource_energy_mult = 0.20
+		tile_resource_minerals_mult = 0.20
+		pop_consumer_goods_add = 0.5
+	}
+}
+
+trait_robotic_3_cyborg_mett = {
+	cost = 0
+	sorting_priority = 25
+	initial = no
+	randomized = no
+	modification = yes
+	opposites = { }
+	prerequisites = { tech_mett_perfected_cybernetics }
+	immortal_leaders = yes
+	allowed_archetypes = { BIOLOGICAL }
+	modifier = {
+		tile_resource_engineering_research_mult = 0.20
+		tile_resource_physics_research_mult = 0.20
+		tile_resource_society_research_mult = 0.20
+		tile_resource_unity_mult = 0.20
+		tile_resource_energy_mult = 0.20
+		tile_resource_minerals_mult = 0.20
+		pop_consumer_goods_add = 0.5
+	}
+}

@@ -1,0 +1,16 @@
+#############################
+# Xenology Scientist Traits #
+#############################
+
+#trait_general_conqueror = {
+#	cost = 1
+#	modification = no
+#	icon = "gfx/interface/icons/traits/leader_traits/trait_admiral_conqueror.dds"
+#	modifier = {
+#		army_damage_mult = 0.30
+#		army_attack_morale_mult = 0.30
+#		army_upkeep_mult = -0.15
+#	}
+#	leader_trait = yes
+#	leader_class = { general }
+#}

@@ -1,0 +1,151 @@
+##########################################################################
+# Planet edicts
+##########################################################################
+
+# Variables:
+#  name, the name of the edict, also serves as localisation key.
+#  influence_cost, the base influence cost of activating the edict.
+#  potential, planet or country trigger to decide whether the edict should be shown.
+#  allow, planet or country trigger to decide if whether this edict can be activated.
+#  effect, an effect that is executed when this trigger activates.
+#  prerequisites, tech requirements for this trigger.
+#  ai_will_do, determines AI scoring for edict
+#  modifier, a list of modifiers
+#  length, number of days the trigger is active.
+
+# Sets the edict-cost for all edicts with this variable
+@standardEdictCost = 150
+
+# Expands a habitat
+#planet_edict = {
+#	name = "mett_expand_habitat"
+#	#influence_cost = 100
+#	length = 0
+#	
+#	effect = {
+#		owner = {
+#			add_influence = -80
+#			add_minerals = -2000
+#			add_energy = -750
+#		}
+#		add_modifier = {
+#			modifier = mod_mett_habitat_expansion
+#			days = 500
+#		}
+#		hidden_effect = {
+#			planet_event = { 
+#				id = brainwash.8
+#				days = 500 #540
+#			}
+#		}
+#	}
+#	
+#	potential = {
+#		owner = {
+#			has_ascension_perk = ap_master_builders
+#		}
+#		planet = {
+#			is_planet_class = pc_habitat
+#			planet_size < 25
+#		}
+#	}
+#	
+#	allow = {	
+#		custom_tooltip = {
+#			fail_text = "edict_mett_expand_habitat_influence_req"
+#			owner = {
+#				influence > 39
+#			}	
+#		}
+#		custom_tooltip = {
+#			fail_text = "edict_mett_expand_habitat_mineral_req"
+#			owner = {
+#				minerals > 1999
+#			}	
+#		}
+#		custom_tooltip = {
+#			fail_text = "edict_mett_expand_habitat_energy_req"
+#			owner = {
+#				energy > 749
+#			}	
+#		}
+#		planet = {
+#			Not = {
+#				has_modifier = mod_mett_habitat_expansion
+#			}
+#		}
+#	}
+#	
+#	ai_weight = {
+#		weight = 0
+#	}
+#}
+
+
+# Expands a planet
+#planet_edict = {
+#	name = "mett_expand_planet"
+#	#influence_cost = 100
+#	length = 0
+#	
+#	effect = {
+#		owner = {
+#			add_influence = -40
+#			add_minerals = -1000
+#			add_energy = -325
+#		}
+#		add_modifier = {
+#			modifier = mod_mett_planet_expansion
+#			days = 300
+#		}
+#		hidden_effect = {
+#			planet_event = { 
+#				id = brainwash.9
+#				days = 300 #540
+#			}
+#		}
+#	}
+#	
+#	potential = {
+#		owner = {
+#			has_ascension_perk = ap_world_shaper
+#		}
+#		planet = {
+#			NOT = {
+#				is_planet_class = pc_habitat
+#				is_planet_class = pc_ringworld_habitable
+#			}
+#			planet_size < 25
+#		}
+#	}
+#	
+#	allow = {	
+#		custom_tooltip = {
+#			fail_text = "edict_mett_expand_habitat_influence_req"
+#			owner = {
+#				influence > 19
+#			}	
+#		}
+#		custom_tooltip = {
+#			fail_text = "edict_mett_expand_habitat_mineral_req"
+#			owner = {
+#				minerals > 999
+#			}	
+#		}
+#		custom_tooltip = {
+#			fail_text = "edict_mett_expand_habitat_energy_req"
+#			owner = {
+#				energy > 324
+#			}	
+#		}
+#		planet = {
+#			Not = {
+#				has_modifier = mod_mett_planet_expansion
+#			}
+#		}
+#	}
+#	
+#	ai_weight = {
+#		weight = 0
+#	}
+#}

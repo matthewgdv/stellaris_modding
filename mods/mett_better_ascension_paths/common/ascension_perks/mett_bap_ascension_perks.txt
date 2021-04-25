@@ -1,0 +1,100 @@
+ap_many_minds_one_voice = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_the_flesh_is_weak
+			has_ascension_perk = ap_many_minds_one_voice
+		}
+	}
+	possible = {		
+		custom_tooltip = {
+			fail_text = "requires_ap_evolutionary_mastery"
+			has_ascension_perk = ap_evolutionary_mastery
+		}
+	}
+	on_enabled = {
+		custom_tooltip = "ta_pm_enable_psionic_3_planet"
+		custom_tooltip = "ta_pm_enable_psionic_3_invasion"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+@ap_the_end_of_limits_POINTS = 20
+@ap_the_end_of_limits_COST_MULT = -0.25
+ap_the_end_of_limits = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_the_flesh_is_weak
+			has_ascension_perk = ap_the_end_of_limits
+		}
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_ap_many_minds_one_voice"
+			has_ascension_perk = ap_many_minds_one_voice
+		}
+	}
+	on_enabled = {
+		add_research_option = tech_mett_the_unity_ritual
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { has_authority = auth_hive_mind }
+				}
+				country_event = { id = brainwash.3 }
+				else {
+					country_event = { id = brainwash.4 }
+				}
+			}
+		}
+	}
+	modifier = {
+		country_resource_unity_mult = 0.25
+		country_resource_influence_add = 2
+		BIOLOGICAL_species_trait_points_add = @ap_the_end_of_limits_POINTS
+#		modify_species_cost_mult = @ap_the_end_of_limits_COST_MULT
+	}
+	ai_weight = {
+		factor = 5
+	}
+}
+
+ap_the_edge_of_infinity = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_engineered_evolution
+			has_ascension_perk = ap_the_edge_of_infinity
+		}
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_ap_machine_worlds"
+			has_ascension_perk = ap_machine_worlds
+		}
+	}
+	on_enabled = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { has_authority = auth_machine_intelligence }
+				}
+				country_event = { id = country_event.6 }
+				else {
+					country_event = { id = brainwash.7}
+				}
+			}
+		}
+	}
+	modifier = {
+		all_technology_research_speed = 0.25
+		country_resource_influence_add = 2
+		
+		ROBOT_species_trait_points_add = 4
+		MACHINE_species_trait_points_add = 4
+		modify_species_cost_mult = -0.25
+	}
+	ai_weight = {
+		factor = 5
+	}
+}

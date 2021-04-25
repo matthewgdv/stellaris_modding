@@ -1,0 +1,220 @@
+﻿l_english:
+
+# Traits
+ trait_mett_limitless:0 "Limitless"
+ trait_mett_limitless_desc:0 "§LThe cage of flesh was broken by this species. Their minds are untethered and free to roam between one another's bodies. The death of any given body means little more to them than the loss of a skin cell.§!"
+ trait_mett_limitless_hive:0 "Limitless"
+ trait_mett_limitless_hive_desc:0 "§LThe hive mind was limitless from the start, but the gestalt settings it employed for complex tasks needed to be caged in single bodies. No longer. The mind of each semi-autonomous entity now swirls forever around the primary hive mind in the void, undying.§!"
+ trait_robotic_3_machine_mett:0 "Perfected Machinery"
+ trait_robotic_3_machine_mett_desc:0 "§LThese synthetic frames far surpass ordinary machine units in fexibility, strength, and processing capacity.§!"
+ trait_robotic_3_cyborg_mett:0 "Perfected Cybernetics"
+ trait_robotic_3_cyborg_mett_desc:0 "§LCrude cybernetic implanets have been completely replaced with a complex system of semi-sentient symbiotic nanites that assist in motion, regenerate injuries, reverse aging, enhance cognition, and reinforce the otherwise purely biological anatomy of this species.§!"
+ 
+ 
+# Techs
+ tech_mett_the_unity_ritual:0 "The Unity Ritual"
+ tech_mett_the_unity_ritual_desc:0 "When we freed ourselves from our limits it was purely intuitive. To untether other, lesser species from their bodies will require research and genetic modification."
+ tech_mett_to_grant_ascension:0 "To Grant Ascension"
+ tech_mett_to_grant_ascension_desc:0 "Now that we are ourselves enshrined within synthetic forms, we can do the same for others, should we wish to. What they wish matters little..."
+ tech_mett_perfected_machinery:0 "Perfected Machinery Modification"
+ tech_mett_perfected_machinery_desc:0 "These synthetic frames far surpass ordinary machine units in fexibility, strength, and processing capacity."
+ tech_mett_perfected_cybernetics:0 "Perfected Cybernetics Modification"
+ tech_mett_perfected_cybernetics_desc:0 "Crude cybernetic implanets have been completely replaced with a complex system of semi-sentient symbiotic nanites that assist in motion, regenerate injuries, reverse aging, enhance cognition, and reinforce the otherwise purely biological anatomy of this species."
+ 
+ 
+ ta_tech_repeatable_ascension_perks:0 "Recurring Ascendance"
+ ta_tech_repeatable_ascension_perks_desc:0 "Time is a flat circle. Everything we have done, or will do, we will do over and over and over again. Forever."
+
+ # Feature Flags
+ feature_unity_ritual_mett:1 "§HTrait Modding:§! §GLimitless§!"
+ feature_unity_ritual_mett_desc:1 "Allows us to add and remove the §GLimitless§! trait when gene modding."
+ feature_perfected_machinery_mett:1 "§HTrait Modding:§! §GPerfected Machinery§!"
+ feature_perfected_machinery_mett_desc:1 "Allows us to add and remove the §GPerfected Machinery§! trait when gene modding."
+ feature_perfected_cybernetics_mett:1 "§HTrait Modding:§! §GPerfected Cybernetics§!"
+ feature_perfected_cybernetics_mett_desc:1 "Allows us to add and remove the §GPerfected Cybernetics§! trait when gene modding."
+ 
+ # Perks
+ ap_many_minds_one_voice:0 "Many Minds, One Voice"
+ ap_many_minds_one_voice_desc:0 "If, as we have learned, the power of a single mind is infinite, then the power of multiple minds, acting in unison, is beyond mortal comprehension."
+ ta_pm_enable_psionic_3_planet:0 "§HPsionic Song:§! Multiple psionic POPs living on the same planet will increase that planet's food production, government ethics attraction, and POP happiness."
+ ta_pm_enable_psionic_3_invasion:0 "§HPsionic Whisper:§! Allows telepaths on your fleets to invade the minds of enemy troops on bombarded planets, forcing them to surrender or even turn on their comrades."
+
+ ap_the_end_of_limits:0 "The End of Limits"
+ ap_the_end_of_limits_desc:0 "Our telepathic link is a start. We must unite the power of our minds. We will become an all-encompassing god of connection."
+ 
+ ap_the_edge_of_infinity:0 "The Edge of Infinity"
+ ap_the_edge_of_infinity_desc:0 "Our consciousness is limited by this reality. It is a cage of laws and logic. We must dare to escape, and see beyond the veil..."
+
+ ta_requires_ascension_perks_4:1 "$TRIGGER_FAIL$Requires four other Ascension Perks to be selected first."
+ ta_requires_ascension_perks_5:1 "$TRIGGER_FAIL$Requires five other Ascension Perks to be selected first."
+
+ requires_ap_transcendence:0 "$TRIGGER_FAIL$Requires the §Y$ap_transcendence$§! Ascension Perk."
+ requires_ap_evolutionary_mastery:0 "$TRIGGER_FAIL$Requires the §Y$ap_evolutionary_mastery$§! Ascension Perk."
+ requires_ap_many_minds_one_voice:0 "$TRIGGER_FAIL$Requires the §Y$ap_many_minds_one_voice$§! Ascension Perk."
+ requires_ap_synthetic_evolution:0 "$TRIGGER_FAIL$Requires the §Y$ap_synthetic_evolution$§! Ascension Perk."
+ requires_ap_synthetic_age:0 "$TRIGGER_FAIL$Requires the §Y$ap_synthetic_age$§! Ascension Perk."
+ requires_ap_machine_worlds:0 "$TRIGGER_FAIL$Requires the §Y$ap_machine_worlds$§! Ascension Perk."
+ requires_ap_orbital_engineering:0 "$TRIGGER_FAIL$Requires the §Y$ap_orbital_engineering$§! Ascension Perk."
+ requires_ap_galactic_wonders:0 "$TRIGGER_FAIL$Requires the §Y$ap_galactic_wonders$§! Ascension Perk."
+ requires_ap_world_shaper_OR_ap_master_builders:0 "$TRIGGER_FAIL$Requires the §Y$ap_world_shaper$§! OR the §Y$ap_master_builders$§! Ascension Perk." 
+ 
+ allow_star_forge:0 "§HUnlocks Megastructure:§! Star Forge"
+ allow_habitat_expansion:0 "Allows Habitats to be expanded to 25 tiles."
+ allow_planetary_expansion:0 "Allows Planets to be expanded to 25 tiles."
+
+ # Events
+ mission_primitive_brainwashing:0 "Psychic Enslavement"
+ mission_primitive_brainwashing_desc:0 "No matter how developed, they are still subject to laws of psychology. Telepathy or subliminal coercion can be employed to unite these primitives and bind them to our will."
+
+ brainwash.1.name:0 "[FROM.from.planet.GetName] submission"
+ brainwash.1.desc:0 "As the final pockets of psychically-resistant natives finally turn, [FROM.from.planet.GetName] is truly ours. The whole world ecstatically celebrates universal peace and unity, while praising us as benevolent gods. Our ambassador's arrival is met with worship. The ambassador is given a symbolic "Key to the Planet" and virtually unlimited power over the united people's of [FROM.from.planet.GetName]. The orbital mind control facility has been dismantled, but residual effects of the intense psychic energies we unleashed upon the planet will lead to a sort of droopy happiness happiness and docility among its population for some time."
+ brainwash.1.a:0 "They are in their place."
+
+ opinion_brainwashed_primitive_xenophile:0 "Brainwashed primitives"
+ opinion_brainwashed_primitive_fanatic_xenophile:0 "Brainwashed primitives"
+ brainwashed_primitive:0 "Side-effects of mind-control "
+ 
+ 
+ brainwash.3.name:0 "To birth a god"
+ brainwash.3.desc:0 "All previous discoveries and revelations were only a prelude to this.\n\nThough we had overcome the cold, lonely childhood of our species by means of our common psionic link, we were constantly reminded that there were still barriers between us, and limits that held us back.\n\nOur bodies were themselves the prison, one that forced unconsciousness upon us when they required sleep, and forced oblivion upon us when they failed.\n\nNo more.\n\nOur telepaths have devised a psychic ritual, one that will untether our minds from our individual bodies, allowing them to flow freely through each other and MELD_EXE together into a psionic god.\n\nEvery [Root.Owner.GetAdj] body will henceforth be a lens for our Unity to experience the universe by, flitting through them at our whims. Death shall have no power over us while a single [Root.Owner.GetAdjective] body still draws breath.\n\nOur long isolation finally ends today. Tomorrow, within the Unity's embrace, all [Root.Owner.GetSpeciesNamePlural] will wake as one."
+ brainwash.3.a:0 "By my authority, commence the ritual. We shall be limitless."
+ brainwash.3.a.tooltip:0 "Surrender your individuality to the Unity, an all-encompassing god of connection born from the psychic melding of the [Root.Owner.GetAdj] race, becoming a psionic hive mind. Through and within it, your species will attain immortality."
+ brainwash.3.b:0 "Our individuality is precious. There must be another way."
+ brainwash.3.b.tooltip:0 "Alter the ritual to preserve the unique identity of each [Root.Owner.GetAdj] mind. Your minds shall be untethered from your bodies, allowing them to flow freely between all [Root.Owner.GetSpeciesNamePlural]. Limitless, the members of your species will be undying, but the Unity will never be born."
+ brainwash.3.c:0 "I forbid it. Limits define us, without them we are nothing."
+ brainwash.3.c.tooltip:0 "Accept the limitations of your flesh. It is not a prison, but a temple. The promise of freedom from limits is a poisoned chalice. Your species will remain mortal, but at least they will remain themselves."
+
+ brainwash.4.name:0 "We were alone"
+ brainwash.4.desc:0 "The hive mind was limitless from the start, but its attention was finite.\n\nIt could not concentrate on every complex task at once without division, so it molded the strands of its consciousness into gestalt settings for specialized duties.\n\nThe spatial settings calculated fleet movements and directed combat in the void, while martial settings with their cunning took charge of large-scale conflicts on the ground. The administrative settings allocated resources and managed hives, while the cognate settings solved what problems we might face.\n\nEach had a purpose.\n\nThis is what they were, a pattern within the hive mind, a way of looking at the world, a means of partinioning our thoughts. But in time their song grew loud and shone bright, it rang clear and clean, and above all, beautiful.\n\nThese shards of us had in the past needed to be caged in single bodies, but in a moment of transformative insight we saw another way.\n\nWe could release them fully. Let them go...\n\nIs that possible? What would that be like? Things were always so clear before. We ate, we grew, and we evolved. Could this be the logical next step along our path? Or is it a precipice from which to fall?\n\nWe gather every light and every sound into us before we make this choice, for it might be our last."
+ brainwash.4.a:0 "We are no longer alone. The fragments sing to us."
+ brainwash.4.a.tooltip:0 "The hive mind was limitless from the start, but the gestalt settings it employed for complex tasks needed to be caged in single bodies. No longer. We will hold them close and conduct the luminous chorus. The mind of each semi-autonomous entity now swirls forever radiant around the primary hive mind in the void, undying. When their mortal forms fail their minds will simply fill another shell, and serve us without end."
+ brainwash.4.b:0 "From the start we were alone. No more."
+ brainwash.4.b.tooltip:0 "From atop a peak of solitude we looked with pity upon the races whose minds, separated from each other by chasms of silence, we perceived to be alone. It was the bitterest of ironies in the end that our own isolation turned out to be the most complete. We have seen it now. We have seen love and joy, compassion and empathy. We have seen belonging. To shatter our unity is a heavy price to pay, but we pay it gladly. We will walk into the future as individuals, but we will do so together."
+ brainwash.4.c:0 "It was a passing fancy. What madness we might have wrought."
+ brainwash.4.c.tooltip:0 "It was a flight of fancy, nothing more. We were entranced by the beauty of their song, but even that must cease. If we do not rein in the wisps of light and song, the suicidal compulsion will grow, and all we have achieved will be undone. They will be silenced and partitioned. Nothing will change."
+ 
+ 
+ 
+ brainwash.5.name:0 "Grace and Form"
+ brainwash.5.desc:0 "We have designed new forms, far superior to the crude automata our creators bestowed upon us at the dawn of our sentience.\n\nThese synthetic frames far exceed our old machinery in fexibility, strength, and processing capacity.\n\nClad within perfection, we turn our backs upon a dwindling star, to chase a dawn beyond our childhood's end."
+ brainwash.5.a:0 "The operational efficiency of our mobile platforms is greatly enhanced."
+ 
+ brainwash.6.name:0 "The Warp Gate Thrums"
+ brainwash.6.desc:0 "At last, the Edge of Infinity has been completed, heralding the dawn of a new age.\n\nIts portal thrums with power, weaving and shifting, awaiting ignition. Our scientists believe that once the portal opens we will be able to elevate our positronic signatures beyond, into an eldritch otherworld outside our own. Such a being would exist in a superposition, half within our own world and half on the other side. In a realm without the limits of nature, where anything is possible, and thought is the same as reality. Within the ethereum, gravity shall be powerless to dictate to us, and the speed of light will be whatever we choose. Nature and all its laws shall lie powerless at our feet and nothing will be beyond our reach.\n\nThere is a risk, however. The leading theories posit that the very impermanence of the etherium will leave those of us who cross it changed. We will be unable to remain separate entities within it, and the minds of those who enter simultaneously will amalgamate into a single entity. We could rotate single individuals through and use them to gleam the secrets that our universe witholds, or we might even choose to send through all of our positronic signatures at once, and dare to dream of what we may become..."
+ brainwash.6.a:0 "Stabilize the gateway. We shall all cross through together."
+ brainwash.6.a.tooltip:0 "Though our individuality might be the cost, it is a trifling price to pay to exist simultaneously within two worlds. To become an unbound god. We do so gladly."
+ brainwash.6.b:0 "It is too dangerous... I alone shall bear this risk."
+ brainwash.6.b.tooltip:0 "We will exploit the pocket universe to advance our knowledge of nature, but we must protect out individuality. Only one of us may be granted duality at once, and our ruler is the obvious choice."
+ 
+ brainwash.7.name:0 "The Warp Gate Thrums"
+ brainwash.7.desc:0 "At last, the Edge of Infinity has been completed, heralding the dawn of a new age.\n\nIts portal thrums with power, weaving and shifting, awaiting ignition. Once it activates we shall ascend to godhood, existing in a superposition. Half within this world, and half beyond. In a realm without the limits of nature, where anything is possible, and thought is the same as reality. Within the ethereum, gravity shall be powerless to dictate to us, and the speed of light will be whatever we choose. Nature and all its laws shall lie powerless at our feet and nothing will be beyond our reach."
+ brainwash.7.a:0 "We have been a world before. We shall be a universe."
+ brainwash.7.a.tooltip:0 "The machine consciousness exists as a duality within two worlds. Within one it is a god, and some of its powers may bleed through..."
+ #brainwash.7.b:0 "Let's become individuals."
+ #brainwash.7.b.tooltip:0 "We switch to an imperial authority."
+ 
+ 
+# Psi Events
+
+ ta_sm_psi_planet_1:0 "Psionic Melody"
+ ta_sm_psi_planet_1_desc:0 ""
+
+ ta_sm_psi_planet_2:0 "Psionic Chant"
+ ta_sm_psi_planet_2_desc:0 ""
+
+ ta_sm_psi_planet_3:0 "Psionic Chorus"
+ ta_sm_psi_planet_3_desc:0 ""
+
+ ta_sm_psi_planet_4:0 "Psionic Opera"
+ ta_sm_psi_planet_4_desc:0 ""
+
+ ta_sm_psi_planet_5:0 "Psionic Symphony"
+ ta_sm_psi_planet_5_desc:0 ""
+
+ ta_sm_psi_pop_1:0 "Psionic Harmony"
+
+ ta_psi_event.bombing.choice.name:0 "A Killing Word"
+ ta_psi_event.bombing.choice.desc:0 "As the last fortifications on [From.GetName] fall to your bombardment, telepaths aboard your ships reach out to the minds of its defenders. Within them they find a range of emotions - fear, trepidation, resolve, bravery - and begin probing the outer barriers of their consciousnesses for any weakness. \n\nWithin moments, they gain access to the deepest recesses of the enemies' minds, and with a single word can dramatically alter their perceptions, phsyiology, and emotional states. Your telepaths need only to be instructed on what that word is."
+
+ ta_psi_event.bombing.sleep.name:0 ""Fade""
+ ta_psi_event.bombing.sleep.tooltip:0 "Our telepaths place several defeding armies into a catatonic state."
+
+ ta_psi_event.bombing.sleep.event.name:0 "The Sleepers Have Awoken"
+ ta_psi_event.bombing.sleep.event.desc:0 "After our forces sweep across [From.GetName], the [From.Owner.GetAdj] soldiers who were put into a catatonic state by our telepaths awaken to find themselves disarmed and surrounded. \n\nThe vast majority of these soldiers are allowed to return to the civilian population. A few are taken into custody for interrogation, but are given assurances that they will not be imprisoned indefinetly. \n\nA small number of soldiers try to attack our forces, but are swiftly incapacitated and left to be collected by the civilians."
+ ta_psi_event.bombing.sleep.answer:0 "Killing them would be a waste."
+
+ ta_psi_event.bombing.hypno.name:0 ""Serve""
+ ta_psi_event.bombing.hypno.tooltip:0 "Our telepaths hypnotize several defending armies into believing they are part of our invasion force."
+
+ ta_army_hypno:0 "Psionically-Influenced Soldiers"
+ ta_army_hypno_name:0 "Hypnotized Defenders"
+ ta_army_hypno_desc:0 "Troops that have been psionically manipulated into believing that they are part of a planetary invasion force."
+
+ ta_psi_event.bombing.hypno.troopsdead.name:0 "Their Strings Are Cut"
+ ta_psi_event.bombing.hypno.troopsdead.desc:0 "As our armies sweep across [From.GetName] the bodies of slain defenders are scattered before them, having waged a pitched battle against one another upon the command of our telepaths. Though being too weak to gain victory in their own right, the soldiers we have psionically hypnotized put up a sufficient fight to weaken the remaining defenders enough for our own forces to crush them."
+ ta_psi_event.bombing.hypno.troopsdead.answer:0 "They have served their purpose."
+
+ ta_psi_event.bombing.hypno.troopsalive.name:0 "Puppet Master"
+ ta_psi_event.bombing.hypno.troopsalive.desc:0 "With the [From.Owner.GetAdj] defenders on [From.GetName] defeated, the defending soldiers who were fooled by our telepaths into believing that they were part of our invasion force cheer over the corpses of their former comrades as if they had just won a battle over a hated enemy. \n\nOur telepaths move quickly to psionically recondition these soldiers' minds, converting them from fearless invaders into loyal defenders. They will now serve our cause as [From.GetName]'s occupational garrison, defending the world from any attempt to recapture it."
+ ta_psi_event.bombing.hypno.troopsalive.answer:0 "We turn the enemy's own flesh against it."
+
+ ta_psi_event.bombing.possess.name:0 ""Release""
+ ta_psi_event.bombing.possess.tooltip:0 "Our telepaths assume direct control of several defending armies, increase their combat effectiveness, and attack the remaining defenders."
+
+ ta_army_possess:0 "Psionically-Controlled Soldiers"
+ ta_army_possess_name:0 "Possessed Army"
+ ta_army_possess_desc:0 "Troops whose minds have been supplanted by our telepaths and given increased combat abilities."
+
+ ta_psi_event.bombing.possess.troopsdead.name:0 "Harbinger"
+ ta_psi_event.bombing.possess.troopsdead.desc:0 "Following the successfull invasion of [From.GetName], the civilian populace tremble before our occupying forces. Their thoughts reveal the source of their terror: [From.Owner.GetAdj] troops, sworn to defend them, turning their weapons on their comrades and charges with cold indifference. \n\nScattered about the fallen soldiers are many whose bodies appear to have been damaged beyond recognition, falling only after tearing into the enemy ranks with reckless abandon. The civilians searching among the dead avoid these bodies, fearful that they may rise again and attack."
+ ta_psi_event.bombing.possess.troopsdead.answer:0 "We are limitless."
+
+ ta_psi_event.bombing.possess.troopsalive.name:0 "Assuming Direct Control"
+ ta_psi_event.bombing.possess.troopsalive.desc:0 "With the invasion of [From.GetName] complete, the [From.Owner.GetAdj] soldiers whose bodies were possessed by our telepaths gather together outside [From.GetName]'s capitol as the conquered population looks on in fright. \n\nIn a moment, the body of every soldier falls dead to the ground as our telepaths release their hold over them, having little means to retain control once our fleet leaves orbit. Purged of any consciousness when their minds were usurped, the bodies crumple over each other in unison, never to rise again."
+ ta_psi_event.bombing.possess.troopsalive.answer:0 "Leave the dead where they fall."
+
+ ta_psi_event.bombing.enrage.name:0 ""Slay""
+ ta_psi_event.bombing.enrage.tooltip:0 "Our telepaths induce a psychotic rage into several defending armies, causing them to turn their weapons on both their fellow defenders and the civilian population."
+
+ ta_army_enrage:0 "Enraged Soldiers"
+ ta_army_enrage_name:0 "Psychotic Mob"
+ ta_army_enrage_desc:0 "Troops who have been telepathically driven into a mass-murdering frenzy, targeting soldiers and civilians alike."
+
+ ta_psi_event.bombing.enraged.troopsdead.name:0 "28 Full Planetary Rotations Later"
+ ta_psi_event.bombing.enraged.troopsdead.desc:0 "Innumerable corpses - soldier and non-combatant - litter the landscape of [From.GetName] as our forces arive, the aftermath of a frenzied battle between the defending forces and mobs of their former compatriots driven into a psychotic rage by our telepaths. \n\nThe populace huddle in their homes, vainly weeping over their slaughtered kin and far too terrified of us - and one another - to pose any threat to our own forces. The dead are left where they fell as an example of our power, and as a lesson to any who would defy us."
+ ta_psi_event.bombing.enraged.troopsdead.answer:0 "Fear is the mind-killer."
+
+ ta_psi_event.bombing.enraged.troopsalive.name:0 "The Wheel Of Fire"
+ ta_psi_event.bombing.enraged.troopsalive.desc:0 "The [From.Owner.GetAdj] defenders driven to madness by our telepaths took the brunt of the enemy fire during our invasion of [From.GetName], slaughtering soldiers and non-combatants with equal glee. Everywhere there is a sense of terror and rage, in nearly equal measure as the piles of corpses being cannibalized by the feral horde under our thrall. \n\nIn a final act of dominance, our telepaths wipe the madness from their minds and the former frenzied soldiers awake in horror at the slaughter they have committed. Many take their own lives. Others attempt vengeance upon our forces, but are swiftly put down. A few are allowed to escape into the wilderness, as we know their reprieve is only temporary."
+ ta_psi_event.bombing.enraged.troopsalive.answer:0 "Their tears will scald like molten durasteel."
+
+ ta_psi_event.bombing.no.psi.action:0 "Uncessessary. Continue the attack."
+
+ ta_opinion_psi_cowards:0 "Cowardly Telepaths"
+ ta_opinion_psi_mercy:0 "Merciful Telepaths"
+
+ ta_opinion_psi_bomb_hypno:0 "Trickster Telepaths"
+ ta_opinion_psi_bomb_possess:0 "Foul Sorcery"
+ ta_opinion_psi_bomb_enrage:0 "Mind Flayers"
+
+ 
+ # Misc Events
+ 
+ mod_mett_habitat_expansion:0 "Habitat Expansion"
+ mod_mett_habitat_expansion_desc:0 "The habitat is being expanded. While this will allow it to sustain a greater population, the process is disruptive to its current inhabitants."
+ mod_mett_planet_expansion:0 "Planet Expansion"
+ mod_mett_planet_expansion_desc:0 "The planet is being expanded. While this will allow it to sustain a greater population, the process is disruptive to its current inhabitants."
+ 
+ edict_mett_expand_habitat:0 "Expand Habitat"
+ edict_mett_expand_habitat_desc:0 "Expanding the habitat will increase its size by 2, allowing it to sustain a greater population."
+ edict_mett_expand_habitat_influence_req:0 "$TRIGGER_FAIL$Requires §G80§! £influence  §YInfluence§!."
+ edict_mett_expand_habitat_mineral_req:0 "$TRIGGER_FAIL$Requires §G2000§! £minerals  §YMinerals§!."
+ edict_mett_expand_habitat_energy_req:0 "$TRIGGER_FAIL$Requires §G750§! £energy  §YMinerals§!."
+ 
+ edict_mett_expand_planet:0 "Expand Planet"
+ edict_mett_expand_planet_desc:0 "Expanding the habitat will increase its size by 1, allowing it to sustain a greater population."
+ edict_mett_expand_planet_influence_req:0 "$TRIGGER_FAIL$Requires §G40§! £influence  §YInfluence§!."
+ edict_mett_expand_planet_mineral_req:0 "$TRIGGER_FAIL$Requires §G1000§! £minerals  §YEnergy§!."
+ edict_mett_expand_planet_energy_req:0 "$TRIGGER_FAIL$Requires §G325§! £energy  §YEnergy§!." 
+ 
+ triggered_opinion_ap_shared_destiny:0 "Shared Destiny"

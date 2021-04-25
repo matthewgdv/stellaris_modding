@@ -1,0 +1,24 @@
+#############################
+# Xenology Scientist Traits #
+#############################
+
+trait_scientist_pathfinder = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_scientist_pathfinder.dds"
+	modifier = {
+		science_ship_survey_speed = 0.5
+		ship_anomaly_generation_chance_mult = 0.25
+	}
+	leader_trait = yes
+	leader_class = { scientist }
+	requires_traits = { trait_scion_of_the_fallen }
+	
+	ai_categories = {
+		survey
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}
