@@ -22,6 +22,43 @@ country_event = {
 	
 	immediate = {
 		every_owned_leader = {
+			limit = { leader_class = ruler }
+			
+			if = {
+				limit = {
+					NOT = { has_ethic = ethic_gestalt_consciousness }
+				}
+				remove_ruler_traits = yes
+				add_ruler_traits_default = yes
+			}
+			else = {
+				add_ruler_traits_gestalt = yes
+			}
+		}
+
+		every_owned_leader = {
+			limit = { leader_class = governor }
+			remove_governor_traits = yes
+			if = {
+				limit = {
+					NOT = { has_ethic = ethic_gestalt_consciousness }
+				}
+				add_governor_traits_default = yes
+			}
+			else = {
+				if = {
+					limit = {
+						NOT = { has_authority = auth_machine_intelligence }
+					}
+					add_governor_traits_hive = yes
+				}
+				else = {
+					add_governor_traits_machine = yes
+				}
+			}
+		}
+		
+		every_owned_leader = {
 			limit = { leader_class = scientist }
 			remove_scientist_traits = yes
 			
@@ -39,12 +76,6 @@ country_event = {
 			}
 			else_if {
 				limit = {
-					is_researching_area = engineering
-				}
-				add_engineering_traits = yes
-			}
-			else_if {
-				limit = {
 					is_researching_area = physics
 				}
 				add_physics_traits = yes
@@ -52,6 +83,27 @@ country_event = {
 			else = {
 				add_survey_traits = yes
 			}
+		}
+		
+		every_owned_leader = {
+			limit = { leader_class = admiral }
+			remove_admiral_traits = yes
+			
+			if = {
+				limit = {
+					NOT = { has_authority = auth_machine_intelligence }
+				}
+				add_admiral_traits_default = yes
+			}
+			else = {
+				add_admiral_traits_machine = yes
+			}
+		}
+		
+		every_owned_leader = {
+			limit = { leader_class = general }
+			remove_general_traits = yes
+			add_general_traits = yes
 		}
 	}
 }

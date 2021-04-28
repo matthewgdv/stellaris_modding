@@ -1,6 +1,6 @@
-name="Mett's Better Ascension Paths"
-path=".\mett_better_ascension_paths"
+name="[Mett] Better Ascension Paths"
 tags={
-	"Gameplay"
+    "Gameplay"
 }
 supported_version="2.1.*"
+path="mett_better_ascension_paths"

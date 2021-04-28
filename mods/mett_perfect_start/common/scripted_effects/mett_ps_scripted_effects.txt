@@ -1,3 +1,110 @@
+# =========================
+# RULER
+# =========================
+
+remove_ruler_traits = {
+	leader = {
+		remove_trait = trait_ruler_architectural_sense
+		remove_trait = trait_ruler_battleship_focus
+		remove_trait = trait_ruler_champion_of_the_people
+		remove_trait = trait_ruler_charismatic
+		remove_trait = trait_ruler_corvette_focus
+		remove_trait = trait_ruler_cruiser_focus
+		remove_trait = trait_ruler_deep_connections
+		remove_trait = trait_ruler_destroyer_focus
+		remove_trait = trait_ruler_expansionist
+		remove_trait = trait_ruler_explorer
+		remove_trait = trait_ruler_eye_for_talent
+		remove_trait = trait_ruler_fertility_preacher
+		remove_trait = leader_trait_fleet_organizer
+		remove_trait = trait_ruler_fortifier
+		remove_trait = trait_ruler_from_the_ranks
+		remove_trait = trait_ruler_frontier_spirit
+		remove_trait = trait_ruler_home_in_the_sky
+		remove_trait = trait_ruler_industrialist
+		remove_trait = trait_ruler_investor
+		remove_trait = trait_ruler_logistic_understanding
+		remove_trait = trait_ruler_military_pioneer
+		remove_trait = leader_trait_nervous
+		remove_trait = trait_ruler_recruiter
+		remove_trait = leader_trait_reformer
+		remove_trait = trait_ruler_space_miner
+		remove_trait = trait_ruler_warlike
+		remove_trait = trait_ruler_world_shaper
+		remove_trait = leader_trait_adaptable
+		remove_trait = leader_trait_eager
+		remove_trait = leader_trait_resilient
+	}
+}
+
+add_ruler_traits_default = {
+	leader = {
+		add_trait = leader_trait_ruler_chosen
+		add_trait = trait_ruler_champion_of_the_people
+		add_trait = leader_trait_reformer
+		add_trait = leader_trait_fleet_organizer
+		add_trait = trait_ruler_eye_for_talent
+	}
+}
+
+add_ruler_traits_gestalt = {
+	leader = {
+		add_trait = leader_trait_ruler_chosen
+	}
+}
+
+# =========================
+# GOVERNOR
+# =========================
+
+remove_governor_traits = {
+	leader = {
+		remove_trait = leader_trait_iron_fist
+		remove_trait = leader_trait_architectural_interest
+		remove_trait = leader_trait_agrarian_upbringing
+		remove_trait = leader_trait_intellectual
+		remove_trait = leader_trait_analytical
+		remove_trait = leader_trait_environmental_engineer
+		remove_trait = leader_trait_bulldozer
+		remove_trait = leader_trait_adaptable
+		remove_trait = leader_trait_flexible_programming
+		remove_trait = leader_trait_eager
+		remove_trait = leader_trait_newboot
+		remove_trait = leader_trait_resilient
+		remove_trait = leader_trait_righteous
+	}
+}
+
+add_governor_traits_default = {
+	leader = {
+		add_trait = leader_trait_governor_chosen
+		add_trait = leader_trait_intellectual
+		add_trait = leader_trait_righteous
+		add_trait = leader_trait_bureaucrat
+	}
+}
+
+add_governor_traits_hive = {
+	leader = {
+		add_trait = leader_trait_governor_chosen
+		add_trait = leader_trait_intellectual
+		add_trait = leader_trait_righteous
+		add_trait = leader_trait_mindfulness
+	}
+}
+
+add_governor_traits_machine = {
+	leader = {
+		add_trait = leader_trait_governor_chosen
+		add_trait = leader_trait_amplifier
+		add_trait = leader_trait_analytical
+	}
+}
+
+# =========================
+# SCIENTIST
+# =========================
+
 remove_scientist_traits = {
 	leader = {
 		remove_trait = leader_trait_maniacal
@@ -30,46 +137,107 @@ remove_scientist_traits = {
 
 add_society_traits = {
 	leader = {
+		add_trait = leader_trait_scientist_chosen
 		add_trait = leader_trait_spark_of_genius
 		add_trait = leader_trait_maniacal
 		add_trait = leader_trait_expertise_psionics
-		add_trait = leader_trait_expertise_new_worlds
-		add_trait = leader_trait_expertise_statecraft
-		add_trait = leader_trait_expertise_biology
-		add_trait = leader_trait_expertise_military_theory
-		
+#		add_trait = leader_trait_expertise_new_worlds
+#		add_trait = leader_trait_expertise_statecraft
+#		add_trait = leader_trait_expertise_biology
+#		add_trait = leader_trait_expertise_military_theory
+	
 	}
 }
 
 add_physics_traits = {
 	leader = {
+		add_trait = leader_trait_scientist_chosen
 		add_trait = leader_trait_spark_of_genius
 		add_trait = leader_trait_maniacal
-		add_trait = leader_trait_expertise_field_manipulation
-		add_trait = leader_trait_expertise_particles
-		add_trait = leader_trait_expertise_computing
+#		add_trait = leader_trait_expertise_field_manipulation
+#		add_trait = leader_trait_expertise_particles
+#		add_trait = leader_trait_expertise_computing
 		
 	}
 }
 
 add_engineering_traits = {
 	leader = {
+		add_trait = leader_trait_scientist_chosen
 		add_trait = leader_trait_spark_of_genius
 		add_trait = leader_trait_maniacal
-		add_trait = leader_trait_expertise_materials
-		add_trait = leader_trait_expertise_propulsion
-		add_trait = leader_trait_expertise_voidcraft
-		add_trait = leader_trait_expertise_industry
+#		add_trait = leader_trait_expertise_materials
+#		add_trait = leader_trait_expertise_propulsion
+#		add_trait = leader_trait_expertise_voidcraft
+#		add_trait = leader_trait_expertise_industry
 	}
 }
 
 add_survey_traits = {
 	leader = {
-		remove_trait = leader_trait_meticulous
-		remove_trait = leader_trait_carefree
-		remove_trait = leader_trait_roamer
-		remove_trait = leader_trait_cataloger
-		remove_trait = leader_trait_archaeologist
-		remove_trait = leader_trait_paranoid
+		add_trait = leader_trait_scientist_chosen
+		add_trait = leader_trait_meticulous
+		add_trait = leader_trait_roamer
+		add_trait = leader_trait_archaeologist
+	}
+}
+
+# =========================
+# ADMIRAL
+# =========================
+
+remove_admiral_traits = {
+	leader = {
+		remove_trait = leader_trait_trickster
+		remove_trait = leader_trait_fleet_logistician
+		remove_trait = leader_trait_engineer
+		remove_trait = leader_trait_aggressive
+		remove_trait = leader_trait_cautious
+		remove_trait = leader_trait_scout
+		remove_trait = leader_trait_unyielding
+		remove_trait = leader_trait_nervous
+		remove_trait = leader_trait_gale_speed
+		remove_trait = leader_trait_maintenance_loop
+		remove_trait = leader_trait_unstable_code_base
+		remove_trait = leader_trait_restore_point
+	}
+}
+
+add_admiral_traits_default = {
+	leader = {
+		add_trait = leader_trait_admiral_chosen
+		add_trait = leader_trait_great_khan
+	}
+}
+
+add_admiral_traits_machine = {
+	leader = {
+		add_trait = leader_trait_admiral_chosen
+		add_trait = leader_trait_great_khan
+		add_trait = leader_trait_restore_point
+	}
+}
+
+# =========================
+# GENERAL
+# =========================
+
+remove_general_traits = {
+	leader = {
+		remove_trait = leader_trait_restrained
+		remove_trait = leader_trait_charismatic
+		remove_trait = leader_trait_butcher
+		remove_trait = leader_trait_glory_seeker
+		remove_trait = leader_trait_armchair_commander
+		remove_trait = leader_trait_army_logistician
+		remove_trait = leader_trait_parts_cannibalizer
+		remove_trait = leader_trait_demoralizer
+		remove_trait = leader_trait_erratic_morality_core
+	}
+}
+
+add_general_traits = {
+	leader = {
+		add_trait = leader_trait_general_chosen
 	}
 }

@@ -1,0 +1,36 @@
+### AGENDAS ####
+#
+# Agendas are given to leader-candidates in Oligarchic government-forms
+#
+# weight_modifier - scope = leader, from = country
+# modifier
+
+agenda_welfare = {
+	weight_modifier = {
+		weight = 10
+		modifier = {
+			factor = 1.5
+			from = {
+				has_ethic = ethic_pacifist
+			}
+		}
+		modifier = {
+			factor = 2
+			from = {
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+		modifier = {
+			factor = 99999
+			from = {
+				is_ai = no
+			}
+		}
+	}
+	
+	modifier = {
+		pop_growth_speed = 0.10
+		pop_happiness = 0.05
+		all_technology_research_speed = 0.10
+	}
+}

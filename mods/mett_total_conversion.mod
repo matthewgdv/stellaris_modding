@@ -1,6 +1,6 @@
-name="Mett Total Conversion"
-path="mett_total_conversion"
+name="[Mett] Total Conversion"
 tags={
-	"Balance"
+    "Balance"
 }
-supported_version="2.4.*"
+supported_version="3.0.*"
+path="mett_total_conversion"

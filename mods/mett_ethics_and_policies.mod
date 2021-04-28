@@ -1,7 +1,7 @@
-name="Mett's Ethics and Policies"
-path="mett_ethics_and_policies"
+name="[Mett] Ethics and Policies"
 tags={
-	"Balance"
+    "Balance"
 	"Gameplay"
 }
 supported_version="2.1.*"
+path="mett_ethics_and_policies"

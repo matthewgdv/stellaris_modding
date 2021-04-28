@@ -1,0 +1,6 @@
+god_rayed_mett = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_atmospheric_hallucinogen.dds"
+	pop_government_ethic_attraction = 1
+	planet_stability_add = 5
+	icon_frame = 2
+}

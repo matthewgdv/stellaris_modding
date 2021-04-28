@@ -1,0 +1,37 @@
+objectTypes = {
+	
+	pdxparticle = {
+		name = "plague_laser_muzzle_effect"
+		type = "plague_laser_muzzle_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "plague_laser_hit_effect"
+		type = "plague_laser_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "plague_laser_megastructure_hit_effect"
+		type = "plague_laser_megastructure_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "plague_muzzle_windup_effect"
+		type = "plague_muzzle_windup_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "plague_nano_effect"
+		type = "plague_nano_effect"
+		
+		scale = 1.0
+	}
+}

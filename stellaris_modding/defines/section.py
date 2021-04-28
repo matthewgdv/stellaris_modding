@@ -34,6 +34,9 @@ class DefinesSection(ReprMixin):
 
         return unequal
 
+    def union(self, other: DefinesSection) -> set[str]:
+        return set(self.defines) | set(other.defines)
+
     def comment(self) -> None:
         for element in self.lexical_elements:
             if isinstance(element, Define):

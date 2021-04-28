@@ -1,0 +1,37 @@
+# ####################
+#  Planet killer beam?
+# ####################
+
+#weapon_component_template = {
+#	key = "PLANET_DESTRUCTION_COMPONENT"
+#	size = planet_killer
+#	entity = "invisible_turret_entity"
+#	type = planet_killer
+#	static_rotation = yes
+#	use_ship_kill_target = no
+#
+#	icon = GFX_technology_unknown
+#	icon_frame = 1
+#
+#	component_set = "PLANET_KILLER_1"
+#
+#	planet_destruction_gfx = "neutron_planet_gfx"
+#}
+
+weapon_component_template = {
+	key = "PLANET_KILLER_PLAGUE"
+	size = planet_killer
+	entity = "invisible_turret_entity"
+	type = planet_killer
+	static_rotation = yes
+	use_ship_kill_target = no
+
+	prerequisites = { "tech_pk_plague" }
+
+	icon = GFX_ship_part_nanobot_diffuser
+	icon_frame = 1
+
+	component_set = "PLANET_KILLER_PLAGUE"
+
+	planet_destruction_gfx = "nerve_plague_gfx"
+}

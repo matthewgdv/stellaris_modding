@@ -1,6 +1,6 @@
-name="Mett's Starbase and Colossus Overhaul"
-path="mett_starbase_and_colossus_overhaul"
+name="[Mett] Starbase and Colossus Overhaul"
 tags={
-	"Balance"
+    "Balance"
 }
 supported_version="2.4.*"
+path="mett_starbase_and_colossus_overhaul"

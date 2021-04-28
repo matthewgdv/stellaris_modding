@@ -1,5 +1,0 @@
-on_game_start = {
-  events = {
-    ps_start.00
-  }
-}

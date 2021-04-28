@@ -1,3 +1,0 @@
-C:\Users\matth\Documents\Paradox Interactive\Stellaris\mod\mett_personalities_and_opinions\common\opinion_modifiers\00_opinion_modifiers.txt
-C:\Users\matth\Documents\Paradox Interactive\Stellaris\mod\mett_personalities_and_opinions\common\opinion_modifiers\01_personality_opinions.txt
-C:\Users\matth\Documents\Paradox Interactive\Stellaris\mod\mett_personalities_and_opinions\common\personalities\00_personalities.txt

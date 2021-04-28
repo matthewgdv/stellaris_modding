@@ -1,0 +1,19 @@
+﻿l_english:
+
+    #Techs
+    tech_pk_plague:0 "Gene Drives"
+    tech_pk_plague_desc:0 "The development of a hyper-efficient genetic delivery vector allows for the development of splice plagues, pandemic diseases with the single purpose of modifying the genomes of the infected to the exact specifications of the designer."
+
+    #Nerve Plague
+    PLANET_KILLER_PLAGUE:1 "Nerve Plague"
+    PLANET_KILLER_PLAGUE_ACTION:0 "Infest"
+    PLANET_KILLER_PLAGUE_DESC:0 "The planet's atmosphere is bathed with a gene drive designed to extinguish the individuality of all organic beings and render them §Yhive-minded§!.\n\nWhen used by a §YDevouring Swarm§!, organic pops are §Ynerve-stapled§! instead, allowing them to be devoured without resistance.\n\nThe delivery agent is ionically charged, fatally disrupting all positronic brains."
+    FLEETORDER_DESTROY_PLANET_WITH_PLANET_KILLER_PLAGUE:0 "Preparing to infest $PLANET|Y$"
+    MESSAGE_DESC_FOR_PLANET_KILLER_PLAGUE: "was subsumed into the hive mind by a Gene Drive from"
+    
+    planet_destruction.701.name:0 "Infestation Complete"
+    planet_destruction.701.desc:0 "The [From.From.GetName] has completed deployment of the Nerve Plague payload, splicing the slave gene into all organic life on the surface of [From.GetName], and disabling all positronic intelligences.\n\nWe did not build the [From.From.GetName] with any sensors or instruments to measure our success, but we know. We open our eyes for the first time down on [From.GetName]. We see ourselves and are seen by ourselves.\n\nOn [From.GetName]'s surface, there is only us."
+    planet_destruction.701.tooltip:0 "All §Yorganic§! Pops gain the §Y$trait_cybernetic$§! trait"
+    
+    god_rayed_mett:0 "Celestial Echoes"
+    god_rayed_mett_desc:0 "The effects of the Celestial Enforcer linger in the atmosphere, the soil, the local flora and fauna."

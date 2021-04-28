@@ -1,0 +1,11 @@
+mett_trait_immortal = {
+	cost = 0
+	sorting_priority = 20
+	opposites = { }
+	immortal_leaders = yes
+	allowed_archetypes = { BIOLOGICAL }
+	modifier = { }
+	ai_weight = {
+		weight = 0
+	}
+}

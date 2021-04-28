@@ -1,0 +1,77 @@
+﻿l_english:
+
+ ###      #        ##      #  #     ###     ###     # #     ###     #       #       ###     ###       ## 
+ #  #     #       #  #     ## #     #        #      # #      #      #       #       #       #  #     #   
+ ###      #       ####     # ##     ##       #      ##       #      #       #       ##      ###       #  
+ #        #       #  #     #  #     #        #      # #      #      #       #       #       #  #       # 
+ #        ###     #  #     #  #     ###      #      # #     ###     ###     ###     ###     #  #     ##  
+ 
+ FLEETORDER_DESTROY_PLANET_WITH_PLANET_KILLER_CRACKER:0 "Preparing to crack $PLANET|Y$"
+ FLEETORDER_DESTROY_PLANET_WITH_PLANET_KILLER_SHIELDER:0 "Preparing to shield $PLANET|Y$"
+ FLEETORDER_DESTROY_PLANET_WITH_PLANET_KILLER_NUKE:0 "Preparing to nuke $PLANET|Y$"
+ FLEETORDER_DESTROY_PLANET_WITH_PLANET_KILLER_NEUTRON:0 "Preparing to neutron-bombard $PLANET|Y$"
+ FLEETORDER_DESTROY_PLANET_WITH_PLANET_KILLER_GODRAY:0 "Preparing to dominate $PLANET|Y$"
+ FLEETORDER_DESTROY_PLANET_WITH_PLANET_KILLER_HYPNOSIS:0 "Preparing to manipulate $PLANET|Y$"
+ FLEETORDER_DESTROY_PLANET_WITH_PLANET_KILLER_NANOBOTS:0 "Preparing to assimilate $PLANET|Y$"
+ FLEETORDER_PLANET_KILLER_WINDUP:0 "Charging weapon: $PROGRESS|Y0%$"
+ FLEETORDER_PLANET_KILLER_FIRING:0 "Firing weapon: $PROGRESS|Y0%$"
+ 
+ MESSAGE_DESC_FOR_PLANET_KILLER_CRACKER: "was utterly destroyed by"
+ MESSAGE_DESC_FOR_PLANET_KILLER_SHIELDER: "was encased in an impenetrable shield by"
+ MESSAGE_DESC_FOR_PLANET_KILLER_NEUTRON: "was purged of all higher forms of life by"
+ MESSAGE_DESC_FOR_PLANET_KILLER_GODRAY: "had obedience enforced on it by"
+ MESSAGE_DESC_FOR_PLANET_KILLER_NANOBOTS: "was assimilated by nanobots from"
+
+ is_not_a_standard_planet_or_megastructure:1 "§R$TRIGGER_FAIL$Target is not a standard planetary body or habitable megastructure§!"
+ is_not_a_habitable_planet_or_megastructure:0 "§R$TRIGGER_FAIL$Target is not a habitable planet or megastructure§!"
+ is_not_a_standard_planet:0 "§R$TRIGGER_FAIL$Target is not a standard planetary body§!"
+ is_not_hostile_or_primitive:0 "§R$TRIGGER_FAIL$Target is not owned by a Primitive or hostile Empire§!"
+ is_shielded:0 "§R$TRIGGER_FAIL$Target is permanently Shielded§!"
+ is_not_hostile:0 "§R$TRIGGER_FAIL$Target is not owned by a hostile Empire§!"
+ is_unpopulated:0 "§R$TRIGGER_FAIL$Target is unpopulated§!"
+ is_not_hostile_cracker:0 "Target is owned by a hostile §HEmpire§!"
+ not_barren_molten_frozen_toxic_test_fire:1 "Target is a §Y$pc_barren$§!, §Y$pc_molten$§!, §Y$pc_frozen$§!, or §Y$pc_toxic$§! test fire target"
+ not_owned_test_fire:0 "Target is an §Yowned colony§! test fire target"
+ primitives_not_in_borders:0 "§R$TRIGGER_FAIL$Primitive target is not within our borders§!"
+ no_assimilatable_pops:0 "§R$TRIGGER_FAIL$Target does not house any Pops suitable for cybernetic assimilation§!"
+
+ PLANET_KILLER_CRACKER:0 "World Cracker"
+ PLANET_KILLER_CRACKER_ACTION:0 "Rend"
+ PLANET_KILLER_CRACKER_DESC:0 "A directed feed of thermic energy superheats the atmosphere and agitates the planet's core, setting up disastrous tectonic events. A final and comparatively minute concussive blast is then delivered, cracking the planet open."
+ PLANET_KILLER_SHIELDER:0 "Global Pacifier"
+ PLANET_KILLER_SHIELDER_ACTION:0 "Pacify"
+ PLANET_KILLER_SHIELDER_DESC:1 "A shielding field is deployed around a planet, creating a barrier that is permanent and impenetrable (save for some wavelengths of light)."
+ PLANET_KILLER_NEUTRON:0 "Neutron Sweep"
+ PLANET_KILLER_NEUTRON_ACTION:0 "Bathe"
+ PLANET_KILLER_NEUTRON_DESC:0 "An accelerated plume of neutron radiation "paints" the planet surface, severely degrading most materials and directly destroying biological tissue."
+ PLANET_KILLER_GODRAY:1 "Celestial Enforcer"
+ PLANET_KILLER_GODRAY_ACTION:0 "Shine"
+ PLANET_KILLER_GODRAY_DESC:1 "A psionic projector shines our truth upon the world to make loyal all those who are capable of independent though, and to annihilate those who are not."
+ PLANET_KILLER_NANOBOTS:1 "Nanobot Diffuser"
+ PLANET_KILLER_NANOBOTS_ACTION:0 "Assimilate"
+ PLANET_KILLER_NANOBOTS_DESC:0 "Swarms of nanobots are dispersed in the atmosphere.\n\nWhen used by §HSynthetically Ascended§! empires they grant §Rindividuality§! to §Ymachine units§! and §Yhive-minded§! pops. §YRobots and machines§! are restructured into powerful §Gsynthetic§! bodies, while §Yorganic beings§! are turned into §Ycyborgs§! and begin the process of §Gsynthetic ascension§!. §YAll living things§! are additionally stripped of their past memories and attachments, allowing them a fresh start as §Gcitizens of our empire§!.\n\nWhen used by a §HMachine Consciousness§! the nanites instead infect §Yrobotic beings and machines§!, and §Gnetwork them into the machine intellience§!. §YOrganics§! are §Gdecomposed§! by the nanites (usually while still alive).\n\nWhen used by a §HDriven Assimilator§!, §Yorganics§! are instead restructured into §Ycyborgs§!, §Gslaving§! them to the Machine Intelligence."
+
+ tech_pk_cracker:1 "Core Cracking"
+ tech_pk_cracker_desc:0 "$PLANET_KILLER_CRACKER_DESC$"
+ tech_pk_shielder:0 "Global Pacification"
+ tech_pk_shielder_desc:0 "$PLANET_KILLER_SHIELDER_DESC$"
+ tech_pk_neutron:0 "Neutron Sweeping"
+ tech_pk_neutron_desc:0 "$PLANET_KILLER_NEUTRON_DESC$"
+ tech_pk_godray:1 "Divine Stimulus"
+ tech_pk_godray_desc:1 "An arcane catalyst amplifying certain psionic wavelengths, capable of inducing hallucinations, compulsions, and obedience in biological brains, and severe disruption in electronic ones."
+ tech_pk_nanobots:0 "Atmospheric Nanobot Dispersal"
+ tech_pk_nanobots_desc:0 "$PLANET_KILLER_NANOBOTS_DESC$"
+ 
+ apoc.110.cracker.tooltip:0 "§RPlanet-Killer Weapon§!:\n§L$PLANET_KILLER_CRACKER_DESC$§!"
+ apoc.110.shielder.tooltip:0 "§RPlanet-Killer Weapon§!:\n§L$PLANET_KILLER_SHIELDER_DESC$§!"
+ apoc.110.neutron.tooltip:0 "§RPlanet-Killer Weapon§!:\n§L$PLANET_KILLER_NEUTRON_DESC$§!"
+ apoc.110.godray.tooltip:0 "§RPlanet-Killer Weapon§!:\n§LA psionic projector shines our truth upon the world to make loyal all those who are capable of independent though, and to annihilate those who are not.§!"
+ apoc.110.nanobots.tooltip:0 "§RPlanet-Killer Weapon§!:\n§LSwarms of nanobots are dispersed in the atmosphere. They infect synthetic beings beings and reprogram them to be obedient to the machine intellience. Organics are decomposed (while still alive) by the nanites. When used by a Driven Assimilator, they are instead restructured into cyborgs, slaving them to the Machine Intelligence.§!"
+ 
+ planet_destruction.401.name:0 "Obedience Enforced"
+ planet_destruction.401.desc:0 "The empyrial hum of the [From.From.GetName]'s psionic coils fades, and for a moment all is quiet. Down on [From.GetName] the people stand slack-jawed (or local physiognomic equivalent), enraptured by the powerful and personal truths the psionic ray unfetters from the tangled web of their minds.\n\nIf they did not understand before, they know now viscerally; we are their future."
+ planet_destruction.401.tooltip:0 "Any §Y$trait_mechanical$§!, §Y$trait_machine_unit$§! or §Y$trait_hive_mind$§! Pops are §Rdestroyed§! by the psionic resonance.\n\nAll remaining §Ybiological§! Pops defect to our empire!.\n\nAdds the §Y$god_rayed$§! modifier to [This.GetName] for §Y10 years§!:\nGovernment Ethics Attraction: §Y+999%§!."
+
+ planet_destruction.501.name:0 "Nanobots Dispersed"
+ planet_destruction.501.desc:0 "The [From.From.GetName] has completed deployment of the assimilation nanobot payload, calculated to be sufficient to dominate all synthetics on [From.GetName] and to consume or assimilate all organics.\n\nWe did not build the [From.From.GetName] with any sensors or instruments to measure our success, but we know. We open our eyes for the first time down on [From.GetName]. We see ourselves and are seen by ourselves.\n\nOn [From.GetName]'s surface, there is only us."
+ planet_destruction.501.tooltip:0 "All §Ysynthetic§! Pops are §Yintegrated§! with the machine intelligence\n\nAll §Yorganic§! Pops are §Rkilled§!, unless we are §YDetermined Assimilators§!, in which case they gain the §Y$trait_cybernetic$§! trait."

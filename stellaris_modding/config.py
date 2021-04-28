@@ -6,4 +6,4 @@ WORKSHOP_DIR = Dir(R"C:\Program Files (x86)\Steam\steamapps\workshop\content\281
 
 MOD_REPO_DIR = File(__file__).parent[1].dirs["mods"]
 
-MELD_EXE = R"C:\Program Files (x86)\Meld\Meld.exe"
+MELD_EXE = R"C:\Users\matthewgdv\AppData\Local\Programs\Meld\Meld.exe"

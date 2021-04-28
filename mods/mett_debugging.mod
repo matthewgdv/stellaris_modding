@@ -1,6 +1,6 @@
-name="Mett's Debugging"
-path="\mett_debugging"
+name="[Mett] Debugging"
 tags={
-	"Fixes"
+    "Fixes"
 }
 supported_version="2.4.*"
+path="mett_debugging"

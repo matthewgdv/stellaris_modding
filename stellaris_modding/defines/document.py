@@ -43,7 +43,7 @@ class DefinesDocument(ReprMixin):
 
             for key in keys:
                 define = self.sections[section_name].defines[key]
-                define.comment = Comment(text="="*150)
+                define.comment = None
 
                 index = defines_section.lexical_elements.index(defines_section.defines[key])
                 defines_section.lexical_elements.insert(index + 1, define)
@@ -53,6 +53,12 @@ class DefinesDocument(ReprMixin):
     def difference(self, other: DefinesDocument) -> dict[str, set[str]]:
         return {
             section_name: self.sections[section_name].difference(other.sections[section_name])
+            for section_name in self.sections
+        }
+
+    def union(self, other: DefinesDocument) -> dict[str, set[str]]:
+        return {
+            section_name: self.sections[section_name].union(other.sections[section_name])
             for section_name in self.sections
         }
 

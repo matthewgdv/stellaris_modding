@@ -1,6 +1,6 @@
-name="Mett's Trait Overhaul"
-path="mett_trait_overhaul"
+name="[Mett] Trait Overhaul"
 tags={
-	"Balance"
+    "Balance"
 }
 supported_version="2.1.*"
+path="mett_trait_overhaul"

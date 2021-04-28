@@ -4,7 +4,7 @@ from typing import Optional
 
 from miscutils import Version, ReprMixin
 from pathmagic import File
-from subtypes import Str, Frame, Process
+from subtypes import Str, Frame
 
 from .mod import Mod
 from .mod_collection import UserModCollection, ModCollection
@@ -22,27 +22,35 @@ class ModManager(ReprMixin):
         self.version, self.author = Version(*version, wildcard="*"), author
         self.mods = UserModCollection()
         self.workshop_mods = ModCollection()
-        self.collisions: dict[tuple[Mod, Mod], list[tuple[File, File]]] = {}
 
         self._parse_mods()
-        self._identify_collisions()
 
     def new_mod(self, name: str, tags: set[str] = None) -> Mod:
-        processed_name = f"{self.author}'{'' if self.author.endswith('s') else 's'} {name}"
+        processed_name = f"[{self.author}] {name}"
         self.mods.current.append(mod := Mod.from_params(name=processed_name, version=self.version,
                                                         tags=tags, root=config.USER_MOD_DIR.new_dir(Str(processed_name).case.snake())))
         return mod
 
-    def diff_all_mods(self) -> None:
+    def diff_mods_against_reference(self) -> None:
         matches: list[tuple[File, File]] = []
         for mod in self.mods.current.values():
-            for dir_match, file_matches in mod.root.compare_tree(config.STELLARIS_DIR):
-                for match in file_matches:
-                    if match[0].extension == "txt":
-                        matches.append(match)
+            mod.diff_against_reference()
 
-        for override, original in matches:
-            Process([config.MELD_EXE, override, original]).wait()
+    def diff_collisions_with_workshop_mods(self) -> None:
+        for mod in self.mods.current.values():
+            for workshop_mod in self.workshop_mods.current.values():
+                mod.diff_against(workshop_mod)
+
+    def collisions_with_workshop_mods(self) -> Frame:
+        collisions: dict[tuple[Mod, Mod], list[tuple[File, File]]] = {}
+
+        for mod in self.mods.current.values():
+            for workshop_mod in self.workshop_mods.current.values():
+                collisions[(mod, workshop_mod)] = mod.collisions_against(workshop_mod)
+
+        data = [(my_mod.name, other_mod.name, str(my_file.path.relative_to(my_mod.root)), str(other_file.path.relative_to(other_mod.root)))
+                for (my_mod, other_mod), matchfiles in collisions.items() for my_file, other_file in matchfiles]
+        return Frame(data, columns=["my_mod", "workshop_mod", "my_file", "workshop_file"])
 
     def _parse_mods(self) -> None:
         for file in config.USER_MOD_DIR.files:
@@ -52,31 +60,12 @@ class ModManager(ReprMixin):
                 except FileNotFoundError:
                     continue
 
-                owner = self.workshop_mods if mod.root > config.WORKSHOP_DIR else self.mods
+                owner = self.workshop_mods if mod.root < config.WORKSHOP_DIR else self.mods
                 collection = owner.current if mod.version >= self.version else owner.outdated
                 collection[Str(mod.name).case.identifier()] = mod
 
         for dir in self.ADDITIONAL_SEARCH_PATHS:
             for file in dir.files:
-                if file.extension == "mod":
+                if file.extension == "mod" and file.stem != "descriptor":
                     mod = Mod(info=file)
                     self.mods.staging[Str(mod.name).case.identifier()] = mod
-
-    def _identify_collisions(self) -> None:
-        for mod in self.mods.current.values():
-            for workshop_mod in self.workshop_mods.current.values():
-                for dirs, files in mod.root.compare_tree(workshop_mod.root):
-                    if collisions := list(files):
-                        self.collisions.setdefault((mod, workshop_mod), []).extend(collisions)
-
-    def list_collisions_with_workshop_mods(self) -> None:
-        my_word, their_word = "mod", R"mod\workshop"
-        data = [(my_mod.info.name, their_mod.info.name, Str(my_file).slice.after(my_word), Str(their_file).slice.after(their_word))
-                for (my_mod, their_mod), matchfiles in self.collisions.items() for my_file, their_file in matchfiles]
-        frame = Frame(data, columns=["My Mod", "Workshop Mod", "My Override", "Workshop Override"]).to_ascii()
-        print(frame)
-
-    def diff_collisions_with_workshop_mods(self) -> None:
-        for pair in self.collisions.values():
-            for mine, theirs in pair:
-                Process([config.MELD_EXE, mine, theirs]).wait()

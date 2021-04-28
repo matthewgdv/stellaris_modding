@@ -1,6 +1,6 @@
-name="Mett's Perfect Start"
-path="mett_perfect_start"
+name="[Mett] Perfect Start"
 tags={
-	"Balance"
+    "Balance"
 }
-supported_version="2.4.*"
+supported_version="3.0.*"
+path="mett_perfect_start"
